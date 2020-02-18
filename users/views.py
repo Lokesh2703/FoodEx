@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 from django.contrib.auth.decorators import user_passes_test
+from django.http import HttpResponse
+from django.contrib.auth import REDIRECT_FIELD_NAME
 
 def Restaurant_Required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url=None):
     """
