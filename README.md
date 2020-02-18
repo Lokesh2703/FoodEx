@@ -10,7 +10,7 @@
     
    Delivery person get the details of the order with restaurant details and customer details like address and mobile numbers. They will have a profile which contains their contact details, restaurant address, email ID. They can track their earnings on daily basis,weekly basis, monthly basis and year basis.
 
-## First create Virtual Environment using
+### First create Virtual Environment using
 
 `virtualenv venv`
 
@@ -25,3 +25,5 @@ Then activate the virtual environment using
 ## To run the project
 
 `python3 manage.py runserver`
+
+#### Open a browser and enter `http://127.0.0.1:8000/` in the url.
