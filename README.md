@@ -9,3 +9,19 @@
    Restaurants can add food items, update food items, place offers, update offers. They can accept the orders given by customers and see the details of customers, delivery person. They will have a profile which contains their contact details, restaurant address,email ID. They can track their earnings on daily basis, weekly basis, monthly basis and year basis.
     
    Delivery person get the details of the order with restaurant details and customer details like address and mobile numbers. They will have a profile which contains their contact details, restaurant address, email ID. They can track their earnings on daily basis,weekly basis, monthly basis and year basis.
+
+## First create Virtual Environment using
+
+`virtualenv venv`
+
+Then activate the virtual environment using 
+
+`source ./venv/bin/activate`
+
+## To install the requirements
+
+`pip3 install -r requirements.txt`
+
+## To run the project
+
+`python3 manage.py runserver`
