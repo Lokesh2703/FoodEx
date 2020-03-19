@@ -48,3 +48,7 @@ def DeliveryPerson_Required(function=None, redirect_field_name=REDIRECT_FIELD_NA
     if function:
         return actual_decorator(function)
     return actual_decorator
+
+def index(request):
+    return render(request,'users/index.html')
+
