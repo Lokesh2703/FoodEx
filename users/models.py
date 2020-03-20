@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 from django.contrib.auth.models import AbstractUser
 from phonenumber_field.modelfields import PhoneNumberField
+from PIL import Image
 
 class User(AbstractUser):
     is_customer=models.BooleanField('Customer Status',default=False)
@@ -74,3 +75,5 @@ class DeliveryPersonProfile(models.Model):
                 image.save(self.image.path)
         except:
             pass
+
+

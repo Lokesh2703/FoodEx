@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'FoodItems.apps.FooditemsConfig',
     'users.apps.UsersConfig',
     'phonenumber_field',
     'django.contrib.admin',
