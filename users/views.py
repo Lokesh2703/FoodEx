@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 # Create your views here.
 from django.contrib.auth.decorators import user_passes_test
@@ -50,5 +50,5 @@ def DeliveryPerson_Required(function=None, redirect_field_name=REDIRECT_FIELD_NA
     return actual_decorator
 
 def index(request):
-    return render(request,'users/index.html')
+    return redirect('static/users/index.html')
 
