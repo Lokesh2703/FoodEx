@@ -4,6 +4,8 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.decorators import user_passes_test
 from django.http import HttpResponse
 from django.contrib.auth import REDIRECT_FIELD_NAME
+from .models import User
+from django.contrib.auth.hashers import make_password
 
 def Restaurant_Required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url=None):
     """
@@ -53,5 +55,14 @@ def index(request):
     context={
         'title' : 'FoodEx'
     }
+    if request.method == 'POST':
+        if request.POST.get('user-submit')=="Sign Up":
+            username = request.POST.get('user_login793553')
+            name  = request.POST.get('foodbakery_display_name793553')
+            email = request.POST.get('foodbakery_user_email793553')
+            password = request.POST.get('foodbakery_user_password793553')
+            password = make_password(password)
+            userObj = User(username=username,email=email,first_name=name,is_customer=True,password=password)
+            userObj.save()
     return render(request,'users/index.html',context)
 
