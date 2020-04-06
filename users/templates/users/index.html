@@ -322,7 +322,25 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 
 
                 </script>
-                <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal" href="#user-register">Login / Register</a><a class="get-start-btn" href="register-user-and-add-restaurant/index.html" > Register Restaurant  </a> 	    		    </div>
+                    {% if request.user.is_authenticated %}
+                    <a class="cs-color cs-popup-joinus-btn login-popup" href="{% url 'foodEx-logout' %}">
+                        Log out
+                    </a>
+                    {% else %}
+                    <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal" href="#user-register">
+                        Login / Register
+                    </a>
+                    {% endif %}
+                    {% if request.user.is_authenticated %}
+                        <a class="get-start-btn" href="register-user-and-add-restaurant/index.html" >
+                            {{ request.user.username }} Profile
+                        </a>
+                    {% else %}
+                        <a class="get-start-btn" href="register-user-and-add-restaurant/index.html" >
+                            Register Restaurant  
+                        </a>
+                    {% endif %} 		    
+                 </div>
 								    <div class="main-nav">
 						    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
 		<ul id="menu-main-menu" class="primary-menu">
@@ -1715,13 +1733,34 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
 					<h5 class="modal-title foodbakery-dev-login-main-title">Login To Your Account</h5>
-				</div><div class="modal-body"><p class="foodbakery-dev-login-top-msg" style="display: none;"></p><div class="cs-login-pbox login-form-id-92408"><div class="status status-message"></div><script>jQuery("body").on("keypress", "input#user_login92408, input#user_pass92408", function (e) {
+				</div><div class="modal-body"><p class="foodbakery-dev-login-top-msg" style="display: none;"></p><div class="cs-login-pbox login-form-id-92408"><div class="status status-message"></div>
+                <script>jQuery("body").on("keypress", "input#user_login92408, input#user_pass92408", function (e) {
 							if (e.which == "13") {
 								foodbakery_user_authentication("wp-admin/admin-ajax.html", "92408", '.ajax-login-button');
 								return false;
 							}
-						});</script><form method="post" class="wp-user-form webkit" id="ControlForm_92408"><div class="input-filed"><i class="icon-user4"></i><input type="text"   tabindex="11" placeholder="Username"   id="user_login92408" name="user_login" /></div><div class="input-filed"><i class="icon-unlock-alt"></i><input type="password"   tabindex="12" size="20" onfocus="if(this.value =='Password') { this.value = ''; }" onblur="if(this.value == '') { this.value ='Password'; }"   id="user_pass92408" name="user_pass" value="Password" /></div><div class="forget-password"><a class="cs-forgot-switch forgot-switch">Forgot Password?</a></div><div class="input-filed input-field-btn"><div class="ajax-login-button input-button-loader"><input type="button"  class="cs-bgcolor"  name="user-submit" value="Log in" /></div><input type="hidden"     id="redirect_to" name="redirect_to" value="index.html" /><input type="hidden"     id="user-cookie" name="user-cookie" value="1" /><input type="hidden"     name="action" value="ajax_login" /><input type="hidden"     id="login" name="login" value="login" />
-					</div></form><div class="signin-tab-link forget-password">New Here? <a href="javascript:void(0);" class="foodbakery-dev-login-box-btn forgot-switch">Signup</a></div>                    <div class="footer-element comment-form-social-connect social_login_ui ">
+						});
+                </script>
+                        
+    <form method="post" class="wp-user-form webkit" id="ControlForm_92408">
+        {% csrf_token %}
+        <div class="input-filed">
+            <i class="icon-user4"></i><input type="text"   tabindex="11" placeholder="Username"   id="user_login92408" name="user_login92408" value="{{ username }}" />
+        </div>
+        <div class="input-filed">
+            <i class="icon-unlock-alt"></i><input type="password"   tabindex="12" size="20" id="user_pass92408" name="user_pass92408" value="Password" placeholder="Password"/>
+        </div>        
+        <div class="forget-password"><a class="cs-forgot-switch forgot-switch">Forgot Password?</a></div>
+        <div class="input-filed input-field-btn">
+            <div class="ajax-login-button input-button-loader">
+                <input type="submit"  class="cs-bgcolor"  name="user-submit-login" value="Log in" />
+            </div>
+            <input type="hidden"     id="redirect_to" name="redirect_to" value="index.html" />
+            <input type="hidden"     id="user-cookie" name="user-cookie" value="1" />
+            <input type="hidden"     name="action" value="ajax_login" />
+            <input type="hidden"     id="login" name="login" value="login" />
+        </div>
+    </form><div class="signin-tab-link forget-password">New Here? <a href="javascript:void(0);" class="foodbakery-dev-login-box-btn forgot-switch">Signup</a></div>                    <div class="footer-element comment-form-social-connect social_login_ui ">
                         <div class="social_login_facebook_auth">
                             <input type="hidden"     name="client_id" value="1168292993253842" /><input type="hidden"     name="redirect_uri" value="index7e49.html?social-login=facebook-callback" />                        </div>
                         <div class="social_login_twitter_auth">
