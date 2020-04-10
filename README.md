@@ -30,6 +30,9 @@ Then activate the virtual environment using
 
 ## To sync with fork
 `git remote add upstream https://github.com/Lokesh2703/FoodEx.git`
+
 `git fetch upstream`
+
 `git checkout master`
+
 `git merge upstream/master`
