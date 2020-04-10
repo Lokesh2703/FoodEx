@@ -27,3 +27,9 @@ Then activate the virtual environment using
 `python3 manage.py runserver`
 
 #### Open a browser and enter `http://127.0.0.1:8000/` in the url.
+
+## To sync with fork
+`git remote add upstream https://github.com/Lokesh2703/FoodEx.git`
+`git fetch upstream`
+`git checkout master`
+`git merge upstream/master`
