@@ -101,7 +101,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 			 	    		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 			 			    	    		    <div class="logo">
 	    			<figure> 
-	    			    <a href="index.html" class="light-logo"> 
+	    			    <a href="{% url 'index' %}" class="light-logo"> 
 					    						<img src="{% static 'wp-content/uploads/logo.png' %}"  alt="FoodBakery">
 							    			    </a> 
 										    <a href="index.html" class="dark-logo">
@@ -336,7 +336,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                             {{ request.user.username }} Profile
                         </a>
                     {% else %}
-                        <a class="get-start-btn" href="register-user-and-add-restaurant/index.html" >
+                        <a class="get-start-btn" href="{% url 'register-restaurant' %}" >
                             Register Restaurant  
                         </a>
                     {% endif %} 		    
@@ -351,7 +351,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 	<li id="menu-item-5343" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="../rtl/index.html">RTL Demo</a></li>
 </ul> End Sub Menu -->
 </li>
-<li id="menu-item-1447" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="listings/index.html">Restaurants</a></li>
+<li id="menu-item-1447" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% url 'restaurants-default' %}">Restaurants</a></li>
 <li id="menu-item-1298" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-has-children"><a href="#">Pages</a>
 <ul>
 	<li id="menu-item-2414" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="price-plans/index.html">Price Plans</a></li>

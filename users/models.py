@@ -34,9 +34,16 @@ class CustomerProfile(models.Model):
 
 class RestaurantProfile(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
+    restaurantName = models.CharField(max_length=50,default='',help_text="Restaurant Name")
     mobile = PhoneNumberField()
     address = models.CharField(max_length=200)
     image = models.ImageField(default='default.jpg',upload_to='profile_pics/')
+    location = models.CharField(max_length=50,default='')
+    
+    class Meta:
+        constraints=[
+            models.UniqueConstraint(fields=['restaurantName','location'],name='unique-restaurants')
+        ]
 
     def __str__(self):
         return f'{self.user.username} Profile'

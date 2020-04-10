@@ -80,3 +80,5 @@ def logout_view(request):
     logout(request)
     return redirect('/')
 
+def registerRestaurant(request):
+    return render(request,'users/register-user-and-add-restaurant/index.html')
