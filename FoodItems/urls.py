@@ -15,13 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from users.views import logout_view
-from FoodItems import views as FoodItemsViews
+from .views import individualRestaurantView
+
 
 urlpatterns = [
-    path('',include('users.urls')),
-    path('',include('FoodItems.urls')),
-    path('admin/', admin.site.urls),
-    path('logout/',logout_view,name='foodEx-logout'),
-    path('restaurants/',FoodItemsViews.restaurantsView,name='restaurants-default'),
+    path('restaurants/view/',individualRestaurantView,name='individual-restaurant-view'),
 ]

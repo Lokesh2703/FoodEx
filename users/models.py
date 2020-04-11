@@ -35,14 +35,27 @@ class CustomerProfile(models.Model):
 class RestaurantProfile(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
     restaurantName = models.CharField(max_length=50,default='',help_text="Restaurant Name")
-    mobile = PhoneNumberField()
-    address = models.CharField(max_length=200)
+    restaurantMobile = PhoneNumberField(blank=True)
+    managerName = models.CharField(max_length=50,default='',help_text="Manager Name")
+    managerMobile = PhoneNumberField(blank=True)
+    managerEmail = models.EmailField(blank=True)
+    address = models.CharField(max_length=200,blank=True)
     image = models.ImageField(default='default.jpg',upload_to='profile_pics/')
-    location = models.CharField(max_length=50,default='')
-    
+    country = models.CharField(max_length=30,default='')
+    state = models.CharField(max_length=50,default='')
+    city = models.CharField(max_length=50,default='')
+
+    SERVICE_TYPE =(
+        ("delivery","Delivery"),
+        ("pickup","Pickup"),
+        ("deliveryPickup","Delivery/Pickup")
+    )
+    serviceType = models.CharField(max_length=20,choices= SERVICE_TYPE,default='delivery')
+    cuisine = models.CharField(max_length=30,default='general')
+
     class Meta:
         constraints=[
-            models.UniqueConstraint(fields=['restaurantName','location'],name='unique-restaurants')
+            models.UniqueConstraint(fields=['restaurantName','city'],name='unique-restaurants')
         ]
 
     def __str__(self):
