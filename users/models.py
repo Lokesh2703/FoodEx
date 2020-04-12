@@ -39,7 +39,7 @@ class RestaurantProfile(models.Model):
     managerName = models.CharField(max_length=50,default='',help_text="Manager Name")
     managerMobile = PhoneNumberField(blank=True)
     managerEmail = models.EmailField(blank=True)
-    address = models.CharField(max_length=200,blank=True)
+    address = models.TextField(blank=True)
     image = models.ImageField(default='default.jpg',upload_to='profile_pics/')
     country = models.CharField(max_length=30,default='')
     state = models.CharField(max_length=50,default='')
@@ -52,6 +52,12 @@ class RestaurantProfile(models.Model):
     )
     serviceType = models.CharField(max_length=20,choices= SERVICE_TYPE,default='delivery')
     cuisine = models.CharField(max_length=30,default='general')
+
+    # paymentTakerFirstName = models.CharField(max_length=30)
+    # paymentTakerLastName = models.CharField(max_length=30)
+    # paymentTakerEmail = models.EmailField(blank=True)
+    # paymentTakerMobile = PhoneNumberField(blank=True)
+    # paymentTakerAddress = models.TextField()
 
     class Meta:
         constraints=[

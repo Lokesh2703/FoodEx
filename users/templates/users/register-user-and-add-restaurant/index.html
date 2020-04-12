@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="profile" href="http://gmpg.org/xfn/11">
         <link rel="pingback" href="../xmlrpc.html">
-        <title>Register User and Add Restaurant &#8211; FoodBakery</title>
+        <title>{{ title }}</title>
 <meta name='robots' content='noindex,follow' />
 <link rel='dns-prefetch' href='http://maps.googleapis.com/' />
 <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
@@ -120,7 +120,8 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                 					                <li class="location-has-children choose-location">
                     <a href="#"><i class="icon-location-pin2"></i>Choose location</a>
                     <ul>
-                        <li class="select-location"><div class="foodbakery-locations-fields-group "><form name="foodbakery-restaurant-top-header-form372884" id="foodbakery-restaurant-top-header-form372884" action="http://foodbakery.chimpgroup.com/homev1/listings/" ><span id="foodbakery-radius-location372884" class="foodbakery-radius-location foodbakery-radius-location372884" data-id="372884"><i class="icon-target5"></i></span><span class="foodbakery-input-cross foodbakery-input-cross372884 foodbakery-input-cross-header" data-id="372884" style="display:none;"><i class="icon-cross"></i></span><input type="text" class=" foodbakery-locations-field372884" data-id="372884" value="" id="foodbakery-locations-field372884" name="location" placeholder="All Locations" autocomplete="off"/><input type="hidden" class="foodbakery-locations-position372884" value="header" id="foodbakery-locations-position372884" name="foodbakery_locations_position"/></form></div></li><li class="popular-location">Popular Locations</li><li><ul class="foodbakery-all-locations372884"></ul></li><script>
+                        <li class="select-location"><div class="foodbakery-locations-fields-group ">
+					<form name="foodbakery-restaurant-top-header-form372884" id="foodbakery-restaurant-top-header-form372884" action="http://foodbakery.chimpgroup.com/homev1/listings/" ><span id="foodbakery-radius-location372884" class="foodbakery-radius-location foodbakery-radius-location372884" data-id="372884"><i class="icon-target5"></i></span><span class="foodbakery-input-cross foodbakery-input-cross372884 foodbakery-input-cross-header" data-id="372884" style="display:none;"><i class="icon-cross"></i></span><input type="text" class=" foodbakery-locations-field372884" data-id="372884" value="" id="foodbakery-locations-field372884" name="location" placeholder="All Locations" autocomplete="off"/><input type="hidden" class="foodbakery-locations-position372884" value="header" id="foodbakery-locations-position372884" name="foodbakery_locations_position"/></form></div></li><li class="popular-location">Popular Locations</li><li><ul class="foodbakery-all-locations372884"></ul></li><script>
 				jQuery(document).ready(function () {
 					jQuery(".chosen-select-location").chosen();
 					chosen_ajaxify("filter-location-box372884", "../wp-admin/admin-ajax.html", "dropdown_options_for_search_location_data");
@@ -387,128 +388,168 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 
             <div class="container "> 
                                     <div class="row">
-                        <div class="section-fullwidth col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 "><div class="user-dashboard loader-holder">	    <div id="foodbakery-dev-posting-main-14248229" class="user-holder" data-ajax-url="http://foodbakery.chimpgroup.com/homev1/wp-admin/admin-ajax.php" data-plugin-url="../wp-content/plugins/wp-foodbakery/index.html">
+                        <div class="section-fullwidth col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 "><div class="user-dashboard loader-holder">	    <div id="foodbakery-dev-posting-main-14248229" class="user-holder">
 
 		
 		    <ul class="restaurant-settings-nav progressbar-nav" data-restaurant="0" data-mcounter="14248229">
-			<li class="active " data-act="restaurant-information"><a href="javascript:void(0);" class="cond-restaurant-settings1" data-act="restaurant-information">Information</a></li>
-					    	<li data-act="package"><a href="javascript:void(0);" class="cond-restaurant-settings1" data-act="package">Select Package</a></li>
-		    	<li data-act="payment-information"><a href="javascript:void(0);" class="cond-restaurant-settings1" data-act="payment-information">Payment Information</a></li>
-						<li data-act="activation"><a href="javascript:void(0);" class="cond-restaurant-settings1" data-act="activation">Activation</a></li>
+				<li class="active " data-act="restaurant-information">
+					<a href="javascript:void(0);" class="cond-restaurant-settings1" data-act="restaurant-information">Information</a>
+				</li>
+				<!-- <li data-act="package">
+					<a href="javascript:void(0);" class="cond-restaurant-settings1" data-act="package">Select Package</a>
+				</li> -->
+		    	<!-- <li data-act="payment-information">
+					<a href="javascript:void(0);" class="cond-restaurant-settings1" data-act="payment-information">Payment Information</a>
+				</li> -->
+				<li data-act="activation">
+					<a href="javascript:void(0);" class="cond-restaurant-settings1" data-act="activation">Activation</a>
+				</li>
 		    </ul>
 
 		    		    <div id="restaurant-sets-holder">
-			<form id="foodbakery-dev-restaurant-form-14248229" name="foodbakery-dev-restaurant-form" class="form-fields-set foodbakery-dev-restaurant-form" data-id="14248229" method="post" enctype="multipart/form-data">
-			    <ul id="foodbakery-dev-main-con-77697234" class="register-add-restaurant-tab-container restaurant-information-tab-container" style="display: none;">	    <li>
-		
-			<div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="row"><ul class="has-seperator"><li><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><div class="field-holder">
-						<label>Restaurant name *</label><input type="text"   placeholder="i.e Pizza Hut"  class="foodbakery-dev-req-field"  id="foodbakery_restaurant_title_77697234" name="foodbakery_restaurant_title" /></div></div><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><div class="field-holder">
-						<label>Restaurant phone</label><input type="text"   placeholder="i.e +1 321 828 6662"   id="foodbakery_restaurant_phone_77697234" name="foodbakery_restaurant_contact_phone" /></div></div><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><div class="field-holder">
-				<label>Manager Name</label><input type="text"   placeholder="i.e Alard Willaim"   id="foodbakery_restaurant_manager_name_77697234" name="foodbakery_restaurant_manager_name" /></div></div><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><div class="field-holder">
-				<label>Manager Contact phone</label><input type="text"   placeholder="i.e +1 321 828 6662"   id="foodbakery_restaurant_manager_phone_77697234" name="foodbakery_restaurant_manager_phone" /></div></div><div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-				<div class="field-holder">
-				<label>Contact Email</label><input type="text"   placeholder="i.e alard@example.com "   id="foodbakery_restaurant_contact_email_77697234" name="foodbakery_restaurant_contact_email" /></div></div></li><li><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div class="element-title">
-							<h4>Location</h4>
-						</div>
-						<div class="row">				
-		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			<fieldset class="gllpLatlonPicker" style="width:100%; float:left;" id="fe_map0" data-radius="10000" data-radiusshow="">
-			<div class="page-wrap page-opts left" style=" position:relative;" id="locations_wrap" data-default-country="" data-themeurl="http://foodbakery.chimpgroup.com/homev1/wp-content/plugins/wp-foodbakery/" data-plugin_url="http://foodbakery.chimpgroup.com/homev1/wp-content/plugins/wp-foodbakery/" data-ajaxurl="http://foodbakery.chimpgroup.com/homev1/wp-admin/admin-ajax.php" data-map_marker="3256">
-				<div class="option-sec" style="margin-bottom:0;">
-				<div class="opt-conts">
+			<form id="foodbakery-dev-restaurant-form-14248229" class="form-fields-set foodbakery-dev-restaurant-form" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			    <!-- <ul id="foodbakery-dev-main-con-77697234" class="register-add-restaurant-tab-container restaurant-information-tab-container" style="display: none;">	    
+					<li> -->
+						<div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<div class="row">
+								<ul class="has-seperator">
+									<li>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<div class="field-holder">
+												<label>Restaurant name *</label>
+												<input type="text"   placeholder="i.e Pizza Hut"  class="foodbakery-dev-req-field"  id="foodbakery_restaurant_title_77697234" name="foodbakery_restaurant_title" value="{{ restaurantName }}" />
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<div class="field-holder">
+												<label>Restaurant phone</label>
+												<input type="text"   placeholder="i.e +1 321 828 6662"   id="foodbakery_restaurant_phone_77697234" name="foodbakery_restaurant_contact_phone" />
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<div class="field-holder">
+												<label>Manager Name</label>
+													<input type="text"   placeholder="i.e Alard Willaim"   id="foodbakery_restaurant_manager_name_77697234" name="foodbakery_restaurant_manager_name" />
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<div class="field-holder">
+												<label>Manager Contact phone</label>
+													<input type="text"   placeholder="i.e +1 321 828 6662"   id="foodbakery_restaurant_manager_phone_77697234" name="foodbakery_restaurant_manager_phone" />
+											</div>
+										</div>
+										<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+											<div class="field-holder">
+												<label>Contact Email</label>
+												<input type="text"   placeholder="i.e alard@example.com "   id="foodbakery_restaurant_contact_email_77697234" name="foodbakery_restaurant_contact_email" />
+											</div>
+										</div>
+									</li>
+				
+									<li>
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<div class="row">
+												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<div class="element-title">
+														<h4>Location</h4>
+													</div>
+											<div class="row">				
+												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+													<fieldset class="gllpLatlonPicker" style="width:100%; float:left;" id="fe_map0" data-radius="10000" data-radiusshow="">
+														<div class="page-wrap page-opts left" style=" position:relative;" id="locations_wrap" data-default-country="India" data-map_marker="3256">
+															<div class="option-sec" style="margin-bottom:0;">
+																<div class="opt-conts">
 					                                    
-						<div class="row">
-							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-								<div class="field-holder">
-								<label>Country *</label>
-								<div class="select-holder">
-									<span class="loader-country-restaurant"></span>
-									<select data-placeholder="Select Country"  class="form-control chosen-select form-select-country dir-map-search foodbakery-dev-req-field "  id="loc_country_restaurant" name="foodbakery_post_loc_country_restaurant"  >
-										<option value="">Select Country</option>
-										<option value='brazil' data-name=''>Brazil</option>
-										<option value='canada' data-name=''>Canada</option>
-										<option value='france' data-name=''>France</option>
-										<option value='india' data-name=''>India</option>
-										<option value='italy' data-name=''>Italy</option>
-										<option value='spain' data-name=''>Spain</option>
-										<option value='united-kingdom' data-name=''>United Kingdom</option>
-										<option value='united-states' data-name=''>United States</option>
-									</select>
-								</div>
-								</div>                                   
-							</div>
-						</div>
+																	<div class="row">
+																		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+																			<div class="field-holder">
+																			<label>Country *</label>
+																			<div class="select-holder">
+																				<span class="loader-country-restaurant"></span>
+																				<select data-placeholder="Select Country"  class="form-control chosen-select form-select-country dir-map-search foodbakery-dev-req-field "  id="loc_country_restaurant" name="foodbakery_post_loc_country_restaurant"  >
+																					<option value="">Select Country</option>
+																					<option value='brazil' data-name=''>Brazil</option>
+																					<option value='canada' data-name=''>Canada</option>
+																					<option value='france' data-name=''>France</option>
+																					<option value='india' data-name=''>India</option>
+																					<option value='italy' data-name=''>Italy</option>
+																					<option value='spain' data-name=''>Spain</option>
+																					<option value='united-kingdom' data-name=''>United Kingdom</option>
+																					<option value='united-states' data-name=''>United States</option>
+																				</select>
+																			</div>
+																			</div>                                   
+																		</div>
+																	</div>
 										
-					<div class="row">
+															<div class="row">
 						                                   
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-								<div class="field-holder">
-									<label>State</label>
-									<div class="select-holder">
-										<span class="loader-state-restaurant"></span><select data-placeholder="Select State"  class="form-control chosen-select form-select-state dir-map-search "  id="loc_state_restaurant" name="foodbakery_post_loc_state_restaurant"  ><option value="">Select State</option></select>									</div>
-								</div>                                   
-							</div>
+																<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+																	<div class="field-holder">
+																		<label>State</label>
+																		<div class="select-holder">
+																			<span class="loader-state-restaurant"></span><select data-placeholder="Select State"  class="form-control chosen-select form-select-state dir-map-search "  id="loc_state_restaurant" name="foodbakery_post_loc_state_restaurant"  ><option value="">Select State</option></select>	
+																		</div>
+																	</div>                                   
+																</div>
 												
 						
-                        							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-								<div class="field-holder">
-									<label>City</label>
-									<div class="select-holder">
-										<span class="loader-city-restaurant"></span><select data-placeholder="Select City"  class="form-control chosen-select form-select-city dir-map-search "  id="loc_city_restaurant" name="foodbakery_post_loc_city_restaurant"  ><option value="">Select County</option></select>									</div>
-								</div>
-							</div>
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+															<div class="field-holder">
+																<label>City</label>
+																<div class="select-holder">
+																	<span class="loader-city-restaurant"></span><select data-placeholder="Select City"  class="form-control chosen-select form-select-city dir-map-search "  id="loc_city_restaurant" name="foodbakery_post_loc_city_restaurant"  ><option value="">Select County</option></select>									</div>
+															</div>
+														</div>
 												
 						
 						                                   
-							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-								<div class="field-holder">
-									<label>Town</label>
-									<div class="select-holder">
-										<span class="loader-town-restaurant"></span><select data-placeholder="Select Town"  class="form-control chosen-select form-select-town dir-map-search "  id="loc_town_restaurant" name="foodbakery_post_loc_town_restaurant"  ><option value="">Select Town</option></select>									</div>
-								</div>
-							</div>
+														<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+															<div class="field-holder">
+																<label>Address</label>
+																<textarea class="foodbakery-dev-req-field" name="trans_address"></textarea>
+															</div>
+														</div>
 						 
 						
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-							<div class="field-holder">
-							<label>Latitude</label>
-							<input type="text"  placeholder="Latitude"  class="form-control gllpLatitude"  id="foodbakery_post_loc_latitude" name="foodbakery_post_loc_latitude_restaurant" value="51.5073509" />							</div>
-						</div>
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-							<div class="field-holder">
-							<label>Longitude</label>
-							<input type="text"  placeholder="Longitude"  class="form-control gllpLongitude"  id="foodbakery_post_loc_longitude" name="foodbakery_post_loc_longitude_restaurant" value="-0.12775829999998223" />							</div>
-						</div>
-						
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-							<input type="hidden"  id="foodbakery__loc_bounds_rest"    name="foodbakery_loc_bounds_rest_restaurant" value="" /><input type="hidden"  id="foodbakery_add_new_loc"  class="gllpSearchField" style="margin-bottom:10px;"  name="foodbakery_add_new_loc_restaurant" value="" /><input type="hidden"  id="foodbakery_post_loc_zoom"  class="gllpZoom"   name="foodbakery_post_loc_zoom_restaurant" value="9" />						
-							<div class="field-holder">
-								<label>Find On Map</label>
-								<input type="text"  onkeypress="foodbakery_gl_search_map(this.value)" placeholder="Type Your Address"  class="foodbakery-search-location"  id="loc_address" name="foodbakery_post_loc_address_restaurant" />							</div>
-						</div>
-						
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-							<div class="field-holder"></div>
-							<div class="field-holder search-location-map input-button-loader">
-								<input type="button"    class="acc-submit cs-section-update cs-color csborder-color gllpSearchButton"  id="foodbakery_map_search_btn" name="foodbakery_map_search_btn" value="Search Location" />							</div>
-						</div>
-					</div>
-					<div class="row">
-						<!-- map start -->
-						<div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12">
-							<div class="cs-map-section" style="float:left; width:100%; height:284px;">
-							<div class="gllpMap" id="cs-map-location-fe-id"></div>
-							</div>
-							<!--<p> For the precise location, you can drag and drop the pin.-->
-						</div>
-					</div>
-				</div>
-				</div>
-			</div>
-			</fieldset>
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+															<div class="field-holder">
+															<label>Latitude</label>
+															<input type="text"  placeholder="Latitude"  class="form-control gllpLatitude"  id="foodbakery_post_loc_latitude" name="foodbakery_post_loc_latitude_restaurant" value="51.5073509" />							</div>
+														</div>
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+															<div class="field-holder">
+															<label>Longitude</label>
+															<input type="text"  placeholder="Longitude"  class="form-control gllpLongitude"  id="foodbakery_post_loc_longitude" name="foodbakery_post_loc_longitude_restaurant" value="-0.12775829999998223" />							</div>
+														</div>
+														
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+															<input type="hidden"  id="foodbakery__loc_bounds_rest"    name="foodbakery_loc_bounds_rest_restaurant" value="" /><input type="hidden"  id="foodbakery_add_new_loc"  class="gllpSearchField" style="margin-bottom:10px;"  name="foodbakery_add_new_loc_restaurant" value="" /><input type="hidden"  id="foodbakery_post_loc_zoom"  class="gllpZoom"   name="foodbakery_post_loc_zoom_restaurant" value="9" />						
+															<div class="field-holder">
+																<label>Find On Map</label>
+																<input type="text"  onkeypress="foodbakery_gl_search_map(this.value)" placeholder="Type Your Address"  class="foodbakery-search-location"  id="loc_address" name="foodbakery_post_loc_address_restaurant" />							</div>
+														</div>
+														
+														<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+															<div class="field-holder"></div>
+															<div class="field-holder search-location-map input-button-loader">
+																<input type="button"    class="acc-submit cs-section-update cs-color csborder-color gllpSearchButton"  id="foodbakery_map_search_btn" name="foodbakery_map_search_btn" value="Search Location" />							</div>
+														</div>
+													</div>
+														<div class="row">
+															<!-- map start -->
+															<div class = "col-lg-12 col-md-12 col-sm-12 col-xs-12">
+																<div class="cs-map-section" style="float:left; width:100%; height:284px;">
+																<div class="gllpMap" id="cs-map-location-fe-id"></div>
+																</div>
+																<!--<p> For the precise location, you can drag and drop the pin.-->
+															</div>
+														</div>
+													</div>
+													</div>
+													</div>
+												</fieldset>
 		</div>
 		<script type="text/javascript">
 			// Call Map gMapsLatLonPicker Class
@@ -618,28 +659,28 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<div class="field-holder">
 						<label>Username *</label>
-						<input type="text" placeholder="i.e alardwillaim" data-id="77697234" data-type="username" name="foodbakery_restaurant_username" class="foodbakery-dev-username foodbakery-dev-req-field"/>
+						<input type="text" placeholder="i.e alardwillaim" name="foodbakery_restaurant_username" class="foodbakery-dev-username foodbakery-dev-req-field" value="{{ username }}"/>
 						<span class="field-info foodbakery-dev-username-check"></span>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<div class="field-holder">
 						<label>Email *</label>
-						<input type="text" placeholder="i.e alard@example.com" data-id="77697234" data-type="useremail" name="foodbakery_restaurant_user_email" class="foodbakery-dev-user-email foodbakery-dev-req-field"/>
+						<input type="text" placeholder="i.e alard@example.com" name="foodbakery_restaurant_user_email" class="foodbakery-dev-user-email foodbakery-dev-req-field" value="{{ useremail }}"/>
 						<span class="field-info foodbakery-dev-useremail-check"></span>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<div class="field-holder">
 						<label>Password *</label>
-						<input type="password" placeholder="i.e *********" data-id="77697234" data-type="username" name="foodbakery_restaurant_password" class="foodbakery-dev-username foodbakery-dev-req-field"/>
+						<input type="password" placeholder="i.e *********" name="foodbakery_restaurant_password" class="foodbakery-dev-username"/>
 						<span class="field-info foodbakery-dev-username-check"></span>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
 					<div class="field-holder">
 						<label>Confirm Password *</label>
-						<input type="password" placeholder="i.e *********" data-id="77697234" data-type="useremail" name="foodbakery_restaurant_password2" class="foodbakery-dev-user-email foodbakery-dev-req-field"/>
+						<input type="password" placeholder="i.e *********" name="foodbakery_restaurant_password2" class="foodbakery-dev-user-email"/>
 						<span class="field-info foodbakery-dev-useremail-check"></span>
 					</div>
 				</div>
@@ -662,13 +703,19 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                             Privacy Policy                        </a>
                     </label>
                 </div>
-                
-									<input type="submit" value="Next" id="btn-next-restaurant-information" class="bgcolor"/>
+									<input type="hidden"     id="redirect_to" name="redirect_to" value="index.html" />
+									<input type="hidden"     id="user-cookie" name="user-cookie" value="1" />
+									<input type="hidden"     name="action" value="ajax_login" />
+									<input type="hidden"     id="login" name="login" value="login" />
+									<input type="submit" value="Next" id="next-btn" name="next-btn" class="bgcolor"/>
 								</div>
 							</div> 
 						</div>
-					</div>		</li><li style="display: none;"><input type="hidden" name="form_rand_id" value="77697234"/><input type="hidden" name="restaurant_id" value="0"/></li>	    
-	    </ul>			    				<ul id="foodbakery-dev-main-con-25803062" class="register-add-restaurant-tab-container package-tab-container" style="display: none;">	    <li>
+					</div>		</li>
+					<li style="display: none;">
+					<input type="hidden" name="form_rand_id" value="77697234"/><input type="hidden" name="restaurant_id" value="0"/></li>  
+	    </ul>			    				
+	<ul id="foodbakery-dev-main-con-25803062" class="register-add-restaurant-tab-container package-tab-container" style="display: none;">	    <li>
 	        <ul class="membership-info-main">
 		    		    
 				<li id="restaurant-packages-sec-25803062" style="display: block;">
@@ -788,7 +835,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 							</div> 
 						</div>
 					</div>	    </li>
-	    </ul> 
+	    </ul>
 			    
 			    <input type="hidden" id="action" name="action" value="user_and_restaurant_meta_save"/>
 			</form>
