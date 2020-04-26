@@ -44,6 +44,7 @@ class RestaurantProfile(models.Model):
     country = models.CharField(max_length=30,default='')
     state = models.CharField(max_length=50,default='')
     city = models.CharField(max_length=50,default='')
+    deliveryTime = models.IntegerField(default=20)
 
     SERVICE_TYPE =(
         ("delivery","Delivery"),
@@ -102,4 +103,21 @@ class DeliveryPersonProfile(models.Model):
         except:
             pass
 
+
+class CustomerReviews(models.Model):
+    reviewText = models.TextField()
+    dateTime = models.DateTimeField(auto_now_add=True)
+    customer = models.ForeignKey(CustomerProfile,on_delete=models.CASCADE)
+    restaurant = models.ForeignKey(RestaurantProfile,on_delete=models.CASCADE)
+    reviewSubject = models.CharField(max_length=35,default='Review')
+
+    RATINGS_CHOICES = (
+        (20,1),
+        (40,2),
+        (60,3),
+        (80,4),
+        (100,5)
+    )
+
+    ratings = models.IntegerField(choices=RATINGS_CHOICES,default=1,null=False)
 
