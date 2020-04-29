@@ -45,7 +45,8 @@ class RestaurantProfile(models.Model):
     state = models.CharField(max_length=50,default='')
     city = models.CharField(max_length=50,default='')
     deliveryTime = models.IntegerField(default=20)
-
+    minimumOrder = models.IntegerField(default=100)
+    
     SERVICE_TYPE =(
         ("delivery","Delivery"),
         ("pickup","Pickup"),

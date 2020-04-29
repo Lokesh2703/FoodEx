@@ -698,11 +698,12 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 	<div class="listing grid-listing three-cols">
 		<input type="hidden" id="current_user_location" value="0">
 		<div class="row">
+            {% for restaurant in restaurants %}
 							<div class="col-md-4 col-xs-6 grid-listing-col ">
 					<div class="img-holder">
 						<figure>
-							<a href="restaurants/italian-pizza-house/index.html">
-								<img width="359" height="212" src="{% static 'wp-content/uploads/foodbaker-special-pizza-359x212.jpg' %}" class="attachment-foodbakery_media_8 size-foodbakery_media_8" alt="" />							</a>
+							<a href="{% url 'individual-restaurant-view' restaurant.id %}">
+								<img width="359" height="212" src="{{ restaurant.image.url }}" class="attachment-foodbakery_media_8 size-foodbakery_media_8" alt="" />							</a>
 							<figcaption class="listing-meta">
 								<div class="listing-inner clearfix">
 									<div class="list-option">
@@ -755,28 +756,29 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 											</div>
 					<div class="text-holder">
 						<div class="listing-inner">
-							<h4><a href="restaurants/italian-pizza-house/index.html">Italian Pizza house</a></h4>
+							<h4><a href="{% url 'individual-restaurant-view' restaurant.id %}">{{ restaurant.restaurantName }}</a></h4>
 															<p>Hot Dogs, Pizza, Stakes</p>
 														<div class="min-order">
-								Min Order <span class="price">£10.00</span>
+								Min Order <span class="price">₹ {{ restaurant.minimumOrder }}</span>
 							</div>
 						</div>
 						<div class="listing-footer">
 							<div class="listing-inner clearfix">
 								<div class="img-holder">
-									<a href="restaurants/italian-pizza-house/index.html">
-										<img src="{% static 'wp-content/uploads/listing-logo18.png' %}" class="img-thumb wp-post-image" alt="" srcset="http://foodbakery.chimpgroup.com/homev1/wp-content/uploads/listing-logo18.png 130w, http://foodbakery.chimpgroup.com/homev1/wp-content/uploads/listing-logo18-100x100.png 100w" sizes="(max-width: 130px) 100vw, 130px" />									</a>
+									<a href="{% url 'individual-restaurant-view' restaurant.id %}">
+										<img src="{{ restaurant.image.url }}" class="img-thumb wp-post-image" alt="" sizes="(max-width: 130px) 100vw, 130px" />									</a>
 								</div>
 								<div class="text-holder">
-																			<p>Italy, Province of Verona, Legnano</p>
+																			<p>{{ restaurant.address }}</p>
 																												<p class="deliver-time"><span class="icon-motorcycle2"></span>40 min</p>
-																			<p class="pickup-time"><span class="icon-clock4"></span>40 min</p>
-																		<a href="restaurants/italian-pizza-house/index.html" class="ordernow-btn bgcolor">Order Now</a>
+																			<p class="pickup-time"><span class="icon-clock4"></span>{{ restaurant.deliveryTime }} min</p>
+																		<a href="{% url 'individual-restaurant-view' restaurant.id %}" class="ordernow-btn bgcolor">Order Now</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+                {% endfor %}
 								<div class="col-md-4 col-xs-6 grid-listing-col ">
 					<div class="img-holder">
 						<figure>
@@ -1296,6 +1298,53 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 <!--Foodbakery Element Start-->
     <div class="listing fancy fancy-simple">
         <ul class="row">
+            {% for restaurant in restaurants %}
+            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="list-post ">
+													<div class="img-holder">
+								<figure>
+									<a href="{% url 'individual-restaurant-view' restaurant.id %}">
+										<img src="{{ restaurant.image.url }}" class="img-thumb wp-post-image" alt="" sizes="(max-width: 130px) 100vw, 130px" />									</a>
+								</figure>
+							</div>
+																										<span class="restaurant-status open"><em class="bookmarkRibbon"></em>Open</span>
+						                                                <div class="text-holder">
+                            <div class="post-title">
+                                <h5>
+                                    <a href="{% url 'individual-restaurant-view' restaurant.id %}">{{ restaurant.restaurantName }}</a>
+                                                                    </h5>
+                            </div>
+
+                                                            <address>Hot Dogs, Pizza, Stakes</address>
+                                                            <div class="delivery-potions">
+																	<div class="post-time">
+                                        <i class="icon-check_circle"></i>
+										Min ₹{{ restaurant.minimumOrder }}									</div>
+								                                                                    <div class="post-time">
+                                        <i class="icon-motorcycle"></i>
+										{{ restaurant.deliveryTime }} min                                    </div>
+                                    									<div class="post-time">
+                                        <i class="icon-clock4"></i>
+										{{ restaurant.deliveryTime }} min                                    </div>
+                                        <br>
+                                																	<div class="list-rating">
+										<div class="rating-star">
+											<span class="rating-box" style="width: 100%;"></span>
+										</div>
+										<span class="reviews">(2)</span>
+									</div>
+																                                    <span>Legnano</span>
+                                                            </div>
+                        </div>
+						                                                    <div class="list-option">
+                                
+                <a href="javascript:void(0);" class="shortlist-btn" data-toggle="modal" data-target="#sign-in">
+                    <i class="icon-heart-o"></i>                </a>
+
+                                            </div>
+                                                </div>
+                </li>
+            {% endfor %}
                             <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="list-post ">
 													<div class="img-holder">
@@ -1340,6 +1389,8 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                                             </div>
                                                 </div>
                 </li>
+
+                
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="list-post ">
 													<div class="img-holder">
@@ -1642,15 +1693,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
             </script>
             <script type="text/javascript">
             jQuery("#inline-style-functions-inline-css").append(".cs-page-sec-728697{margin-top: 0px;padding-top: 60px;padding-bottom: 30px;margin-bottom: 0px;background: #ffffff;}");
-        </script>        <!-- Page Section 2121-->
-                <div  class="page-section  cs-page-sec-251385  nopadding cs-nomargin"    >
-                        <!-- Container Start -->
-
-            <div class="container "> 
-                                    <div class="row">
-                        <div class="section-fullwidth col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 "><div class="main-post promo-box"><div class="img-frame"><figure><img src="{% static 'wp-content/uploads/mobile-apps.png' %}" alt="FoodBakery in your mobile! Get our app"></figure></div><div class="column-text"><h3 style="color:#000000 !important;">FoodBakery in your mobile! Get our app</h3><div class="promo-content">Get our app, it's the fastest way to order food on the go.      </div><a class="app-btn" href="#"><img src="{% static 'wp-content/uploads/app-img1-1.png' %}" alt="foodbakery_var_app_store_image_url_array"></a><a class="app-btn" href="#"><img src="{% static 'wp-content/uploads/app-img2-1.png' %}" alt="foodbakery_var_google_store_image_url_array"></a><form><div class="field-holder"><input class="field-input" type="email" placeholder="Your Email"><label class="field-label-btn"><input class="field-btn" type="submit" value="Send Link" ></label></div></form></div></div></div></div><!-- end section row --></div>                    </div>
-                                </div>  <!-- End Container Start -->
-        </div> <!-- End Page Section -->
+        </script>
 
                     <script type="text/javascript">
                 if (jQuery("#inline-style-functions-inline-css").length == 0) {

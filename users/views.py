@@ -8,6 +8,7 @@ from .models import User,RestaurantProfile
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_exempt,csrf_protect
+from .models import RestaurantProfile
 
 def Restaurant_Required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url=None):
     """
@@ -54,9 +55,12 @@ def DeliveryPerson_Required(function=None, redirect_field_name=REDIRECT_FIELD_NA
     return actual_decorator
 
 def index(request):
+    restaurants = RestaurantProfile.objects.all()[:6]
     context={
-        'title' : 'FoodEx'
+        'title' : 'FoodEx',
+        'restaurants' : restaurants,
     }
+    print(len(restaurants))
     if request.method == 'POST':
         print(request.POST)
         if request.POST.get('user-submit')=="Sign Up":
