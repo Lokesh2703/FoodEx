@@ -25,7 +25,7 @@ def Restaurant_Required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, 
     return actual_decorator
 
 
-def Customer_Required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url=None):
+def Customer_Required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url='/user/login'):
     """
     Decorator for views that checks that the user is logged in, redirecting
     to the log-in page if necessary.
@@ -146,3 +146,26 @@ def registerRestaurant(request):
 
             return render(request,'users/register-user-and-add-restaurant/index2.html',context)
     return render(request,'users/register-user-and-add-restaurant/index.html',context)
+
+@Customer_Required
+def userDashboard(request):
+    return render(request,'users/user_dashboard/dashboard.html')
+
+@Customer_Required
+def userBookings(request):
+    return render(request,'users/user_dashboard/my-bookings.html')
+
+def userLogin(request):
+    print(request.GET)
+    if request.method == 'POST':
+        if request.POST.get('login'):
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                print("Login success",request.GET['next'])
+                return redirect(request.GET['next'])
+            else:
+                return redirect('/')  
+    return render(request,'users/my-account/index.html')
