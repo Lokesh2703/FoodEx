@@ -43,10 +43,10 @@ class FoodItemsDescription(models.Model):
 
 class OrdersDescription(models.Model):
     dateTime = models.DateTimeField(auto_now_add=True)
-    Subtotal = models.DecimalField(max_digits=10,decimal_places=2)
-    TotalPrice = models.DecimalField(max_digits=10,decimal_places=2)
-    charges = models.DecimalField(max_digits=10,decimal_places=2)
-    received = models.DecimalField(max_digits=10,decimal_places=2)
+    Subtotal = models.FloatField()
+    TotalPrice = models.FloatField()
+    charges = models.FloatField()
+    received = models.FloatField()
     
     class OrderStatusEnum(models.IntegerChoices):
         PROCESSING = 1

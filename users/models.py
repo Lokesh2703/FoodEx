@@ -14,7 +14,7 @@ class CustomerProfile(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
     mobile = PhoneNumberField()
     address = models.CharField(max_length=200)
-    image = models.ImageField(default='default.jpg',upload_to='profile_pics/')
+    image = models.ImageField(default='default_user_pic.jpg',upload_to='profile_pics/')
 
     def __str__(self):
         return f'{self.user.username} Profile'

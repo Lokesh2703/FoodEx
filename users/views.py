@@ -155,6 +155,10 @@ def userDashboard(request):
 def userBookings(request):
     return render(request,'users/user_dashboard/my-bookings.html')
 
+@Customer_Required
+def userAccountSetting(request):
+    return render(request,'users/user_dashboard/account-settings.html')
+
 def userLogin(request):
     print(request.GET)
     if request.method == 'POST':
