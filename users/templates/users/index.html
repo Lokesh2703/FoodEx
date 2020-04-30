@@ -360,6 +360,11 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 </ul> End Sub Menu -->
 </li>
 <li id="menu-item-1447" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% url 'restaurants-default' %}">Restaurants</a></li>
+{% if request.user.is_authenticated and request.user.is_delivery_person %}
+    <li id="menu-item-1448" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% url 'deliveryPersonOrdersboard' request.user.deliverypersonprofile.id %}">Delivery Person</a></li>
+{% elif not request.user.is_authenticated %}
+    <li id="menu-item-1448" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% url 'deliveryPersonLogin' %}">Delivery Person</a></li>    
+{% endif %}
 <li id="menu-item-1298" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-has-children"><a href="#">Pages</a>
 <ul>
 	<li id="menu-item-2414" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="price-plans/index.html">Price Plans</a></li>
@@ -1684,15 +1689,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
             </script>
             <script type="text/javascript">
             jQuery("#inline-style-functions-inline-css").append(".cs-page-sec-267948{margin-top: 0px;padding-top: 90px;padding-bottom: 10px;margin-bottom: 0px;background: #ffffff;}");
-        </script>        <!-- Page Section 2121-->
-                <div  class="page-section  cs-page-sec-728697  nopadding cs-nomargin"    >
-                        <!-- Container Start -->
-
-            <div class="container "> 
-                                    <div class="row">
-                        <div class="section-fullwidth col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 "><div class="element-title align-center"><h2>we caters for business and events</h2></div><div class="company-logo fancy"><ul><li><figure><a href="javascript:void(0)"><img src="{% static 'wp-content/uploads/partners-logo1.png' %}" alt="clients_img_user"></a></figure></li><li><figure><a href="javascript:void(0)"><img src="{% static 'wp-content/uploads/partners-logo2.png' %}" alt="clients_img_user"></a></figure></li><li><figure><a href="javascript:void(0)"><img src="{% static 'wp-content/uploads/partners-logo3.png' %}" alt="clients_img_user"></a></figure></li><li><figure><a href="javascript:void(0)"><img src="{% static 'wp-content/uploads/partners-logo4.png' %}" alt="clients_img_user"></a></figure></li><li><figure><a href="javascript:void(0)"><img src="{% static 'wp-content/uploads/partners-logo5.png' %}" alt="clients_img_user"></a></figure></li></ul></div></div></div><!-- end section row --></div>                    </div>
-                                </div>  <!-- End Container Start -->
-        </div> <!-- End Page Section -->
+        </script>
 
                     <script type="text/javascript">
                 if (jQuery("#inline-style-functions-inline-css").length == 0) {

@@ -1,7 +1,7 @@
 from django.shortcuts import render,get_list_or_404,get_object_or_404
 
 # Create your views here.
-from users.models import RestaurantProfile,CustomerReviews,CustomerProfile,User
+from users.models import RestaurantProfile,CustomerReviews,CustomerProfile,User,DeliveryPersonProfile
 from .models import OrdersDescription,OrderFoodQuantity,FoodItemsDescription
 import re
 from django.views.generic import (
@@ -58,5 +58,12 @@ def individualRestaurantView(request,pk):
             order.TotalPrice=round(sum+order.charges,2)
             order.received=order.TotalPrice
             order.save()
+
+            deliveryPeople = DeliveryPersonProfile.objects.filter(is_available=True)
+            if deliveryPeople:
+                order.deliveryPerson = deliveryPeople[0]
+                order.save()
+                deliveryPeople[0].is_available=False
+
     return render(request,'users/restaurants/italian-pizza-house/index.html',context)
  
