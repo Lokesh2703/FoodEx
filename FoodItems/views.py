@@ -37,7 +37,6 @@ def individualRestaurantView(request,pk):
     }
     if request.method=='POST':
         if request.POST.get('OrderConfirm'):
-            print(request.POST)
             order = OrdersDescription(status=1,
                                     restaurant=restaurant,
                                     customer=get_object_or_404(CustomerProfile,pk=request.POST.get('customer')),
@@ -51,9 +50,8 @@ def individualRestaurantView(request,pk):
             for k,v in request.POST.items():
                 if pat.match(k):
                     if int(v)>0:
-                        print(int(v))
                         foodItem = get_object_or_404(FoodItemsDescription,pk=int(k))
-                        sum=sum+foodItem.price
+                        sum=sum+(foodItem.price*int(v))
                         quan = OrderFoodQuantity(foodItemId=get_object_or_404(FoodItemsDescription,pk=int(k)),
                                                     quantity=int(v),orderId=order)
                         quan.save()

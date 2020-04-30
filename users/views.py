@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,get_object_or_404,get_list_or_404
 
 # Create your views here.
 from django.contrib.auth.decorators import user_passes_test
@@ -160,7 +160,6 @@ def userAccountSetting(request):
     return render(request,'users/user_dashboard/account-settings.html')
 
 def userLogin(request):
-    print(request.GET)
     if request.method == 'POST':
         if request.POST.get('login'):
             username = request.POST.get('username')
@@ -168,8 +167,16 @@ def userLogin(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                print("Login success",request.GET['next'])
                 return redirect(request.GET['next'])
             else:
                 return redirect('/')  
     return render(request,'users/my-account/index.html')
+
+def restaurantOrders(request,pk):
+    restaurant = get_object_or_404(RestaurantProfile,pk=pk)
+    orders = restaurant.ordersdescription_set.all()
+    context = {
+        'orders' : orders,
+        'restaurant' : restaurant
+    }
+    return render(request,'users/restaurant-dashboard/orders.html',context)
