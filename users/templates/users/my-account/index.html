@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en-US">
     
@@ -7,14 +8,14 @@
                 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="profile" href="http://gmpg.org/xfn/11">
-        <link rel="pingback" href="../xmlrpc.html">
+        <link rel="pingback" href="{% static 'xmlrpc.html' %}">
         <title>My Account &#8211; FoodBakery</title>
 <meta name='robots' content='noindex,follow' />
 <link rel='dns-prefetch' href='http://maps.googleapis.com/' />
 <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
 <link rel='dns-prefetch' href='http://s.w.org/' />
-<link rel="alternate" type="application/rss+xml" title="FoodBakery &raquo; Feed" href="../feed/index.html" />
-<link rel="alternate" type="application/rss+xml" title="FoodBakery &raquo; Comments Feed" href="../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="FoodBakery &raquo; Feed" href="{% static 'feed/index.html' %}" />
+<link rel="alternate" type="application/rss+xml" title="FoodBakery &raquo; Comments Feed" href="{% static 'comments/feed/index.html' %}" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />		<script type="text/javascript">
 			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.8"}};
 			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
@@ -34,67 +35,67 @@ img.emoji {
 }
 </style>
 <link rel='stylesheet' id='foodbakery-google-fonts-css'  href='http://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C700%2C700italic%2C900%2C900italic%7CMontserrat%3Aregular%2C700%26subset%3Dcyrillic-ext%2Cgreek-ext%2Cgreek%2Clatin-ext%2Cvietnamese%2Ccyrillic%2Clatin%2Clatin&amp;ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='iconmoon-css'  href='../wp-content/themes/foodbakery/assets/common/icomoon/css/iconmoon9537.css?ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='bootstrap-css'  href='../wp-content/themes/foodbakery/assets/frontend/css/bootstrap9537.css?ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='bootstrap-theme-css'  href='../wp-content/themes/foodbakery/assets/frontend/css/bootstrap-theme9537.css?ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='chosen-css'  href='../wp-content/themes/foodbakery/assets/frontend/css/chosen9537.css?ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='swiper-css'  href='../wp-content/themes/foodbakery/assets/frontend/css/swiper9537.css?ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='animate-css'  href='../wp-content/themes/foodbakery/assets/frontend/css/animate9537.css?ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='foodbakery-style-css'  href='../wp-content/themes/foodbakery/style9537.css?ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='foodbakery-widget-css'  href='../wp-content/themes/foodbakery/assets/frontend/css/widget9537.css?ver=4.8.8' type='text/css' media='all' />
+<link rel='stylesheet' id='iconmoon-css'  href="{% static 'wp-content/themes/foodbakery/assets/common/icomoon/css/iconmoon9537.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href="{% static 'wp-content/themes/foodbakery/assets/frontend/css/bootstrap9537.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-theme-css'  href="{% static 'wp-content/themes/foodbakery/assets/frontend/css/bootstrap-theme9537.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='chosen-css'  href="{% static 'wp-content/themes/foodbakery/assets/frontend/css/chosen9537.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='swiper-css'  href="{% static 'wp-content/themes/foodbakery/assets/frontend/css/swiper9537.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css'  href="{% static 'wp-content/themes/foodbakery/assets/frontend/css/animate9537.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='foodbakery-style-css'  href="{% static 'wp-content/themes/foodbakery/style9537.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='foodbakery-widget-css'  href="{% static 'wp-content/themes/foodbakery/assets/frontend/css/widget9537.css' %}" type='text/css' media='all' />
 <link rel='stylesheet' id='foodbakery-google-font-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C600italic%2C400%2C600&amp;subset=latin%2Ccyrillic-ext&amp;ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='foodbakery-social-network-css'  href='../wp-content/themes/foodbakery/assets/backend/css/social-network9537.css?ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='foodbakery_fonticonpicker_bootstrap_css-css'  href='../wp-content/plugins/wp-foodbakery/assets/icomoon/theme/bootstrap-theme/jquery.fonticonpicker.bootstrap9537.css?ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='bootstrap_slider-css'  href='../wp-content/plugins/wp-foodbakery/assets/frontend/css/bootstrap-slider9537.css?ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='foodbakery_plugin_css-css'  href='../wp-content/plugins/wp-foodbakery/assets/frontend/css/cs-foodbakery-plugin9537.css?ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='datetimepicker-css'  href='../wp-content/plugins/wp-foodbakery/assets/common/css/jquery_datetimepicker9537.css?ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='foodbakery-default-element-style-css'  href='../wp-content/themes/foodbakery_/assets/frontend/css/default-elementcd9c.css?ver=5cf8b56c53f520495f901ffa118b9d82' type='text/css' media='all' />
-<link rel='stylesheet' id='select2-css'  href='../wp-content/plugins/woocommerce/assets/css/select24c8b.css?ver=3.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='foodbakery-social-network-css'  href="{% static 'wp-content/themes/foodbakery/assets/backend/css/social-network9537.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='foodbakery_fonticonpicker_bootstrap_css-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/icomoon/theme/bootstrap-theme/jquery.fonticonpicker.bootstrap9537.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap_slider-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/css/bootstrap-slider9537.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='foodbakery_plugin_css-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/css/cs-foodbakery-plugin9537.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='datetimepicker-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/common/css/jquery_datetimepicker9537.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='foodbakery-default-element-style-css'  href="{% static 'wp-content/themes/foodbakery_/assets/frontend/css/default-elementcd9c.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='select2-css'  href="{% static 'wp-content/plugins/woocommerce/assets/css/select24c8b.css' %}" type='text/css' media='all' />
 <style id='woocommerce-inline-inline-css' type='text/css'>
 .woocommerce form .form-row .required { visibility: visible; }
 </style>
-<link rel='stylesheet' id='foodbakery_responsive_css-css'  href='../wp-content/themes/foodbakery/assets/frontend/css/responsivef24c.css?ver=1.6' type='text/css' media='all' />
-<link rel='stylesheet' id='jquery-mCustomScrollbar-css'  href='../wp-content/plugins/wp-foodbakery/assets/frontend/css/jquery.mCustomScrollbar9537.css?ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='daterangepicker-css'  href='../wp-content/plugins/wp-foodbakery/assets/frontend/css/daterangepicker9537.css?ver=4.8.8' type='text/css' media='all' />
-<link rel='stylesheet' id='bootstrap-datepicker-css'  href='../wp-content/plugins/wp-foodbakery/assets/frontend/css/bootstrap-datepicker9537.css?ver=4.8.8' type='text/css' media='all' />
-<script type='text/javascript' src='../wp-includes/js/jquery/jqueryb8ff.js?ver=1.12.4'></script>
-<script type='text/javascript' src='../wp-includes/js/jquery/jquery-migrate.min330a.js?ver=1.4.1'></script>
-<script type='text/javascript' src='../wp-content/themes/foodbakery/assets/common/js/chosen.selectf24c.js?ver=1.6'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery_latlon_picker9537.js?ver=4.8.8'></script>
+<link rel='stylesheet' id='foodbakery_responsive_css-css'  href="{% static 'wp-content/themes/foodbakery/assets/frontend/css/responsivef24c.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-mCustomScrollbar-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/css/jquery.mCustomScrollbar9537.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='daterangepicker-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/css/daterangepicker9537.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-datepicker-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/css/bootstrap-datepicker9537.css' %}" type='text/css' media='all' />
+<script type='text/javascript' src="{% static 'wp-includes/js/jquery/jqueryb8ff.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/jquery/jquery-migrate.min330a.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/common/js/chosen.selectf24c.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery_latlon_picker9537.js' %}"></script>
 <script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyD2TXu7gwlRglQOqc_bW55zytRombGZAcI&amp;libraries=places%2Cdrawing&amp;ver=4.8.8'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var icons_vars = {"plugin_url":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-content\/plugins\/wp-foodbakery\/"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/common/js/icons-loader9537.js?ver=4.8.8'></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/common/js/icons-loader9537.js' %}"></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-admin\/admin-ajax.php","plugin_dir_url":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-content\/plugins\/wp-foodbakery\/","security":"5aa9215f18"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/functions9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/theia-sticky-sidebar9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery-ui9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/common/js/jquery-te-1.4.0.min9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/booking-functions9537.js?ver=4.8.8'></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/functions9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/theia-sticky-sidebar9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery-ui9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/common/js/jquery-te-1.4.0.min9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/booking-functions9537.js' %}"></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var _zxcvbnSettings = {"src":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-includes\/js\/zxcvbn.min.js"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='../wp-includes/js/zxcvbn-async.min5152.js?ver=1.0'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery.twbsPagination.min5152.js?ver=1.0'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/orders-functions9537.js?ver=4.8.8'></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/zxcvbn-async.min5152.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery.twbsPagination.min5152.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/orders-functions9537.js' %}"></script>
 <link rel='https://api.w.org/' href='../wp-json/index.html' />
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.html?rsd" />
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml" /> 
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="{% static 'xmlrpc0db0.html?rsd' %}" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{% static 'wp-includes/wlwmanifest.xml' %}" /> 
 <meta name="generator" content="WordPress 4.8.8" />
 <meta name="generator" content="WooCommerce 3.4.5" />
 <link rel="canonical" href="index.html" />
 <link rel='shortlink' href='../indexa6f0.html?p=1812' />
-<link rel="alternate" type="application/json+oembed" href="../wp-json/oembed/1.0/embed443d.json?url=http%3A%2F%2Ffoodbakery.chimpgroup.com%2Fhomev1%2Fmy-account%2F" />
-<link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embed9e0f.json?url=http%3A%2F%2Ffoodbakery.chimpgroup.com%2Fhomev1%2Fmy-account%2F&amp;format=xml" />
+<link rel="alternate" type="application/json+oembed" href="{% static 'wp-json/oembed/1.0/embed443d.json?url=http%3A%2F%2Ffoodbakery.chimpgroup.com%2Fhomev1%2Fmy-account%2F' %}" />
+<link rel="alternate" type="text/xml+oembed" href="{% static 'wp-json/oembed/1.0/embed9e0f.json?url=http%3A%2F%2Ffoodbakery.chimpgroup.com%2Fhomev1%2Fmy-account%2F&amp;format=xml' %}" />
 	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
 	<meta name='robots' content='noindex,follow' />
     </head>
@@ -110,11 +111,11 @@ var _zxcvbnSettings = {"src":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-inc
 			 	    		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 			 			    	    		    <div class="logo">
 	    			<figure> 
-	    			    <a href="../index.html" class="light-logo"> 
-					    						<img src="../wp-content/uploads/logo.png"  alt="FoodBakery">
+	    			    <a href="{% static 'index.html' %}" class="light-logo"> 
+					    						<img src="{% static 'wp-content/uploads/logo.png' %}"  alt="FoodBakery">
 							    			    </a> 
-										    <a href="../index.html" class="dark-logo">
-						<img src="../wp-content/uploads/sticky-logo.png"  alt="FoodBakery">
+										    <a href="{% static 'index.html' %}" class="dark-logo">
+						<img src="{% static 'wp-content/uploads/sticky-logo.png' %}"  alt="FoodBakery">
 					    </a>
 					    
 	    			</figure>
@@ -122,7 +123,7 @@ var _zxcvbnSettings = {"src":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-inc
 			                                 			    			    	    		    <div class="main-location">
 	    			<ul>
 					                <li class="location-has-children"><a href="#"><i class="icon-compass-with-white-needles"></i>Feel Like Eating</a>
-                        <ul><li><a href="../listings/index90a1.html?foodbakery_restaurant_category=apple-juice"><img alt="" src="../wp-content/uploads/food-icon-05-1.png"/>Apple Juice</a> <span></span> </li><li><a href="../listings/indexf9ec.html?foodbakery_restaurant_category=bb-q"><img alt="" src="../wp-content/uploads/food-icon-19-1.png"/>BB.Q</a> <span></span> </li><li><a href="../listings/index27f9.html?foodbakery_restaurant_category=beef-roast"><img alt="" src="../wp-content/uploads/food-icon-22-1.png"/>Beef Roast</a> <span></span> </li><li><a href="../listings/index4045.html?foodbakery_restaurant_category=carrot-juice"><img alt="" src="../wp-content/uploads/food-icon-10-1.png"/>Carrot Juice</a> <span></span> </li><li><a href="../listings/index3631.html?foodbakery_restaurant_category=cheese-burger"><img alt="" src="../wp-content/uploads/food-icon-03-1.png"/>Cheese Burger</a> <span></span> </li><li><a href="../listings/index9329.html?foodbakery_restaurant_category=chicken-roast"><img alt="" src="../wp-content/uploads/food-icon-07-1.png"/>Chicken Roast</a> <span></span> </li><li><a href="../listings/index4f90.html?foodbakery_restaurant_category=chines-soup"><img alt="" src="../wp-content/uploads/food-icon-01-1.png"/>Chines Soup</a> <span></span> </li><li><a href="../listings/indexe2ca.html?foodbakery_restaurant_category=cold-coffee"><img alt="" src="../wp-content/uploads/food-icon-18-1.png"/>Cold Coffee</a> <span></span> </li><li><a href="../listings/index4839.html?foodbakery_restaurant_category=cold-drink"><img alt="" src="../wp-content/uploads/food-icon-23-1.png"/>Cold Drink</a> <span></span> </li><li><a href="../listings/indexd2c2.html?foodbakery_restaurant_category=cupcake"><img alt="" src="../wp-content/uploads/food-icon-28-1.png"/>Cupcake</a> <span></span> </li><li><a href="../listings/indexeed9.html?foodbakery_restaurant_category=doughnut"><img alt="" src="../wp-content/uploads/food-icon-21-1.png"/>Doughnut</a> <span></span> </li><li><a href="../listings/indexef4a.html?foodbakery_restaurant_category=stakes"><img alt="" src="../wp-content/uploads/food-icon-16-1.png"/>Stakes</a> <span></span> </li><li><a href="../listings/indexcb8f.html?foodbakery_restaurant_category=steam-roast"><img alt="" src="../wp-content/uploads/food-icon-22-1.png"/>Steam Roast</a> <span></span> </li></ul>
+                        <ul><li><a href="{% static 'listings/index90a1.html?foodbakery_restaurant_category=apple-juice' %}"><img alt="" src="{% static 'wp-content/uploads/food-icon-05-1.png' %}"/>Apple Juice</a> <span></span> </li><li><a href="{% static 'listings/indexf9ec.html?foodbakery_restaurant_category=bb-q' %}"><img alt="" src="{% static 'wp-content/uploads/food-icon-19-1.png' %}"/>BB.Q</a> <span></span> </li><li><a href="{% static 'listings/index27f9.html?foodbakery_restaurant_category=beef-roast' %}"><img alt="" src="{% static 'wp-content/uploads/food-icon-22-1.png' %}"/>Beef Roast</a> <span></span> </li><li><a href="{% static 'listings/index4045.html?foodbakery_restaurant_category=carrot-juice' %}"><img alt="" src="{% static 'wp-content/uploads/food-icon-10-1.png' %}"/>Carrot Juice</a> <span></span> </li><li><a href="{% static 'listings/index3631.html?foodbakery_restaurant_category=cheese-burger' %}"><img alt="" src="{% static 'wp-content/uploads/food-icon-03-1.png' %}"/>Cheese Burger</a> <span></span> </li><li><a href="{% static 'listings/index9329.html?foodbakery_restaurant_category=chicken-roast' %}"><img alt="" src="{% static 'wp-content/uploads/food-icon-07-1.png' %}"/>Chicken Roast</a> <span></span> </li><li><a href="{% static 'listings/index4f90.html?foodbakery_restaurant_category=chines-soup' %}"><img alt="" src="{% static 'wp-content/uploads/food-icon-01-1.png' %}"/>Chines Soup</a> <span></span> </li><li><a href="{% static 'listings/indexe2ca.html?foodbakery_restaurant_category=cold-coffee' %}"><img alt="" src="{% static 'wp-content/uploads/food-icon-18-1.png' %}"/>Cold Coffee</a> <span></span> </li><li><a href="{% static 'listings/index4839.html?foodbakery_restaurant_category=cold-drink' %}"><img alt="" src="{% static 'wp-content/uploads/food-icon-23-1.png' %}"/>Cold Drink</a> <span></span> </li><li><a href="{% static 'listings/indexd2c2.html?foodbakery_restaurant_category=cupcake' %}"><img alt="" src="{% static 'wp-content/uploads/food-icon-28-1.png' %}"/>Cupcake</a> <span></span> </li><li><a href="{% static 'listings/indexeed9.html?foodbakery_restaurant_category=doughnut' %}"><img alt="" src="{% static 'wp-content/uploads/food-icon-21-1.png' %}"/>Doughnut</a> <span></span> </li><li><a href="{% static 'listings/indexef4a.html?foodbakery_restaurant_category=stakes' %}"><img alt="" src="{% static 'wp-content/uploads/food-icon-16-1.png' %}"/>Stakes</a> <span></span> </li><li><a href="{% static 'listings/indexcb8f.html?foodbakery_restaurant_category=steam-roast' %}"><img alt="" src="{% static 'wp-content/uploads/food-icon-22-1.png' %}"/>Steam Roast</a> <span></span> </li></ul>
                 </li>
                 					                <li class="location-has-children choose-location">
                     <a href="#"><i class="icon-location-pin2"></i>Choose location</a>
@@ -331,33 +332,33 @@ var _zxcvbnSettings = {"src":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-inc
 
 
                 </script>
-                <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal" href="#user-register">Login / Register</a><a class="get-start-btn" href="../register-user-and-add-restaurant/index.html" > Register Restaurant  </a> 	    		    </div>
+                <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal" href="#user-register">Login / Register</a><a class="get-start-btn" href="{% static 'register-user-and-add-restaurant/index.html' %}" > Register Restaurant  </a> 	    		    </div>
 								    <div class="main-nav">
 						    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
-		<ul id="menu-main-menu" class="primary-menu"><li id="menu-item-33" class="menu-item  menu-item-type-post_type  menu-item-object-page  menu-item-home  menu-item-has-children"><a href="../index.html">Demos</a>
+		<ul id="menu-main-menu" class="primary-menu"><li id="menu-item-33" class="menu-item  menu-item-type-post_type  menu-item-object-page  menu-item-home  menu-item-has-children"><a href="{% static 'index.html' %}">Demos</a>
 <ul>
-	<li id="menu-item-3816" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="../../index.html">Food Bakery</a></li>
-	<li id="menu-item-3815" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-home"><a href="../index.html">Mexican Restaurant</a></li>
-	<li id="menu-item-5343" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="../../rtl/index.html">RTL Demo</a></li>
+	<li id="menu-item-3816" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="{% static '../index.html' %}">Food Bakery</a></li>
+	<li id="menu-item-3815" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-home"><a href="{% static 'index.html' %}">Mexican Restaurant</a></li>
+	<li id="menu-item-5343" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="{% static '../rtl/index.html' %}">RTL Demo</a></li>
 </ul> <!--End Sub Menu -->
 </li>
-<li id="menu-item-1447" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="../listings/index.html">Restaurants</a></li>
+<li id="menu-item-1447" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'listings/index.html' %}">Restaurants</a></li>
 <li id="menu-item-1298" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-has-children"><a href="#">Pages</a>
 <ul>
-	<li id="menu-item-2414" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="../price-plans/index.html">Price Plans</a></li>
-	<li id="menu-item-297" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="../how-it-works/index.html">How it works</a></li>
-	<li id="menu-item-296" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="../faqs/index.html">FAQ&#8217;s</a></li>
-	<li id="menu-item-38" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="../404.html">404</a></li>
-	<li id="menu-item-39" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="../indexdccf.html?s=Enter+your+keyword">Search Result</a></li>
-	<li id="menu-item-298" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="../contact-us/index.html">Contact</a></li>
+	<li id="menu-item-2414" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'price-plans/index.html' %}">Price Plans</a></li>
+	<li id="menu-item-297" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'how-it-works/index.html' %}">How it works</a></li>
+	<li id="menu-item-296" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'faqs/index.html' %}">FAQ&#8217;s</a></li>
+	<li id="menu-item-38" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="{% static '404.html' %}">404</a></li>
+	<li id="menu-item-39" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="{% static 'indexdccf.html?s=Enter+your+keyword' %}">Search Result</a></li>
+	<li id="menu-item-298" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'contact-us/index.html' %}">Contact</a></li>
 </ul> <!--End Sub Menu -->
 </li>
 <li id="menu-item-303" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-has-children"><a href="#">Blogs</a>
 <ul>
-	<li id="menu-item-45" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="../blog-large/index.html">Blog Large</a></li>
-	<li id="menu-item-156" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="../blog-medium/index.html">Blog Medium</a></li>
-	<li id="menu-item-155" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="../blog-masonry/index.html">Blog Masonry</a></li>
-	<li id="menu-item-304" class="menu-item  menu-item-type-post_type  menu-item-object-post"><a href="../creating-the-worlds-greatest-food-community-with-food-bakery/index.html">Blog Detail Page</a></li>
+	<li id="menu-item-45" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'blog-large/index.html' %}">Blog Large</a></li>
+	<li id="menu-item-156" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'blog-medium/index.html' %}">Blog Medium</a></li>
+	<li id="menu-item-155" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'blog-masonry/index.html' %}">Blog Masonry</a></li>
+	<li id="menu-item-304" class="menu-item  menu-item-type-post_type  menu-item-object-post"><a href="{% static 'creating-the-worlds-greatest-food-community-with-food-bakery/index.html' %}">Blog Detail Page</a></li>
 </ul> <!--End Sub Menu -->
 </li>
 </ul>	    </nav><!-- .main-navigation -->
@@ -368,7 +369,7 @@ var _zxcvbnSettings = {"src":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-inc
 		</div>
 	</header>
 			<div class="sub-header align-center">
-		    <div class="subheader-holder"  style=" background:url(../wp-content/uploads/fb-subheader-4.jpg)  no-repeat ; background-size: cover; padding-top: 170px; padding-bottom: 165px; margin-top: 0px; margin-bottom: 0px; min-height: 430px !important;">
+		    <div class="subheader-holder"  style=" background:url({% static 'wp-content/uploads/fb-subheader-4.jpg' %})  no-repeat ; background-size: cover; padding-top: 170px; padding-bottom: 165px; margin-top: 0px; margin-bottom: 0px; min-height: 430px !important;">
 			<div class="container">
 			    <div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -383,7 +384,7 @@ var _zxcvbnSettings = {"src":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-inc
 			    </div>
 			</div>
 		    </div>
-		    <div class="breadcrumbs align-left"><div class="container"><div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> <ul><li><a href="../index.html">Home</a></li><li class="active">My Account</li></ul></div></div></div></div>		</div>
+		    <div class="breadcrumbs align-left"><div class="container"><div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> <ul><li><a href="{% static 'index.html' %}">Home</a></li><li class="active">My Account</li></ul></div></div></div></div>		</div>
 		
 <div class="main-section ">
             <div class="page-content-fullwidth"><div class="col-xs-12"><div class="container"><div class="row">
@@ -395,7 +396,7 @@ var _zxcvbnSettings = {"src":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-inc
 		<h2>Login</h2>
 
 		<form class="woocommerce-form woocommerce-form-login login" method="post">
-
+        {% csrf_token %}
 			
 			<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 				<label for="username">Username or email address&nbsp;<span class="required">*</span></label>
@@ -407,16 +408,15 @@ var _zxcvbnSettings = {"src":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-inc
 
 			
 			<p class="form-row">
-				<input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="7ea2d01bf6" /><input type="hidden" name="_wp_http_referer" value="/homev1/my-account/" />				<button type="submit" class="woocommerce-Button button" name="login" value="Log in">Log in</button>
+				<input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="7ea2d01bf6" /><input type="hidden" name="_wp_http_referer" value="/homev1/my-account/" />				
+                <button type="submit" class="woocommerce-Button button" name="login" value="Log in">Log in</button>
 				<label class="woocommerce-form__label woocommerce-form__label-for-checkbox inline">
 					<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span>Remember me</span>
 				</label>
 			</p>
-			<p class="woocommerce-LostPassword lost_password">
-				<a href="lost-password/index.html">Lost your password?</a>
+			<p class="woocommerce-LostPassword lost_password">Don't have an Account? 
+				<a href="{% url 'deliveryPersonRegister' %}">Sign Up</a>
 			</p>
-
-			
 		</form>
 
 
@@ -433,11 +433,11 @@ var _zxcvbnSettings = {"src":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-inc
 			    <div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 				    <div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-top-cities"><div class="widget-title"><h5>Popular Cities</h5></div><ul><li><a href="../listings/index07c4.html?location=Barcelona">Barcelona</a></li><li><a href="../listings/index8d15.html?location=Florida">Florida</a></li><li><a href="../listings/indexead1.html?location=Miami">Miami</a></li><li><a href="../listings/indexe3cf.html?location=Normandy">Normandy</a></li><li><a href="../listings/index6775.html?location=Toronto">Toronto</a></li><li><a href="../listings/index4ca2.html?location=United States">United States</a></li></ul></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-top-cities"><div class="widget-title"><h5>Popular Cuisnies</h5></div><ul><li><a href="../listings/index523e.html?restaurant-category=apple-juice">Apple Juice</a></li><li><a href="../listings/indexe3a7.html?restaurant-category=bb-q">BB.Q</a></li><li><a href="../listings/index7c2f.html?restaurant-category=chicken-roast">Chicken Roast</a></li><li><a href="../listings/index896c.html?restaurant-category=hot-dogs">Hot Dogs</a></li><li><a href="../listings/index5fc8.html?restaurant-category=prawns">Prawns</a></li><li><a href="../listings/index0712.html?restaurant-category=steam-roast">Steam Roast</a></li></ul></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-categories"><div class="widget-title"><h5>Menu</h5></div><ul><li id="menu-item-289" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-289"><a href="../index.html"> Home</a></li>
-<li id="menu-item-1243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1243"><a href="../blog-large/index.html"> Blog Large</a></li>
-<li id="menu-item-293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293"><a href="../contact-us/index.html"> Contact</a></li>
-<li id="menu-item-324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-324"><a href="../faqs/index.html"> FAQ&#8217;s</a></li>
-<li id="menu-item-325" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-325"><a href="../how-it-works/index.html"> How it works</a></li>
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-top-cities"><div class="widget-title"><h5>Popular Cities</h5></div><ul><li><a href="{% static 'listings/index07c4.html?location=Barcelona' %}">Barcelona</a></li><li><a href="{% static 'listings/index8d15.html?location=Florida' %}">Florida</a></li><li><a href="{% static 'listings/indexead1.html?location=Miami' %}">Miami</a></li><li><a href="{% static 'listings/indexe3cf.html?location=Normandy' %}">Normandy</a></li><li><a href="{% static 'listings/index6775.html?location=Toronto' %}">Toronto</a></li><li><a href="../listings/index4ca2.html?location=United States">United States</a></li></ul></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-top-cities"><div class="widget-title"><h5>Popular Cuisnies</h5></div><ul><li><a href="{% static 'listings/index523e.html?restaurant-category=apple-juice' %}">Apple Juice</a></li><li><a href="{% static 'listings/indexe3a7.html?restaurant-category=bb-q' %}">BB.Q</a></li><li><a href="{% static 'listings/index7c2f.html?restaurant-category=chicken-roast' %}">Chicken Roast</a></li><li><a href="{% static 'listings/index896c.html?restaurant-category=hot-dogs' %}">Hot Dogs</a></li><li><a href="{% static 'listings/index5fc8.html?restaurant-category=prawns' %}">Prawns</a></li><li><a href="{% static 'listings/index0712.html?restaurant-category=steam-roast' %}">Steam Roast</a></li></ul></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-categories"><div class="widget-title"><h5>Menu</h5></div><ul><li id="menu-item-289" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-289"><a href="{% static 'index.html' %}"> Home</a></li>
+<li id="menu-item-1243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1243"><a href="{% static 'blog-large/index.html' %}"> Blog Large</a></li>
+<li id="menu-item-293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293"><a href="{% static 'contact-us/index.html' %}"> Contact</a></li>
+<li id="menu-item-324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-324"><a href="{% static 'faqs/index.html' %}"> FAQ&#8217;s</a></li>
+<li id="menu-item-325" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-325"><a href="{% static 'how-it-works/index.html' %}"> How it works</a></li>
 </ul></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-connect"><div class="widget-title"><h5>Connect With Us</h5></div>		    <ul class="social-media">
 						    <li><a href="#" data-original-title="twitter"><i class=" icon-twitter"></i></a></li>
 						    <li><a href="#" data-original-title="linkedin"><i class="icon-linkedin"></i></a></li>
@@ -619,9 +619,9 @@ var _zxcvbnSettings = {"src":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-inc
                                 </div><div class="input-filed"><i class="icon-v-card"></i><input type="text"   placeholder="Display Name"   id="foodbakery_display_name302647" name="foodbakery_display_name302647" /></div><div class="input-filed"><i class="icon-email"></i><input type="email"   placeholder="Email"   id="foodbakery_user_email302647" name="foodbakery_user_email302647" /></div><span class="signup-alert"><b>Note :</b> Please enter your correct email and we will send you a password on that email.</span>                <div class="checkbox-area">
                     <input type="checkbox" id="terms-302647" name="terms-302647" class="foodbakery-dev-req-field"/>
                     <label for="terms-302647">
-                        By Registering You Confirm That You Accept The                        <a target="_blank" href="../contact-us/index.html">
+                        By Registering You Confirm That You Accept The                        <a target="_blank" href="{% static 'contact-us/index.html' %}">
                             Terms &amp; conditions                        </a>
-                        And                        <a target="_blank" href="../contact-us/index.html">
+                        And                        <a target="_blank" href="{% static 'contact-us/index.html' %}">
                             Privacy Policy                        </a>
                     </label>
                 </div>
@@ -654,69 +654,70 @@ var _zxcvbnSettings = {"src":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-inc
 var foodbakery_shortlists = {"admin_url":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-admin\/admin-ajax.php","confirm_msg":"Are you sure to do this?"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='../wp-content/plugins/foodbakery-shortlists/assets/js/functions4fa9.js?ver=foodbakery-shortlists'></script>
-<script type='text/javascript' src='../wp-content/themes/foodbakery/assets/common/js/bootstrap.minf24c.js?ver=1.6'></script>
-<script type='text/javascript' src='../wp-content/themes/foodbakery/assets/frontend/js/modernizrf24c.js?ver=1.6'></script>
-<script type='text/javascript' src='../wp-content/themes/foodbakery/assets/frontend/js/responsive.menuf24c.js?ver=1.6'></script>
-<script type='text/javascript' src='../wp-content/themes/foodbakery/assets/frontend/js/swiper.minf24c.js?ver=1.6'></script>
-<script type='text/javascript' src='../wp-content/themes/foodbakery/assets/frontend/js/counterf24c.js?ver=1.6'></script>
-<script type='text/javascript' src='../wp-content/themes/foodbakery/assets/frontend/js/flitersf24c.js?ver=1.6'></script>
-<script type='text/javascript' src='../wp-content/themes/foodbakery/assets/backend/js/cs-map_stylesf24c.js?ver=1.6'></script>
-<script type='text/javascript' src='../wp-content/themes/foodbakery/assets/frontend/js/jquery.fitvidsf24c.js?ver=1.6'></script>
-<script type='text/javascript' src='../wp-content/themes/foodbakery/assets/frontend/js/jquery.matchHeight-minf24c.js?ver=1.6'></script>
-<script type='text/javascript' src='../wp-content/themes/foodbakery/assets/frontend/js/functionsf24c.js?ver=1.6'></script>
-<script type='text/javascript' src='../wp-content/themes/foodbakery/assets/frontend/js/skills-progressf24c.js?ver=1.6'></script>
-<script type='text/javascript' src='../wp-includes/js/imagesloaded.min55a0.js?ver=3.2.0'></script>
-<script type='text/javascript' src='../wp-includes/js/masonry.mind617.js?ver=3.3.2'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/foodbakery-map-styles9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery.growl9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/bootstrap-slider9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/common/js/jquery_datetimepicker9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/common/js/jquery.location-autocomplete9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-content/plugins/foodbakery-framework/assets/js/jquery.countdown9537.js?ver=4.8.8'></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/foodbakery-shortlists/assets/js/functions4fa9.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/common/js/bootstrap.minf24c.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/modernizrf24c.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/responsive.menuf24c.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/swiper.minf24c.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/counterf24c.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/flitersf24c.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/backend/js/cs-map_stylesf24c.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/jquery.fitvidsf24c.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/jquery.matchHeight-minf24c.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/functionsf24c.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/skills-progressf24c.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/imagesloaded.min55a0.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/masonry.mind617.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/foodbakery-map-styles9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery.growl9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/bootstrap-slider9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/common/js/jquery_datetimepicker9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/common/js/jquery.location-autocomplete9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/foodbakery-framework/assets/js/jquery.countdown9537.js' %}"></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var wc_add_to_cart_params = {"ajax_url":"\/homev1\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/homev1\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"http:\/\/foodbakery.chimpgroup.com\/homev1\/cart\/","is_cart":"","cart_redirect_after_add":"no"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='../wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min4c8b.js?ver=3.4.5'></script>
-<script type='text/javascript' src='../wp-content/plugins/woocommerce/assets/js/selectWoo/selectWoo.full.min4b68.js?ver=1.0.4'></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min4c8b.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/woocommerce/assets/js/selectWoo/selectWoo.full.min4b68.js' %}"></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var pwsL10n = {"unknown":"Password strength unknown","short":"Very weak","bad":"Weak","good":"Medium","strong":"Strong","mismatch":"Mismatch"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='../wp-admin/js/password-strength-meter.min9537.js?ver=4.8.8'></script>
+<script type='text/javascript' src="{% static 'wp-admin/js/password-strength-meter.min9537.js' %}"></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var wc_password_strength_meter_params = {"min_password_strength":"3","i18n_password_error":"Please enter a stronger password.","i18n_password_hint":"Hint: The password should be at least twelve characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! \" ? $ % ^ & )."};
+var wc_password_strength_meter_params = {"min_password_strength":"3","i18n_password_error":"Please enter a stronger password.","i18n_password_hint":"Hint: The password should be at least twelve characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! " ? $ % ^ & )."};
 /* ]]> */
 </script>
-<script type='text/javascript' src='../wp-content/plugins/woocommerce/assets/js/frontend/password-strength-meter.min4c8b.js?ver=3.4.5'></script>
-<script type='text/javascript' src='../wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js?ver=2.70'></script>
-<script type='text/javascript' src='../wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min6b25.js?ver=2.1.4'></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/woocommerce/assets/js/frontend/password-strength-meter.min4c8b.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min44fd.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min6b25.js' %}"></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var woocommerce_params = {"ajax_url":"\/homev1\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/homev1\/?wc-ajax=%%endpoint%%"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='../wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min4c8b.js?ver=3.4.5'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery.mCustomScrollbar.concat.min9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jQuery.print9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/moment9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/daterangepicker9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/frontend/scripts/bootstrap-datepicker9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-includes/js/wp-embed.min9537.js?ver=4.8.8'></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min4c8b.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery.mCustomScrollbar.concat.min9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jQuery.print9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/moment9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/daterangepicker9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/bootstrap-datepicker9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/wp-embed.min9537.js' %}"></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
 var foodbakery_chosen_vars = {"plugin_url":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-content\/plugins\/wp-foodbakery\/"};
 /* ]]> */
 </script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/assets/backend/scripts/chosen-ajaxify9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../wp-content/plugins/wp-foodbakery/elements/login/cs-social-login/media/js/cs-connect9537.js?ver=4.8.8'></script>
-<script type='text/javascript' src='../../../www.google.com/recaptcha/api9537.js?ver=4.8.8'></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/backend/scripts/chosen-ajaxify9537.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/elements/login/cs-social-login/media/js/cs-connect9537.js' %}"></script>
+<script type='text/javascript' src="{% static '../../www.google.com/recaptcha/api9537.js' %}"></script>
 </body>
 
 <!-- Mirrored from foodbakery.chimpgroup.com/homev1/my-account/ by HTTrack Website Copier/3.x [XR&CO'2005], Thu, 13 Feb 2020 12:29:57 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
 </html>
+

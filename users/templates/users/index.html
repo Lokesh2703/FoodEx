@@ -331,15 +331,23 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                         Login / Register
                     </a>
                     {% endif %}
-                    {% if request.user.is_authenticated %}
-                        <a class="get-start-btn" href="register-user-and-add-restaurant/index.html" >
+                    {% if request.user.is_authenticated and request.user.is_customer %}
+                        <a class="get-start-btn" href="{% url 'dashboard1' %}" >
+                            {{ request.user.username }} Profile
+                        </a>
+                    {% elif request.user.is_authenticated and request.user.is_restaurant %}
+                        <a class="get-start-btn" href="{% url 'restaurantOrdersboard' request.user.restaurantprofile.id %}" >
+                            {{ request.user.username }} Profile
+                        </a>
+                    {% elif request.user.is_authenticated and request.user.is_delivery_person %}
+                        <a class="get-start-btn" href="{% url 'deliveryPersonOrdersboard' request.user.deliverypersonprofile.id %}" >
                             {{ request.user.username }} Profile
                         </a>
                     {% else %}
                         <a class="get-start-btn" href="{% url 'register-restaurant' %}" >
                             Register Restaurant  
                         </a>
-                    {% endif %} 		    
+                    {% endif %}	    
                  </div>
 								    <div class="main-nav">
 						    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
@@ -352,6 +360,11 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 </ul> End Sub Menu -->
 </li>
 <li id="menu-item-1447" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% url 'restaurants-default' %}">Restaurants</a></li>
+{% if request.user.is_authenticated and request.user.is_delivery_person %}
+    <li id="menu-item-1448" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% url 'deliveryPersonOrdersboard' request.user.deliverypersonprofile.id %}">Delivery Person</a></li>
+{% elif not request.user.is_authenticated %}
+    <li id="menu-item-1448" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% url 'deliveryPersonLogin' %}">Delivery Person</a></li>    
+{% endif %}
 <li id="menu-item-1298" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-has-children"><a href="#">Pages</a>
 <ul>
 	<li id="menu-item-2414" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="price-plans/index.html">Price Plans</a></li>
@@ -698,11 +711,12 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 	<div class="listing grid-listing three-cols">
 		<input type="hidden" id="current_user_location" value="0">
 		<div class="row">
+            {% for restaurant in restaurants %}
 							<div class="col-md-4 col-xs-6 grid-listing-col ">
 					<div class="img-holder">
 						<figure>
-							<a href="restaurants/italian-pizza-house/index.html">
-								<img width="359" height="212" src="{% static 'wp-content/uploads/foodbaker-special-pizza-359x212.jpg' %}" class="attachment-foodbakery_media_8 size-foodbakery_media_8" alt="" />							</a>
+							<a href="{% url 'individual-restaurant-view' restaurant.id %}">
+								<img width="359" height="212" src="{{ restaurant.image.url }}" class="attachment-foodbakery_media_8 size-foodbakery_media_8" alt="" />							</a>
 							<figcaption class="listing-meta">
 								<div class="listing-inner clearfix">
 									<div class="list-option">
@@ -755,28 +769,29 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 											</div>
 					<div class="text-holder">
 						<div class="listing-inner">
-							<h4><a href="restaurants/italian-pizza-house/index.html">Italian Pizza house</a></h4>
+							<h4><a href="{% url 'individual-restaurant-view' restaurant.id %}">{{ restaurant.restaurantName }}</a></h4>
 															<p>Hot Dogs, Pizza, Stakes</p>
 														<div class="min-order">
-								Min Order <span class="price">£10.00</span>
+								Min Order <span class="price">₹ {{ restaurant.minimumOrder }}</span>
 							</div>
 						</div>
 						<div class="listing-footer">
 							<div class="listing-inner clearfix">
 								<div class="img-holder">
-									<a href="restaurants/italian-pizza-house/index.html">
-										<img src="{% static 'wp-content/uploads/listing-logo18.png' %}" class="img-thumb wp-post-image" alt="" srcset="http://foodbakery.chimpgroup.com/homev1/wp-content/uploads/listing-logo18.png 130w, http://foodbakery.chimpgroup.com/homev1/wp-content/uploads/listing-logo18-100x100.png 100w" sizes="(max-width: 130px) 100vw, 130px" />									</a>
+									<a href="{% url 'individual-restaurant-view' restaurant.id %}">
+										<img src="{{ restaurant.image.url }}" class="img-thumb wp-post-image" alt="" sizes="(max-width: 130px) 100vw, 130px" />									</a>
 								</div>
 								<div class="text-holder">
-																			<p>Italy, Province of Verona, Legnano</p>
+																			<p>{{ restaurant.address }}</p>
 																												<p class="deliver-time"><span class="icon-motorcycle2"></span>40 min</p>
-																			<p class="pickup-time"><span class="icon-clock4"></span>40 min</p>
-																		<a href="restaurants/italian-pizza-house/index.html" class="ordernow-btn bgcolor">Order Now</a>
+																			<p class="pickup-time"><span class="icon-clock4"></span>{{ restaurant.deliveryTime }} min</p>
+																		<a href="{% url 'individual-restaurant-view' restaurant.id %}" class="ordernow-btn bgcolor">Order Now</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+                {% endfor %}
 								<div class="col-md-4 col-xs-6 grid-listing-col ">
 					<div class="img-holder">
 						<figure>
@@ -1296,6 +1311,53 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 <!--Foodbakery Element Start-->
     <div class="listing fancy fancy-simple">
         <ul class="row">
+            {% for restaurant in restaurants %}
+            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <div class="list-post ">
+													<div class="img-holder">
+								<figure>
+									<a href="{% url 'individual-restaurant-view' restaurant.id %}">
+										<img src="{{ restaurant.image.url }}" class="img-thumb wp-post-image" alt="" sizes="(max-width: 130px) 100vw, 130px" />									</a>
+								</figure>
+							</div>
+																										<span class="restaurant-status open"><em class="bookmarkRibbon"></em>Open</span>
+						                                                <div class="text-holder">
+                            <div class="post-title">
+                                <h5>
+                                    <a href="{% url 'individual-restaurant-view' restaurant.id %}">{{ restaurant.restaurantName }}</a>
+                                                                    </h5>
+                            </div>
+
+                                                            <address>Hot Dogs, Pizza, Stakes</address>
+                                                            <div class="delivery-potions">
+																	<div class="post-time">
+                                        <i class="icon-check_circle"></i>
+										Min ₹{{ restaurant.minimumOrder }}									</div>
+								                                                                    <div class="post-time">
+                                        <i class="icon-motorcycle"></i>
+										{{ restaurant.deliveryTime }} min                                    </div>
+                                    									<div class="post-time">
+                                        <i class="icon-clock4"></i>
+										{{ restaurant.deliveryTime }} min                                    </div>
+                                        <br>
+                                																	<div class="list-rating">
+										<div class="rating-star">
+											<span class="rating-box" style="width: 100%;"></span>
+										</div>
+										<span class="reviews">(2)</span>
+									</div>
+																                                    <span>Legnano</span>
+                                                            </div>
+                        </div>
+						                                                    <div class="list-option">
+                                
+                <a href="javascript:void(0);" class="shortlist-btn" data-toggle="modal" data-target="#sign-in">
+                    <i class="icon-heart-o"></i>                </a>
+
+                                            </div>
+                                                </div>
+                </li>
+            {% endfor %}
                             <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="list-post ">
 													<div class="img-holder">
@@ -1340,6 +1402,8 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                                             </div>
                                                 </div>
                 </li>
+
+                
                                 <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <div class="list-post ">
 													<div class="img-holder">
@@ -1625,15 +1689,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
             </script>
             <script type="text/javascript">
             jQuery("#inline-style-functions-inline-css").append(".cs-page-sec-267948{margin-top: 0px;padding-top: 90px;padding-bottom: 10px;margin-bottom: 0px;background: #ffffff;}");
-        </script>        <!-- Page Section 2121-->
-                <div  class="page-section  cs-page-sec-728697  nopadding cs-nomargin"    >
-                        <!-- Container Start -->
-
-            <div class="container "> 
-                                    <div class="row">
-                        <div class="section-fullwidth col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 "><div class="element-title align-center"><h2>we caters for business and events</h2></div><div class="company-logo fancy"><ul><li><figure><a href="javascript:void(0)"><img src="{% static 'wp-content/uploads/partners-logo1.png' %}" alt="clients_img_user"></a></figure></li><li><figure><a href="javascript:void(0)"><img src="{% static 'wp-content/uploads/partners-logo2.png' %}" alt="clients_img_user"></a></figure></li><li><figure><a href="javascript:void(0)"><img src="{% static 'wp-content/uploads/partners-logo3.png' %}" alt="clients_img_user"></a></figure></li><li><figure><a href="javascript:void(0)"><img src="{% static 'wp-content/uploads/partners-logo4.png' %}" alt="clients_img_user"></a></figure></li><li><figure><a href="javascript:void(0)"><img src="{% static 'wp-content/uploads/partners-logo5.png' %}" alt="clients_img_user"></a></figure></li></ul></div></div></div><!-- end section row --></div>                    </div>
-                                </div>  <!-- End Container Start -->
-        </div> <!-- End Page Section -->
+        </script>
 
                     <script type="text/javascript">
                 if (jQuery("#inline-style-functions-inline-css").length == 0) {
@@ -1642,15 +1698,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
             </script>
             <script type="text/javascript">
             jQuery("#inline-style-functions-inline-css").append(".cs-page-sec-728697{margin-top: 0px;padding-top: 60px;padding-bottom: 30px;margin-bottom: 0px;background: #ffffff;}");
-        </script>        <!-- Page Section 2121-->
-                <div  class="page-section  cs-page-sec-251385  nopadding cs-nomargin"    >
-                        <!-- Container Start -->
-
-            <div class="container "> 
-                                    <div class="row">
-                        <div class="section-fullwidth col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 "><div class="main-post promo-box"><div class="img-frame"><figure><img src="{% static 'wp-content/uploads/mobile-apps.png' %}" alt="FoodBakery in your mobile! Get our app"></figure></div><div class="column-text"><h3 style="color:#000000 !important;">FoodBakery in your mobile! Get our app</h3><div class="promo-content">Get our app, it's the fastest way to order food on the go.      </div><a class="app-btn" href="#"><img src="{% static 'wp-content/uploads/app-img1-1.png' %}" alt="foodbakery_var_app_store_image_url_array"></a><a class="app-btn" href="#"><img src="{% static 'wp-content/uploads/app-img2-1.png' %}" alt="foodbakery_var_google_store_image_url_array"></a><form><div class="field-holder"><input class="field-input" type="email" placeholder="Your Email"><label class="field-label-btn"><input class="field-btn" type="submit" value="Send Link" ></label></div></form></div></div></div></div><!-- end section row --></div>                    </div>
-                                </div>  <!-- End Container Start -->
-        </div> <!-- End Page Section -->
+        </script>
 
                     <script type="text/javascript">
                 if (jQuery("#inline-style-functions-inline-css").length == 0) {
@@ -1768,11 +1816,11 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                         <div class="social_login_google_auth">
                             <input type="hidden"     name="client_id" value="307125859622-ovoqs7k7d9khob282n8e7qe422nriu1i.apps.googleusercontent.com" /><input type="hidden"     name="redirect_uri" value="wp-login3a08.html?loginGoogle=1" />                        </div>
 
-                        <div class="social-media">
+                        <!-- <div class="social-media">
                             <h6><span>Login with</span></h6>
                             <ul>
                                 <li><a href="javascript:void(0);" title="Facebook" data-original-title="Facebook" class="social_login_login_facebook facebook"><span class="social-mess-top fb-social-login" style="display:none">Please set API key</span><i class="icon-facebook"></i>Sign In With Facebook</a></li><li><a href="javascript:void(0);" title="Twitter" data-original-title="twitter" class="social_login_login_twitter twitter"><span class="social-mess-top tw-social-login" style="display:none">Please set API key</span><i class="icon-twitter3"></i>Sign In With Twitter</a></li><li><a href="javascript:void(0);" rel="nofollow" title="google-plus" data-original-title="google+" class="social_login_login_google gplus"><span class="social-mess-top gplus-social-login" style="display:none">Please set API key</span><i class="icon-google2"></i>Sign In With Google</a></li>                            </ul>
-                        </div>
+                        </div> -->
                     </div>
                 
                 </div></div><div class="content-style-form cs-forgot-pbox content-style-form-2" style="display:none;">            <span class="foodbakery-dev-login-forget-txt" style="display: none;">Create Your Food Bakery Account</span>
@@ -1906,7 +1954,10 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                             Privacy Policy                        </a>
                     </label>
                 </div>
-                <input type="hidden"  id="foodbakery_user_role_type793553"  class="input-holder"   name="foodbakery_user_role_type793553" value="publisher" /><div class="side-by-side select-icon clearfix"><div class="select-holder"></div></div><div class="recaptcha-reload" id="recaptcha6_div"><div class="g-recaptcha" data-theme="light" id="recaptcha6" data-sitekey="6LfoFgsUAAAAAP_o9aUl2oIyvocDwZrBdrhqlqWo" style=""></div> <a class="recaptcha-reload-a" href="javascript:void(0);" onclick="captcha_reload('wp-admin/admin-ajax.html', 'recaptcha6');"><i class="icon-refresh2"></i> Reload</a></div><div class="checks-holder"><div class="input-filed input-field-btn"><div class="ajax-signup-button input-button-loader"><input type="submit"   tabindex="103"  class="user-submit cs-bgcolor acc-submit"  id="submitbtn1467322373" name="user-submit" value="Sign Up" /></div><input type="hidden"     id="signin-role" name="role" /><input type="hidden"     name="action" value="foodbakery_registration_validation" />
+                <input type="hidden"  id="foodbakery_user_role_type793553"  class="input-holder"   name="foodbakery_user_role_type793553" value="publisher" />
+                <div class="side-by-side select-icon clearfix"><div class="select-holder"></div></div><div class="checks-holder">
+                <div class="input-filed input-field-btn"><div class="ajax-signup-button input-button-loader">
+                <input type="submit"   tabindex="103"  class="user-submit cs-bgcolor acc-submit"  id="submitbtn1467322373" name="user-submit" value="Sign Up" /></div><input type="hidden"     id="signin-role" name="role" /><input type="hidden"     name="action" value="foodbakery_registration_validation" />
                                         </div></div></form>
                                         <div class="register_content"></div><div class="create- signin-tab-link ">Already have an account? <a href="javascript:void(0);" class="foodbakery-dev-signup-box-btn">Login here</a></div>                    <div class="footer-element comment-form-social-connect social_login_ui ">
                         <div class="social_login_facebook_auth">
@@ -1916,11 +1967,11 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                         <div class="social_login_google_auth">
                             <input type="hidden"     name="client_id" value="307125859622-ovoqs7k7d9khob282n8e7qe422nriu1i.apps.googleusercontent.com" /><input type="hidden"     name="redirect_uri" value="wp-login3a08.html?loginGoogle=1" />                        </div>
 
-                        <div class="social-media">
+                        <!-- <div class="social-media">
                             <h6><span>Login with</span></h6>
                             <ul>
                                 <li><a href="javascript:void(0);" title="Facebook" data-original-title="Facebook" class="social_login_login_facebook facebook"><span class="social-mess-top fb-social-login" style="display:none">Please set API key</span><i class="icon-facebook"></i>Sign In With Facebook</a></li><li><a href="javascript:void(0);" title="Twitter" data-original-title="twitter" class="social_login_login_twitter twitter"><span class="social-mess-top tw-social-login" style="display:none">Please set API key</span><i class="icon-twitter3"></i>Sign In With Twitter</a></li><li><a href="javascript:void(0);" rel="nofollow" title="google-plus" data-original-title="google+" class="social_login_login_google gplus"><span class="social-mess-top gplus-social-login" style="display:none">Please set API key</span><i class="icon-google2"></i>Sign In With Google</a></li>                            </ul>
-                        </div>
+                        </div> -->
                     </div>
                 
                 </div></div>

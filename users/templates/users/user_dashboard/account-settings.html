@@ -1,0 +1,1158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+                <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+        <link rel="pingback" href="http://foodbakery.chimpgroup.com/xmlrpc.php">
+        <title>User Dashboard &#8211; Foodbakery</title>
+<link rel='dns-prefetch' href='//maps.googleapis.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Foodbakery &raquo; Feed" href="http://foodbakery.chimpgroup.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Foodbakery &raquo; Comments Feed" href="http://foodbakery.chimpgroup.com/comments/feed/" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/foodbakery.chimpgroup.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='foodbakery-google-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%7CMontserrat%3Aregular%2C700%26subset%3Dcyrillic-ext%2Cgreek-ext%2Cgreek%2Clatin-ext%2Cvietnamese%2Ccyrillic%2Clatin%2Clatin&#038;ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='iconmoon-css'  href="{% static 'wp-content/themes/foodbakery/assets/common/icomoon/css/iconmoon.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href="{% static 'wp-content/themes/foodbakery/assets/frontend/css/bootstrap.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-theme-css'  href="{% static 'wp-content/themes/foodbakery/assets/frontend/css/bootstrap-theme.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='chosen-css'  href="{% static 'wp-content/themes/foodbakery/assets/frontend/css/chosen.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='swiper-css'  href="{% static 'wp-content/themes/foodbakery/assets/frontend/css/swiper.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='animate-css'  href="{% static 'wp-content/themes/foodbakery/assets/frontend/css/animate.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='foodbakery-style-css'  href="{% static 'wp-content/themes/foodbakery/style.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='foodbakery-widget-css'  href="{% static 'wp-content/themes/foodbakery/assets/frontend/css/widget.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='foodbakery-google-font-css'  href='http://fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C600italic%2C400%2C600&#038;subset=latin%2Ccyrillic-ext&#038;ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='foodbakery-social-network-css'  href="{% static 'wp-content/themes/foodbakery/assets/backend/css/social-network.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='foodbakery_fonticonpicker_bootstrap_css-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/icomoon/theme/bootstrap-theme/jquery.fonticonpicker.bootstrap.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap_slider-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/css/bootstrap-slider.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='foodbakery_plugin_css-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/css/cs-foodbakery-plugin.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='datetimepicker-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/common/css/jquery_datetimepicker.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='custom-publisher-style-inline-css'  href="{% static 'wp-content/plugins/wp-foodbakery/frontend/templates/dashboards/publisher/../../../../assets/frontend/css/custom_script.css' %}" type='text/css' media='all' />
+<style id='custom-publisher-style-inline-inline-css' type='text/css'>
+#id_confrmdiv
+    {
+        display: none;
+        background-color: #eee;
+        border-radius: 5px;
+        border: 1px solid #aaa;
+        position: fixed;
+        width: 300px;
+        left: 50%;
+        margin-left: -150px;
+        padding: 6px 8px 8px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    #id_confrmdiv .button {
+        background-color: #ccc;
+        display: inline-block;
+        border-radius: 3px;
+        border: 1px solid #aaa;
+        padding: 2px;
+        text-align: center;
+        width: 80px;
+        cursor: pointer;
+    }
+    #id_confrmdiv .button:hover
+    {
+        background-color: #ddd;
+    }
+    #confirmBox .message {
+        text-align: left;
+        margin-bottom: 8px;
+    }
+</style>
+<link rel='stylesheet' id='foodbakery-default-element-style-css'  href="{% static 'wp-content/themes/foodbakery//assets/frontend/css/default-element.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href="{% static 'wp-includes/css/dist/block-library/style.min.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='foodbakery_responsive_css-css'  href="{% static 'wp-content/themes/foodbakery/assets/frontend/css/responsive.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='jquery-mCustomScrollbar-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/css/jquery.mCustomScrollbar.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='daterangepicker-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/css/daterangepicker.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-datepicker-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/css/bootstrap-datepicker.css' %}" type='text/css' media='all' />
+<script type='text/javascript' src="{% static 'wp-includes/js/jquery/jquery.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/jquery/jquery-migrate.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/common/js/chosen.select.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery_latlon_picker.js' %}"></script>
+<script type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyANm8FXsFCup5NFuxmVN0a7Xsd-RrdcFpo&#038;libraries=places%2Cdrawing&#038;ver=5.3.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var icons_vars = {"plugin_url":"http:\/\/foodbakery.chimpgroup.com\/wp-content\/plugins\/wp-foodbakery\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/common/js/icons-loader.js' %}"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-admin\/admin-ajax.php","plugin_dir_url":"http:\/\/foodbakery.chimpgroup.com\/wp-content\/plugins\/wp-foodbakery\/","security":"f232baf29d"};
+/* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/functions.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/theia-sticky-sidebar.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery-ui.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/common/js/jquery-te-1.4.0.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/booking-functions.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery.twbsPagination.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/orders-functions.js' %}"></script>
+<link rel='https://api.w.org/' href='http://foodbakery.chimpgroup.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://foodbakery.chimpgroup.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="{% static 'wp-includes/wlwmanifest.xml' %}" /> 
+<meta name="generator" content="WordPress 5.3.2" />
+<link rel="canonical" href="http://foodbakery.chimpgroup.com/user-dashboard/" />
+<link rel='shortlink' href='http://foodbakery.chimpgroup.com/?p=617' />
+<link rel="alternate" type="application/json+oembed" href="{% static 'wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffoodbakery.chimpgroup.com%2Fuser-dashboard%2F' %}" />
+<link rel="alternate" type="text/xml+oembed" href="{% static 'wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffoodbakery.chimpgroup.com%2Fuser-dashboard%2F&#038;format=xml' %}" />
+    </head>
+    <body class="page-template page-template-publisher-dashboard page-template-publisher-dashboard-php page page-id-617 logged-in wp-foodbakery">
+        <div class="wrapper wrapper-full_width" >
+            <!-- Side Menu Start -->
+            <div id="overlay"></div>
+            
+	<header id="header"  >
+	    <div class="main-header">
+		<div class="container">
+		    	    	    <div class="row">
+			 	    		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+			 			    	    		    <div class="logo">
+	    			<figure> 
+	    			    <a href="http://foodbakery.chimpgroup.com/" class="light-logo"> 
+					    						<img src="{% static 'wp-content/uploads/main-logo.png' %}"  alt="Foodbakery">
+							    			    </a> 
+										    <a href="http://foodbakery.chimpgroup.com/" class="dark-logo">
+						<img src="{% static 'wp-content/uploads/main-logo.png' %}"  alt="Foodbakery">
+					    </a>
+					    
+	    			</figure>
+	    		    </div>
+			                                 			    	    		    <div class="main-nav">
+				    	    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+		<ul id="menu-main-menu" class="primary-menu"><li id="menu-item-15833" class="menu-item  menu-item-type-post_type  menu-item-object-page  menu-item-home  menu-item-has-children"><a href="http://foodbakery.chimpgroup.com/">Demos</a>
+<ul>
+	<li id="menu-item-15834" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-home"><a href="http://foodbakery.chimpgroup.com/">Food Bakery</a></li>
+	<li id="menu-item-20319" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="http://foodbakery.chimpgroup.com/single-restaurant/">Single Restaurant</a></li>
+	<li id="menu-item-15832" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="http://foodbakery.chimpgroup.com/homev1/">Mexican Restaurant</a></li>
+	<li id="menu-item-20315" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="http://foodbakery.chimpgroup.com/foodcourt">FoodCourt</a></li>
+	<li id="menu-item-20316" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="http://foodbakery.chimpgroup.com/foodstop">Food Stop</a></li>
+	<li id="menu-item-15835" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="http://foodbakery.chimpgroup.com/rtl">RTL Demo</a></li>
+</ul> <!--End Sub Menu -->
+</li>
+<li id="menu-item-15830" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/listings/">Restaurants</a></li>
+<li id="menu-item-15829" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-has-children"><a href="#">Pages</a>
+<ul>
+	<li id="menu-item-15831" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/price-plans/">Price Plans</a></li>
+	<li id="menu-item-15816" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/how-it-works/">How it works</a></li>
+	<li id="menu-item-15815" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/faqs/">FAQ&#8217;s</a></li>
+	<li id="menu-item-15808" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="http://foodbakery.chimpgroup.com/404">404</a></li>
+	<li id="menu-item-15809" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="http://foodbakery.chimpgroup.com/?s=Enter+your+keyword">Search Result</a></li>
+	<li id="menu-item-15817" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/contact-us/">Contact</a></li>
+</ul> <!--End Sub Menu -->
+</li>
+<li id="menu-item-15818" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-has-children"><a href="#">Blogs</a>
+<ul>
+	<li id="menu-item-15810" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/blog-large/">Blog Large</a></li>
+	<li id="menu-item-15812" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/blog-medium/">Blog Medium</a></li>
+	<li id="menu-item-15811" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/blog-masonry/">Blog Masonry</a></li>
+	<li id="menu-item-15819" class="menu-item  menu-item-type-post_type  menu-item-object-post"><a href="http://foodbakery.chimpgroup.com/creating-the-worlds-greatest-food-community-with-food-bakery/">Blog Detail Page</a></li>
+</ul> <!--End Sub Menu -->
+</li>
+</ul>	    </nav><!-- .main-navigation -->
+	    	    		    </div>
+							    	    		    <div class="main-location">
+	    			<ul>
+					                <li class="location-has-children"><a href="#"><i class="icon-compass-with-white-needles"></i>Feel Like Eating</a>
+                        <ul><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=apple-juice"><img alt="" src="{% static 'wp-content/uploads/food-icon-05-1.png' %}"/>Apple Juice</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=bb-q"><img alt="" src="{% static 'wp-content/uploads/food-icon-19-1.png' %}"/>BB.Q</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=carrot-juice"><img alt="" src="{% static 'wp-content/uploads/food-icon-10-1.png' %}"/>Carrot Juice</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=cold-coffee"><img alt="" src="{% static 'wp-content/uploads/food-icon-18-1.png' %}"/>Cold Coffee</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=cupcake"><img alt="" src="{% static 'wp-content/uploads/food-icon-28-1.png' %}"/>Cupcake</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=doughnut"><img alt="" src="{% static 'wp-content/uploads/food-icon-21-1.png' %}"/>Doughnut</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=drum-stick"><img alt="" src="{% static 'wp-content/uploads/food-icon-25-1.png' %}"/>Drum Stick</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=hot-dogs"><img alt="" src="{% static 'wp-content/uploads/food-icon-30-1.png' %}"/>Hot Dogs</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=ice-cream"><img alt="" src="{% static 'wp-content/uploads/food-icon-26-1.png' %}"/>Ice Cream</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=magi"><img alt="" src="{% static 'wp-content/uploads/food-icon-15-1-1.png' %}"/>Magi</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=noodles"><img alt="" src="{% static 'wp-content/uploads/food-icon-09-1.png' %}"/>Noodles</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=pastry"><img alt="" src="{% static 'wp-content/uploads/food-icon-14-1-1.png' %}"/>Pastry</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=pizza"><img alt="" src="{% static 'wp-content/uploads/food-icon-29-1.png' %}"/>Pizza</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=potato-fries"><img alt="" src="{% static 'wp-content/uploads/food-icon-06-1.png' %}"/>Potato Fries</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=prawns"><img alt="" src="{% static 'wp-content/uploads/food-icon-08-1.png' %}"/>Prawns</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=sham-pane"><img alt="" src="{% static 'wp-content/uploads/food-icon-17-1.png' %}"/>Sham pane</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=shawarma"><img alt="" src="{% static 'wp-content/uploads/food-icon-27-1.png' %}"/>Shawarma</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=soda-water"><img alt="" src="{% static 'wp-content/uploads/food-icon-04-1.png' %}"/>Soda water</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=stakes"><img alt="" src="{% static 'wp-content/uploads/food-icon-16-1.png' %}"/>Stakes</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=tea"><img alt="" src="{% static 'wp-content/uploads/food-icon-02-1.png' %}"/>Tea</a> <span></span> </li></ul>
+                </li>
+                					                <li class="location-has-children choose-location">
+                    <a href="#"><i class="icon-location-pin2"></i>Choose location</a>
+                    <ul>
+                        <li class="select-location"><div class="foodbakery-locations-fields-group "><form name="foodbakery-restaurant-top-header-form609879" id="foodbakery-restaurant-top-header-form609879" action="http://foodbakery.chimpgroup.com/listings/"><span id="foodbakery-radius-location609879" class="foodbakery-radius-location foodbakery-radius-location609879" data-id="609879"><i class="icon-target5"></i></span><span class="foodbakery-input-cross foodbakery-input-cross609879 foodbakery-input-cross-header" data-id="609879" style="display:none;"><i class="icon-cross"></i></span><input type="text" class=" foodbakery-locations-field609879" data-id="609879" value="" id="foodbakery-locations-field609879" name="location" placeholder="All Locations" autocomplete="off"/><input type="hidden" class="foodbakery-locations-position609879" value="header" id="foodbakery-locations-position609879" name="foodbakery_locations_position"/><span id="foodbakery-geo-location609879" data-id="609879"><span class="loc-icon-holder"><i class="icon-target3"></i></span></span><div class="select-location foodbakery-radius-range609879" style="display:none"><div class="select-popup popup-open" id="popup609879"> <a href="javascript:;" id="close609879" class="location-close-popup location-close-popup609879"><i class="icon-times"></i></a><input type="hidden"  id="range-hidden-foodbakery-radius609879"  class="foodbakery-radius" data-id="609879"  name="foodbakery_radius" value="10" /><p>Show with in</p>
+                                <input id="ex16b609879" type="text" />
+                                <span id="ex16b609879CurrentSliderValLabel">Miles: <span id="ex16b609879SliderVal">10</span></span><br /><p class="my-location">of <i class="cs-color icon-location-arrow"></i><a id="foodbakery-geo-location-all" class="cs-color foodbakery-geo-location609879" href="javascript:void(0)">My location</a></p></div></div><script>
+                        jQuery(document).ready(function() {
+							var elem = jQuery("#ex16b609879");
+							if (elem.length != "") {
+								elem.slider({
+									step : 1,
+									min: 0,
+									max: 500,
+									value: 10,
+								});
+								elem.on("slideStop", function () {
+										var rang_slider_val = elem.val();
+										jQuery("#ex16b609879SliderVal").html(rang_slider_val);
+										jQuery("#range-hidden-foodbakery-radius609879").val(rang_slider_val);
+										//foodbakery_restaurant_content("609879");
+									});
+								elem.on("slide", function () {
+										jQuery("#ex16b609879SliderVal").html( elem.val() );
+								});
+                            }
+							
+							$(".location-close-popup609879").click(function() {
+								$(".foodbakery-radius-range609879").hide();
+							});
+                        });
+						
+                    </script></form></div></li><li class="popular-location">Popular Locations</li><li><ul class="foodbakery-all-locations609879"></ul></li><script>
+				jQuery(document).ready(function () {
+					jQuery(".chosen-select-location").chosen();
+					chosen_ajaxify("filter-location-box609879", "http://foodbakery.chimpgroup.com/wp-admin/admin-ajax.php", "dropdown_options_for_search_location_data");
+					$(document).on("click", ".foodbakery-all-locations609879 li", select_item_from_dropdown);
+				});
+				</script><script>
+				function select_item_from_dropdown( e ) {
+					var this_value  = jQuery(this).text();
+					jQuery(".foodbakery-locations-field609879").val(this_value);
+					$("#foodbakery-restaurant-top-header-form609879").submit();
+					return false;
+			    }
+				
+                jQuery(document).ready(function () {
+                    jQuery(".chosen-select-location").chosen();
+
+                    /*
+                    * Locations search
+                    */
+                   $(document).on("keyup", ".foodbakery-locations-field609879", function () {
+                       var this_value  = jQuery(this).val();
+                       var this_position  = jQuery("#foodbakery-locations-position609879").val();
+                       if( this_value.length > 2 ){
+                           jQuery.ajax({
+                               type: "POST",
+                               url: foodbakery_globals.ajax_url,
+                               data: "this_position="+this_position+"&keyword="+this_value+"&action=foodbakery_get_all_locations",
+                               success: function (response) {
+                                   jQuery(".foodbakery-all-locations609879").html(response);
+                               }
+                           });
+                       } else {
+                           jQuery.ajax({
+                               type: "POST",
+                               url: foodbakery_globals.ajax_url,
+                               data: "this_position="+this_position+"&action=foodbakery_get_all_default_locations",
+                               success: function (response) {
+                                   jQuery(".foodbakery-all-locations609879").html(response);
+                               }
+                           });
+                       }
+					   
+					   $(document).on("click", ".foodbakery-all-locations609879 li", select_item_from_dropdown);
+                   });
+				   
+				   $(document).on("keypress", ".foodbakery-locations-field609879", function (e) {
+						var key = e.keyCode || e.which;
+						if (key == 13){ 
+							$("#foodbakery-restaurant-top-header-form609879").submit();
+							return false;
+						}
+				   });
+
+                   $(document).on("focus", ".foodbakery-locations-field609879", function () {
+                       jQuery("#range-hidden-foodbakery-radius").val(0);
+                       jQuery(".foodbakery-radius-range609879").hide();
+                       jQuery(this).keyup();
+                   });
+
+                   $(document).on("click", ".foodbakery-all-locations609879 li", function () {
+                       var this_value  = jQuery(this).text();
+                       jQuery(".foodbakery-locations-field609879").val(this_value);
+                       var this_position  = jQuery("#foodbakery-locations-position609879").val();
+                       if( this_position != "header" ){
+                            var data_counter    = jQuery(".foodbakery-locations-field609879").data("id");
+                            jQuery("#range-hidden-foodbakery-radius609879").val(0);
+                            jQuery(".foodbakery-radius-range609879").hide();
+                            foodbakery_restaurant_content(data_counter);
+                       }
+                   });
+                   $(document).on("click", "body", function () {
+                        var data_id     = jQuery(".location-field-text").data("id");
+                        jQuery(".foodbakery-all-locations"+data_id).html("");
+                   });
+                   
+                    $(document).on("click", ".foodbakery-input-cross", function () {
+                        var data_id = jQuery(this).data("id");
+                        jQuery(".foodbakery-locations-field"+data_id).val("");
+                        jQuery(".foodbakery-locations-field"+data_id).keyup();
+                        jQuery(".foodbakery-locations-field-geo"+data_id).val("");
+                        jQuery(".foodbakery-locations-field-geo"+data_id).keyup();
+                        jQuery("body").click();
+                        jQuery("#range-hidden-foodbakery-radius609879").val(0);
+                        jQuery(".foodbakery-radius-range609879").hide();
+                        
+                        jQuery(".foodbakery-input-cross609879").hide();
+                    });
+                    
+                    $(document).on("change", ".location-field-text", function(){
+                        this_text   = jQuery(this).val();
+                        if(this_text == ""){
+                            jQuery(".foodbakery-input-cross609879").hide();
+                        }
+                    });
+                    
+                    $(document).on("click", ".foodbakery-geo-location609879", function () {
+                     var gmap_api_key  = "AIzaSyANm8FXsFCup5NFuxmVN0a7Xsd-RrdcFpo";
+						var _this_f = $(this);
+                        var data_id = jQuery(this).data("id");
+                        jQuery(".foodbakery-locations-field-geo"+data_id).val("");
+                        jQuery("#range-hidden-foodbakery-radius").val(10);
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(function(position) {
+								jQuery.ajax({
+									url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&sensor=true&key="+gmap_api_key,
+									type: "POST",
+									dataType: "json",
+									success: function (response) {
+										if ( typeof response.results[0] != "undefined" ) {
+											jQuery("#foodbakery-locations-field609879").val( response.results[0].formatted_address );
+											
+											jQuery(".foodbakery-input-cross609879").show();
+											_this_f.parents("form").submit();
+										}
+									}
+								});
+                            });
+                        }
+                    });
+                    
+                    $(".foodbakery-radius-location609879").click( function() {
+						var data_id = jQuery(this).data("id");
+						$(".foodbakery-radius-range"+data_id).show();
+					});
+                                  
+                    
+                });
+                
+                function fillInAddress() {
+                  var place = autocomplete.getPlace();
+                  var city_name = "";
+                  $.each( place.address_components, function( key, value ) {
+                        check_city  = $.inArray( "locality", value.types );
+                        if( check_city != -1){
+                            var city_name = value.long_name;
+                            $(".foodbakery-locations-field-geo609879").val(city_name);
+                        }
+                  });
+                  $("#range-hidden-foodbakery-radius").val(0);
+                  var data_id   = $(".foodbakery-locations-field-geo609879").data("id");
+                  $(".foodbakery-input-cross609879").show();
+                  foodbakery_restaurant_content(data_id);
+                }
+                
+                function foodbakery_current_lat_long(){
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(function(position) {
+                            var pos = {
+                              lat: position.coords.latitude,
+                              lng: position.coords.longitude
+                            };
+                            return pos;
+                        });
+                    }
+                }
+                
+                </script>
+			<script>
+			$( window ).load(function() {
+				if ( typeof isCountryAlreadyDetected != "undefined" ) {
+					return true;
+				}
+				isCountryAlreadyDetected = true;
+				var current_value = jQuery("input[name='location']").val();
+				
+				if(current_value == "" && ( window.location.search.indexOf("location=") < 0 ) ) {
+					
+					jQuery.getJSON("https://freegeoip.net/json/", function(data) {
+						
+						if( typeof data.city != "undefined" && data.city.trim() != "" ) {
+							current_value = data.city;
+						}
+						if( typeof data.region_name != "undefined" && data.region_name.trim() != "" ) {
+							if ( current_value != "") {
+								current_value += " ";
+							}
+							current_value += data.region_name;
+						}
+						if( typeof data.zip_code != "undefined" && data.zip_code.trim() != "" ) {
+							if ( current_value != "") {
+								current_value += " ";
+							}
+							current_value += data.zip_code;
+						}
+						if( typeof data.country_name != "undefined" && data.country_name.trim() != "" ) {
+							if ( current_value != "") {
+								current_value += ", ";
+							}
+							current_value += data.country_name;
+						} 
+						
+						if ( current_value != "" ) {
+							jQuery(".foodbakery-locations-fields-group input[name='location'], .foodbakery-locations-fields-group .location-field-text").val( current_value );
+							//jQuery(".location-field-text").val( current_value );
+							//jQuery("input[name='location']").val( current_value );
+							//foodbakery_restaurant_content(data_id);
+							jQuery(".foodbakery-input-cross").show();
+						}
+					});
+				}
+				
+			});
+            </script><script>
+                    jQuery.ajax({
+                       type: "POST",
+                       url: foodbakery_globals.ajax_url,
+                       data: "this_position=header&action=foodbakery_get_all_default_locations",
+                       success: function (response) {
+                           jQuery(".foodbakery-all-locations609879").html(response);
+                       }
+                   });
+                    $(document).on("click", ".location-has-children > a", function () {
+                         jQuery.ajax({
+                               type: "POST",
+                               url: foodbakery_globals.ajax_url,
+                               data: "keyword=&action=foodbakery_get_all_locations",
+                               success: function (response) {
+                               }
+                           });
+                    });
+                </script>                    </ul>
+                </li>
+                						    			</ul>
+	    		    </div>
+			    			    			    			     	    		</div>
+		    				    		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+	    		    <div class="login-option">
+				                    <div class="user-dashboard-menu">
+                    <ul>
+                        <li class="user-dashboard-menu-children">
+                            <a href="javascript:void(0);">
+                                <figure class="profile-image">
+                                                                    </figure>
+                                Buyer Demo                            </a>
+                                                            <ul>
+                                                                            <li class="user_dashboard_ajax active" id="foodbakery_publisher_suggested" data-queryvar="dashboard=suggested"><a href="javascript:void(0);"><i class="icon-dashboard3"></i>Dashboard</a></li>
+
+                                        <li class="user_dashboard_ajax" id="foodbakery_publisher_bookings" data-queryvar="dashboard=bookings"><a href="javascript:void(0);">
+                                                <i class="icon-file-text2"></i>My Bookings</a></li>
+                                        <li class="user_dashboard_ajax" id="foodbakery_publisher_reviews" data-queryvar="dashboard=reviews"><a href="javascript:void(0);"><i class="icon-comment2"></i>My Reviews</a></li>
+                                        <li class="user_dashboard_ajax" id="foodbakery_publisher_orders" data-queryvar="dashboard=orders"><a href="javascript:void(0);"><i class="icon-add_shopping_cart"></i>My Orders</a></li>
+
+                                         <li class="user_dashboard_ajax" id="foodbakery_publisher_shortlists" data-queryvar="dashboard=shortlists"><a href="javascript:void(0);"><i class="icon-heart"></i>Shortlists</a></li>                                        <li class="user_dashboard_ajax" id="foodbakery_publisher_statements" data-queryvar="dashboard=statements"><a href="javascript:void(0);"><i class="icon-file-text22"></i>Statement</a></li>
+                                                                                    <li class="user_dashboard_ajax" id="foodbakery_publisher_accounts" data-queryvar="dashboard=account"><a href="javascript:void(0);"><i class="icon-build"></i>Account Settings</a></li>
+                                                                                <li>
+                                                                                            <a class="logout-btn" href="{% static 'wp-login.php?action=logout&#038;redirect_to=http%3A%2F%2Ffoodbakery.chimpgroup.com%2Fuser-dashboard%2F%3Fdashboard%3Daccount&#038;_wpnonce=3c46059231' %}"><i class="icon-log-out"></i>Signout</a>
+                                                                                        </li>
+
+                                                                        </ul>                        </li>
+                    </ul>
+                </div>
+
+                	    		    </div>
+							    
+				    		</div>
+			    </div>
+		</div>
+	</header>
+	                    <div class="main-section ">
+                        <div class="page-content-fullwidth">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="page-section restaurant-detail-image-section"  style=" background: url(http://foodbakery.chimpgroup.com/wp-content/uploads/cover-photo01.jpg) no-repeat scroll 0 0 / cover;">
+                                        <!-- Container Start -->
+                                        <div class="container">
+                                            <!-- Row Start -->
+                                            <div class="row">
+                                                <!-- Column Start -->
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="company-info-detail">
+                                                        <div class="company-info">
+                                                            
+                                                            <div class="text-holder">
+                                                                <span class="restaurant-title">Buyer Demo</span>
+                                                                                                                                    <ul class="user-info-contact">
+                                                                                                                                                    <li class="cell"><i class="icon-phone"></i><a href="tel:0123456789">012 3456 789</a></li>
+                                                                                                                                                    <li class="email"><i class="icon-mail5"></i><a href="mailto:dum4@chimpgroup.com">dum4@chimpgroup.com</a></li>
+                                                                                                                                            </ul>  
+                                                                                                                            </div>
+                                                        </div>
+
+                                                    </div>  
+                                                </div>
+                                                <!-- Column End -->
+                                            </div>
+                                            <!-- Row End -->
+                                        </div>
+                                        <!-- Container End -->
+                                    </div>
+
+                                                                    <div id="main">
+                                    <div class="page-section account-header buyer-logged-in">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12"> 
+                                                    <div class="user-account-nav user-account-sidebar">
+                                                                                                                <div class="user-nav-list">
+                                                            <ul>
+                                                                                                                                    <li class="user_dashboard_ajax active" id="foodbakery_publisher_suggested" data-queryvar="dashboard=suggested"><a href="javascript:void(0);"><i class="icon-dashboard3"></i> Dashboard</a></li>
+
+                                                                    
+                                                                    <li class="user_dashboard_ajax" id="foodbakery_publisher_bookings" data-queryvar="dashboard=bookings"><a href="javascript:void(0);" class="btn-edit-profile" ><i class="icon-file-text2"></i>My Bookings</a></li>
+                                                                                                                                        <li class="user_dashboard_ajax" id="foodbakery_publisher_reviews" data-queryvar="dashboard=reviews"><a href="javascript:void(0);" class="btn-edit-profile"><i class="icon-comment2"></i>My Reviews</a></li>
+                                                                                                                                        <li class="user_dashboard_ajax" id="foodbakery_publisher_orders" data-queryvar="dashboard=orders"><a href="javascript:void(0);" class="btn-edit-profile"><i class="icon-add_shopping_cart"></i>My Orders</a></li>
+                                                                     <li class="user_dashboard_ajax" id="foodbakery_publisher_shortlists" data-queryvar="dashboard=shortlists"><a href="javascript:void(0);"><i class="icon-heart"></i>Shortlists</a></li>                                                                    <li class="user_dashboard_ajax" id="foodbakery_publisher_statements" data-queryvar="dashboard=statement"><a href="javascript:void(0);"><i class="icon-file-text22"></i>Statement</a></li>
+                                                                                                                                            <li class="user_dashboard_ajax" id="foodbakery_publisher_accounts" data-queryvar="dashboard=account"><a href="javascript:void(0);"><i class="icon-build"></i>Account Settings</a></li>
+                                                                                                                                            <li>
+                                                                        <a href="javascript:void(0)" onclick="cs_remove_profile('http://foodbakery.chimpgroup.com/wp-admin/admin-ajax.php', '2', 'publisher-dashboard.php')"><i class="icon-delete"></i>Delete Profile</a>
+                                                                    </li>
+                                                                    <li><a href="{% static 'wp-login.php?action=logout&#038;redirect_to=http%3A%2F%2Ffoodbakery.chimpgroup.com%2Fuser-dashboard%2F%3Fdashboard%3Daccount&#038;_wpnonce=3c46059231' %}"><i class="icon-log-out"></i>Sign out</a></li>
+
+                                                                                                                                </ul>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                                                                                            
+                                                        <script>
+                                                            function remove_order_complete() {
+                                                                jQuery("#close-me-order").remove();
+                                                            }
+
+                                                        </script>
+                                                        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                                                                                            
+                                                        <script>
+                                                            function remove_order_complete() {
+                                                                jQuery("#close-me-order").remove();
+                                                            }
+
+                                                        </script>
+                                                        <div class="user-dashboard loader-holder">
+                                                            <div class="user-holder"><link rel="stylesheet" type="text/css" media="all" href="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/css/main.css' %}"><link rel="stylesheet" type="text/css" media="all" href="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/css/croppic.css' %}"><script type="text/javascript" src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/croppic.js' %}"></script>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="row">
+                    <div class="user-profile">
+                        <div class="response-holder"></div>
+                        <div class="ewrror-holder"></div>
+                        <div class="element-title has-border">
+                            <h5>Account Settings</h5>
+                        </div>
+                        
+                            <div class="row">
+                                <form id="publisher_profile" method="POST">
+                                    <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                                        <div class="row">
+                                                                                   
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 foodbakery-company-name" style="display:none">
+                                                    <div class="field-holder">
+                                                        <label>Restaurant Name *</label>
+                                                        <input type="text" id="foodbakery_foodbakery_publisher_company_name" name="foodbakery_publisher_company_name" value="Buyer Demo">                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="field-holder">
+                                                        <label>Full Name*</label>
+                                                        <input type="text" class="foodbakery-dev-req-field" id="foodbakery_publisher_display_name" name="publisher_display_name" value="{{ request.user.username }}"><input type="hidden" id="foodbakery_publisher_company_slug" name="publisher_company_slug" value="buyer-demo-2">                                                    </div>
+                                                </div>
+                                                
+
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="field-holder">
+                                                        <label>     Email Address *</label>
+                                                        <input type="text" class="foodbakery-dev-req-field" id="foodbakery_publisher_email" name="publisher_email" value="{{ request.user.email }}">                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="field-holder">
+                                                        <label>Phone Number *</label>
+                                                        <input type="text" class="foodbakery-dev-req-field" id="foodbakery_foodbakery_user_phone_number" name="foodbakery_user_phone_number" value="{{ request.user.customerprofile.mobile }}">                                                    </div>
+                                                </div>
+
+                                                                                    </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                                                                <div class="user-profile-images">
+											<div class="current-img">
+                                                <div class="row mt">
+                                                    <div id="cropContainerModal" data-def-img="http://foodbakery.chimpgroup.com/wp-content/plugins/wp-foodbakery//assets/frontend/images/no-profile-image.jpg" data-img-type="default">
+														<figure>
+																<a>
+																																	<img src="{{ request.user.customerprofile.image.url }}">
+																																</a>
+														</figure>
+													<div class="cropControls cropControlsUpload" style="display: none;"> <i class="cropControlUpload"></i><i class="cropControlRemoveCroppedImage"></i> </div><form class="cropContainerModal_imgUploadForm" style="visibility: hidden;">  <input type="file" name="img" id="cropContainerModal_imgUploadField">  </form></div>
+													<input type="hidden" id="foodbakery_publisher_profile_image" name="publisher_profile_image">                                                </div>
+                                                <span>Upload a profile picture or choose one of the following</span>
+                                            </div>
+                                            <div class="upload-file">
+                                                <button for="file-1" type="button"><span>Upload Picture</span></button>
+                                            </div>
+                                            <ul class="uploaded-img">
+                                                                                            </ul>
+
+                                        </div>
+                    </div>
+                            
+
+                                    
+                                                    <script>
+                            var ajax_url = 'http://foodbakery.chimpgroup.com/wp-admin/admin-ajax.php';
+                            var croppicHeaderOptions = {
+                               
+                                cropData: {
+                                    "dummyData": 1,
+                                    "dummyData2": "asdas"
+                                },
+                                cropUrl: ajax_url,
+                                customUploadButtonId: 'cropContainerHeaderButton',
+                                modal: false,
+                                processInline: true,
+                                loaderHtml: '<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+                                onBeforeImgUpload: function () {
+                                    console.log('onBeforeImgUpload')
+                                },
+                                onAfterImgUpload: function () {
+                                    console.log('onAfterImgUpload')
+                                },
+                                onImgDrag: function () {
+                                    console.log('onImgDrag')
+                                },
+                                onImgZoom: function () {
+                                    console.log('onImgZoom')
+                                },
+                                onBeforeImgCrop: function () {
+                                    console.log('onBeforeImgCrop')
+                                },
+                                onAfterImgCrop: function () {
+                                    console.log('onAfterImgCrop')
+                                },
+                                onReset: function () {
+                                    console.log('onReset')
+                                },
+                                onError: function (errormessage) {
+                                    console.log('onError:' + errormessage)
+                                }
+                            }
+                            var croppic = new Croppic('croppic', croppicHeaderOptions);
+
+
+                            var croppicContainerModalOptions = {
+                                uploadUrl: ajax_url,
+                                cropUrl: ajax_url,
+                                modal: true,
+                                imgEyecandyOpacity: 0.4,
+                                loaderHtml: '<div class="loader bubblingG"><span id="bubblingG_1"></span><span id="bubblingG_2"></span><span id="bubblingG_3"></span></div> ',
+                                onBeforeImgUpload: function () {
+                                    console.log('onBeforeImgUpload')
+                                },
+                                onAfterImgUpload: function () {
+                                    console.log('onAfterImgUpload')
+                                },
+                                onImgDrag: function () {
+                                    console.log('onImgDrag')
+                                },
+                                onImgZoom: function () {
+                                    console.log('onImgZoom')
+                                },
+                                onBeforeImgCrop: function () {
+                                    console.log('onBeforeImgCrop')
+                                },
+                                onAfterImgCrop: function () {
+                                    console.log('onAfterImgCrop')
+                                },
+                                onReset: function () {
+                                    console.log('onReset')
+                                },
+                                onError: function (errormessage) {
+                                    console.log('onError:' + errormessage)
+                                }
+                            }
+                            var cropContainerModal = new Croppic('cropContainerModal', croppicContainerModalOptions);
+
+                           
+                        </script>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="row">
+                <div class="response-holder-change-address"></div>
+                    				
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<fieldset class="gllpLatlonPicker" style="width:100%; float:left;" id="fe_map0" data-radius="10000" data-radiusshow="off">
+			<div class="page-wrap page-opts left" style=" position:relative;" id="locations_wrap" data-default-country="" data-themeurl="http://foodbakery.chimpgroup.com/wp-content/plugins/wp-foodbakery/" data-plugin_url="http://foodbakery.chimpgroup.com/wp-content/plugins/wp-foodbakery/" data-ajaxurl="http://foodbakery.chimpgroup.com/wp-admin/admin-ajax.php" data-map_marker="3256">
+				<div class="option-sec" style="margin-bottom:0;">
+				<div class="opt-conts">
+					                                    
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<div class="field-holder">
+								<label>Country *</label>
+								<div class="select-holder">
+									<span class="loader-country-publisher"></span><select data-placeholder="Select Country" class="form-control chosen-select form-select-country dir-map-search foodbakery-dev-req-field " id="loc_country_publisher" name="foodbakery_post_loc_country_publisher" style="display: none;"><option value="">Select Country</option><option value="barry" data-name="">Barry</option><option value="cardiff" data-name="">Cardiff</option><option value="cowbridge" data-name="">Cowbridge</option><option value="england" data-name="">England</option><option value="llantwit-major" data-name="">Llantwit Major</option><option value="northern-ireland" data-name="">Northern Ireland</option><option value="penarth" data-name="">Penarth</option><option value="scotland" data-name="">Scotland</option><option value="wales" data-name="">Wales</option></select><div class="chosen-container chosen-container-single" style="width: 100%;" title="" id="loc_country_publisher_chosen"><a class="chosen-single chosen-default" tabindex="-1"><span>Select Country</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>
+								</div>
+								</div>                                   
+							</div>
+						</div>
+										
+					<div class="row">
+						                                   
+							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+								<div class="field-holder">
+									<label>State</label>
+									<div class="select-holder">
+										<span class="loader-state-publisher"></span><select data-placeholder="Select State" class="form-control chosen-select form-select-state dir-map-search " id="loc_state_publisher" name="foodbakery_post_loc_state_publisher" style="display: none;"><option value="">Select State</option></select><div class="chosen-container chosen-container-single" style="width: 100%;" title="" id="loc_state_publisher_chosen"><a class="chosen-single chosen-default" tabindex="-1"><span>Select State</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>									</div>
+								</div>                                   
+							</div>
+												
+						
+                        							<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+								<div class="field-holder">
+									<label>City</label>
+									<div class="select-holder">
+										<span class="loader-city-publisher"></span><select data-placeholder="Select City" class="form-control chosen-select form-select-city dir-map-search " id="loc_city_publisher" name="foodbakery_post_loc_city_publisher" style="display: none;"><option value="">Select County</option></select><div class="chosen-container chosen-container-single" style="width: 100%;" title="" id="loc_city_publisher_chosen"><a class="chosen-single" tabindex="-1"><span>Select County</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div>									</div>
+								</div>
+							</div>
+												
+						
+						 
+						
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="field-holder">
+							<label>Latitude</label>
+							<input type="text" placeholder="Latitude" class="form-control gllpLatitude" id="foodbakery_post_loc_latitude" name="foodbakery_post_loc_latitude_publisher" value="51.5073509">							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="field-holder">
+							<label>Longitude</label>
+							<input type="text" placeholder="Longitude" class="form-control gllpLongitude" id="foodbakery_post_loc_longitude" name="foodbakery_post_loc_longitude_publisher" value="-0.12775829999998223">							</div>
+						</div>
+						
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<input type="hidden" id="foodbakery__loc_bounds_rest" name="foodbakery_loc_bounds_rest_publisher" value=""><input type="hidden" id="foodbakery_add_new_loc" class="gllpSearchField" style="margin-bottom:10px;" name="foodbakery_add_new_loc_publisher" value=""><input type="hidden" id="foodbakery_post_loc_zoom" class="gllpZoom" name="foodbakery_post_loc_zoom_publisher" value="9">						
+							<div class="field-holder">
+								<label>Find On Map</label>
+								<input type="text" onkeypress="foodbakery_gl_search_map(this.value)" placeholder="Type Your Address" class="foodbakery-search-location pac-target-input" id="loc_address" name="foodbakery_post_loc_address_publisher" autocomplete="off">							</div>
+						</div>
+						
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+							<div class="field-holder"></div>
+							<div class="field-holder search-location-map input-button-loader">
+								<input type="button" class="acc-submit cs-section-update cs-color csborder-color gllpSearchButton" id="foodbakery_map_search_btn" name="foodbakery_map_search_btn" value="Search Location">							</div>
+						</div>
+					</div>
+					<div class="row">
+						<!-- map start -->
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<div class="cs-map-section" style="float:left; width:100%; height:284px;">
+							<div class="gllpMap" id="cs-map-location-fe-id" style="pointer-events: none; position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px;"><div tabindex="0" style="position: absolute; z-index: 0; left: 0px; top: 0px; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;), default; touch-action: pan-x pan-y;"><div style="z-index: 1; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 991; transform: matrix(1, 0, 0, 1, -209, -65);"><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px;"><div style="width: 256px; height: 256px;"></div></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 30;"><div style="position: absolute; z-index: 991; transform: matrix(1, 0, 0, 1, -209, -65);"><div style="width: 256px; height: 256px; position: absolute; left: 256px; top: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 0px; top: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 0px; top: -256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 256px; top: -256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 512px; top: -256px;"></div><div style="width: 256px; height: 256px; position: absolute; left: 512px; top: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -256px; top: 0px;"></div><div style="width: 256px; height: 256px; position: absolute; left: -256px; top: -256px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; left: -14px; top: -43px; z-index: 0;"><img alt="" src="https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi2.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div style="position: absolute; z-index: 991; transform: matrix(1, 0, 0, 1, -209, -65);"><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 0px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 256px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: -256px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: 512px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: 0px;"></div><div style="width: 256px; height: 256px; overflow: hidden; position: absolute; left: -256px; top: -256px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div style="position: absolute; z-index: 991; transform: matrix(1, 0, 0, 1, -209, -65);"><div style="position: absolute; left: 512px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i9!2i257!3i169!4i256!2m3!1e0!2sm!3i511225584!2m3!1e2!6m1!3e5!3m17!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0&amp;key=AIzaSyANm8FXsFCup5NFuxmVN0a7Xsd-RrdcFpo&amp;token=54867" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i9!2i256!3i170!4i256!2m3!1e0!2sm!3i511225596!2m3!1e2!6m1!3e5!3m17!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0&amp;key=AIzaSyANm8FXsFCup5NFuxmVN0a7Xsd-RrdcFpo&amp;token=83319" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 512px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i9!2i257!3i170!4i256!2m3!1e0!2sm!3i511225609!2m3!1e2!6m1!3e5!3m17!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0&amp;key=AIzaSyANm8FXsFCup5NFuxmVN0a7Xsd-RrdcFpo&amp;token=11903" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 256px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i9!2i256!3i169!4i256!2m3!1e0!2sm!3i511225596!2m3!1e2!6m1!3e5!3m17!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0&amp;key=AIzaSyANm8FXsFCup5NFuxmVN0a7Xsd-RrdcFpo&amp;token=40292" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i9!2i255!3i169!4i256!2m3!1e0!2sm!3i511225596!2m3!1e2!6m1!3e5!3m17!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0&amp;key=AIzaSyANm8FXsFCup5NFuxmVN0a7Xsd-RrdcFpo&amp;token=86005" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i9!2i255!3i170!4i256!2m3!1e0!2sm!3i511225596!2m3!1e2!6m1!3e5!3m17!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0&amp;key=AIzaSyANm8FXsFCup5NFuxmVN0a7Xsd-RrdcFpo&amp;token=129032" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: 0px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i9!2i254!3i170!4i256!2m3!1e0!2sm!3i511225596!2m3!1e2!6m1!3e5!3m17!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0&amp;key=AIzaSyANm8FXsFCup5NFuxmVN0a7Xsd-RrdcFpo&amp;token=43674" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="position: absolute; left: -256px; top: -256px; width: 256px; height: 256px; transition: opacity 200ms linear 0s;"><img draggable="false" alt="" role="presentation" src="https://maps.googleapis.com/maps/vt?pb=!1m5!1m4!1i9!2i254!3i169!4i256!2m3!1e0!2sm!3i511225596!2m3!1e2!6m1!3e5!3m17!2sen-US!3sUS!5e18!12m4!1e68!2m2!1sset!2sRoadmap!12m3!1e37!2m1!1ssmartmaps!12m4!1e26!2m2!1sstyles!2zcC5zOi02MHxwLmw6LTYw!4e0&amp;key=AIzaSyANm8FXsFCup5NFuxmVN0a7Xsd-RrdcFpo&amp;token=647" style="width: 256px; height: 256px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div class="gm-style-pbc" style="z-index: 2; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; opacity: 0;"><p class="gm-style-pbt"></p></div><div style="z-index: 3; position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px; touch-action: pan-x pan-y;"><div style="z-index: 4; position: absolute; left: 50%; top: 50%; width: 100%; transform: translate(0px, 0px);"><div style="position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"><div style="width: 27px; height: 43px; overflow: hidden; position: absolute; opacity: 0; touch-action: none; left: -14px; top: -43px; z-index: 0;"><img alt="" src="https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi2.png" draggable="false" usemap="#gmimap0" style="position: absolute; left: 0px; top: 0px; width: 27px; height: 43px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"><map name="gmimap0" id="gmimap0"><area log="miw" coords="13.5,0,4,3.75,0,13.5,13.5,43,27,13.5,23,3.75" shape="poly" title="Drag this Marker" style="cursor: pointer; touch-action: none;"></map></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"><div style="z-index: -202; cursor: pointer; display: none; touch-action: none;"><div style="width: 30px; height: 27px; overflow: hidden; position: absolute;"><img alt="" src="https://maps.gstatic.com/mapfiles/undo_poly.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 90px; height: 27px;"></div></div></div></div></div></div><iframe aria-hidden="true" frameborder="0" tabindex="-1" style="z-index: -1; position: absolute; width: 100%; height: 100%; top: 0px; left: 0px; border: none;"></iframe><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" rel="noopener" href="https://maps.google.com/maps?ll=51.507351,-0.127758&amp;z=9&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Open this area in Google Maps (opens a new window)" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img alt="" src="https://maps.gstatic.com/mapfiles/api-3/images/google4.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-sizing: border-box; box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 300px; height: 180px; position: absolute; left: 168px; top: 51px;"><div style="padding: 0px 0px 10px; font-size: 16px; box-sizing: border-box;">Map Data</div><div style="font-size: 13px;">Map data ©2020 Google</div><button draggable="false" title="Close" aria-label="Close" type="button" class="gm-ui-hover-effect" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; position: absolute; cursor: pointer; user-select: none; top: 0px; right: 0px; width: 37px; height: 37px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224px%22%20height%3D%2224px%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22%23000000%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M19%206.41L17.59%205%2012%2010.59%206.41%205%205%206.41%2010.59%2012%205%2017.59%206.41%2019%2012%2013.41%2017.59%2019%2019%2017.59%2013.41%2012z%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="pointer-events: none; display: block; width: 13px; height: 13px; margin: 12px;"></button></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 168px; bottom: 0px; width: 121px;"><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="text-decoration: none; cursor: pointer; display: none;">Map Data</a><span>Map data ©2020 Google</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2020 Google</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; user-select: none; height: 14px; line-height: 14px; position: absolute; right: 96px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" rel="noopener" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><button draggable="false" title="Toggle fullscreen view" aria-label="Toggle fullscreen view" type="button" class="gm-control-active gm-fullscreen-control" style="background: none rgb(255, 255, 255); border: 0px; margin: 10px; padding: 0px; position: absolute; cursor: pointer; user-select: none; border-radius: 2px; height: 40px; width: 40px; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; overflow: hidden; top: 0px; right: 0px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%20018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2C0v2v4h2V2h4V0H2H0z%20M16%2C0h-4v2h4v4h2V2V0H16z%20M16%2C16h-4v2h4h2v-2v-4h-2V16z%20M2%2C12H0v4v2h2h4v-2H2V12z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2C0v2v4h2V2h4V0H2H0z%20M16%2C0h-4v2h4v4h2V2V0H16z%20M16%2C16h-4v2h4h2v-2v-4h-2V16z%20M2%2C12H0v4v2h2h4v-2H2V12z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2C0v2v4h2V2h4V0H2H0z%20M16%2C0h-4v2h4v4h2V2V0H16z%20M16%2C16h-4v2h4h2v-2v-4h-2V16z%20M2%2C12H0v4v2h2h4v-2H2V12z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"></button><div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="background-color: rgb(245, 245, 245); width: auto; height: 100%; margin-left: 1px;"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; box-sizing: border-box; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_blank" rel="noopener" title="Report errors in the road map or imagery to Google" href="https://www.google.com/maps/@51.5073509,-0.1277583,9z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div><div class="gmnoprint gm-bundled-control gm-bundled-control-on-bottom" draggable="false" controlwidth="40" controlheight="81" style="margin: 10px; user-select: none; position: absolute; bottom: 95px; right: 40px;"><div class="gmnoprint" controlwidth="40" controlheight="81" style="position: absolute; left: 0px; top: 0px;"><div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 40px; height: 81px;"><button draggable="false" title="Zoom in" aria-label="Zoom in" type="button" class="gm-control-active" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; position: relative; cursor: pointer; user-select: none; overflow: hidden; width: 40px; height: 40px; top: 0px; left: 0px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2218%2C7%2011%2C7%2011%2C0%207%2C0%207%2C7%200%2C7%200%2C11%207%2C11%207%2C18%2011%2C18%2011%2C11%2018%2C11%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpolygon%20fill%3D%22%23333%22%20points%3D%2218%2C7%2011%2C7%2011%2C0%207%2C0%207%2C7%200%2C7%200%2C11%207%2C11%207%2C18%2011%2C18%2011%2C11%2018%2C11%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpolygon%20fill%3D%22%23111%22%20points%3D%2218%2C7%2011%2C7%2011%2C0%207%2C0%207%2C7%200%2C7%200%2C11%207%2C11%207%2C18%2011%2C18%2011%2C11%2018%2C11%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"></button><div style="position: relative; overflow: hidden; width: 30px; height: 1px; margin: 0px 5px; background-color: rgb(230, 230, 230); top: 0px;"></div><button draggable="false" title="Zoom out" aria-label="Zoom out" type="button" class="gm-control-active" style="background: none; display: block; border: 0px; margin: 0px; padding: 0px; position: relative; cursor: pointer; user-select: none; overflow: hidden; width: 40px; height: 40px; top: 0px; left: 0px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2C7h18v4H0V7z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2C7h18v4H0V7z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2C7h18v4H0V7z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"></button></div></div><div class="gmnoprint" controlwidth="40" controlheight="40" style="display: none; position: absolute;"><div style="width: 40px; height: 40px;"><button draggable="false" title="Rotate map 90 degrees" aria-label="Rotate map 90 degrees" type="button" class="gm-control-active" style="background: none rgb(255, 255, 255); display: none; border: 0px; margin: 0px 0px 32px; padding: 0px; position: relative; cursor: pointer; user-select: none; width: 40px; height: 40px; top: 0px; left: 0px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2222%22%20viewBox%3D%220%200%2024%2022%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20fill-rule%3D%22evenodd%22%20d%3D%22M20%2010c0-5.52-4.48-10-10-10s-10%204.48-10%2010v5h5v-5c0-2.76%202.24-5%205-5s5%202.24%205%205v5h-4l6.5%207%206.5-7h-4v-5z%22%20clip-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2222%22%20viewBox%3D%220%200%2024%2022%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20fill-rule%3D%22evenodd%22%20d%3D%22M20%2010c0-5.52-4.48-10-10-10s-10%204.48-10%2010v5h5v-5c0-2.76%202.24-5%205-5s5%202.24%205%205v5h-4l6.5%207%206.5-7h-4v-5z%22%20clip-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2222%22%20viewBox%3D%220%200%2024%2022%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20fill-rule%3D%22evenodd%22%20d%3D%22M20%2010c0-5.52-4.48-10-10-10s-10%204.48-10%2010v5h5v-5c0-2.76%202.24-5%205-5s5%202.24%205%205v5h-4l6.5%207%206.5-7h-4v-5z%22%20clip-rule%3D%22evenodd%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="height: 18px; width: 18px;"></button><button draggable="false" title="Tilt map" aria-label="Tilt map" type="button" class="gm-tilt gm-control-active" style="background: none rgb(255, 255, 255); display: block; border: 0px; margin: 0px; padding: 0px; position: relative; cursor: pointer; user-select: none; width: 40px; height: 40px; top: 0px; left: 0px; overflow: hidden; box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px; border-radius: 2px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218px%22%20height%3D%2216px%22%20viewBox%3D%220%200%2018%2016%22%3E%0A%20%20%3Cpath%20fill%3D%22%23666%22%20d%3D%22M0%2C16h8V9H0V16z%20M10%2C16h8V9h-8V16z%20M0%2C7h8V0H0V7z%20M10%2C0v7h8V0H10z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218px%22%20height%3D%2216px%22%20viewBox%3D%220%200%2018%2016%22%3E%0A%20%20%3Cpath%20fill%3D%22%23333%22%20d%3D%22M0%2C16h8V9H0V16z%20M10%2C16h8V9h-8V16z%20M0%2C7h8V0H0V7z%20M10%2C0v7h8V0H10z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="width: 18px;"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218px%22%20height%3D%2216px%22%20viewBox%3D%220%200%2018%2016%22%3E%0A%20%20%3Cpath%20fill%3D%22%23111%22%20d%3D%22M0%2C16h8V9H0V16z%20M10%2C16h8V9h-8V16z%20M0%2C7h8V0H0V7z%20M10%2C0v7h8V0H10z%22%2F%3E%0A%3C%2Fsvg%3E%0A" style="width: 18px;"></button></div></div></div></div></div><div style="background-color: white; font-weight: 500; font-family: Roboto, sans-serif; padding: 15px 25px; box-sizing: border-box; top: 5px; border: 1px solid rgba(0, 0, 0, 0.12); border-radius: 5px; left: 50%; max-width: 375px; position: absolute; transform: translateX(-50%); width: calc(100% - 10px); z-index: 1;"><div><img alt="" src="https://maps.gstatic.com/mapfiles/api-3/images/google_gray.svg" draggable="false" style="padding: 0px; margin: 0px; border: 0px; height: 17px; vertical-align: middle; width: 52px; user-select: none;"></div><div style="line-height: 20px; margin: 15px 0px;"><span style="color: rgba(0, 0, 0, 0.87); font-size: 14px;">This page can't load Google Maps correctly.</span></div><table style="width: 100%;"><tr><td style="line-height: 16px; vertical-align: middle;"><a href="https://developers.google.com/maps/documentation/javascript/error-messages?utm_source=maps_js&amp;utm_medium=degraded&amp;utm_campaign=billing#api-key-and-billing-errors" target="_blank" rel="noopener" style="color: rgba(0, 0, 0, 0.54); font-size: 12px;">Do you own this website?</a></td><td style="text-align: right;"><button class="dismissButton">OK</button></td></tr></table></div></div>
+							</div>
+							<!--<p> For the precise location, you can drag and drop the pin.</p>-->
+						</div>
+					</div>
+				</div>
+				</div>
+			</div>
+			</fieldset>
+		</div>
+		<script type="text/javascript">
+			// Call Map gMapsLatLonPicker Class
+
+			jQuery(document).on("change", "#myonoffswitch2", function () {
+                            
+                           // alert('fsdfsd');
+			$check = jQuery(this).is(':checked');
+			if ($check) {
+				jQuery(".gllpLatlonPicker").each(function () {
+				var radius = $(this).data('radius');
+				$obj = jQuery(document).gMapsLatLonPicker(radius);
+				$obj.init(jQuery(this));
+				});
+			} else {
+				jQuery(".gllpLatlonPicker").each(function () {
+
+				$obj = jQuery(document).gMapsLatLonPicker();
+				$obj.init(jQuery(this));
+				});
+			}
+			});
+			jQuery(document).ready(function () {
+			chosen_selectionbox();
+
+			jQuery(".gllpLatlonPicker").each(function () {
+				var radius = $(this).data('radius');
+				var show_rad = $(this).data('radiusshow');
+				if (show_rad == 'on') {
+				$obj = jQuery(document).gMapsLatLonPicker(radius);
+				} else {
+				$obj = jQuery(document).gMapsLatLonPicker();
+				}
+				$obj.init(jQuery(this));
+			});
+			});
+
+			jQuery(document).ready(function () {
+			foodbakery_load_location_ajax('publisher', ["country","state","city"], {"country":0,"state":1,"city":2,"town":-1}, '1b76002508');
+			});
+			function foodbakery_gl_search_map() {
+			var vals;
+			vals = jQuery('#loc_address').val();
+			if (jQuery('#loc_town').length > 0) {
+				vals = vals + ", " + jQuery('#loc_town').val();
+			}
+			if (jQuery('#loc_city').length > 0) {
+				vals = vals + ", " + jQuery('#loc_city').val();
+			}
+			if (jQuery('#loc_state').length > 0) {
+				vals = vals + ", " + jQuery('#loc_state').val();
+			}
+			if (jQuery('#loc_country').length > 0) {
+				vals = vals + ", " + jQuery('#loc_country').val();
+			}
+			jQuery('.gllpSearchField').val(vals);
+			}
+			function foodbakery_fe_search_map() {
+			var vals;
+			vals = jQuery('#fe_map0 #loc_address').val();
+			jQuery('#fe_map0 .gllpSearchField_fe').val(vals);
+			}
+
+			(function ($) {
+			$(function () {
+		 //var autocomplete;
+				autocomplete = new google.maps.places.Autocomplete(document.getElementById('loc_address'));
+					});
+			})(jQuery);
+			jQuery(document).ready(function () {
+			var $ = jQuery;
+			jQuery("[id^=map_canvas]").css("pointer-events", "none");
+			jQuery("[id^=cs-map-location]").css("pointer-events", "none");
+			// on leave handle
+			var onMapMouseleaveHandler = function (event) {
+				var that = jQuery(this);
+				that.on('click', onMapClickHandler);
+				that.off('mouseleave', onMapMouseleaveHandler);
+				jQuery("[id^=map_canvas]").css("pointer-events", "none");
+				jQuery("[id^=cs-map-location]").css("pointer-events", "none");
+			}
+			// on click handle
+			var onMapClickHandler = function (event) {
+				var that = jQuery(this);
+				// Disable the click handler until the user leaves the map area
+				that.off('click', onMapClickHandler);
+				// Enable scrolling zoom
+				that.find('[id^=map_canvas]').css("pointer-events", "auto");
+				that.find('[id^=cs-map-location]').css("pointer-events", "auto");
+				// Handle the mouse leave event
+				that.on('mouseleave', onMapMouseleaveHandler);
+			}
+			// Enable map zooming with mouse scroll when the user clicks the map
+			jQuery('.cs-map-section').on('click', onMapClickHandler);
+			// new addition
+			});
+		</script>
+		                    <script type="text/javascript">
+
+                        jQuery(document).ready(function ($) {
+                            chosen_selectionbox();
+                        });
+                    </script>
+            </div>
+                                </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="row">
+                <div class="response-holder-change-pass"></div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="element-title has-border">
+                            <h5>Change Password</h5>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="field-holder">
+                            <label> Current Password*</label>
+                            <input type="password" id="foodbakery_publisher_current_password" name="publisher_current_password">                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="field-holder">
+                            <label> New Password*</label>
+                            <input type="password" id="foodbakery_publisher_new_password" name="publisher_new_password">                        </div>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="field-holder">
+                            <label> Confirm New Password* </label>
+                            <input type="password" id="foodbakery_publisher_confirm_new_password" name="publisher_confirm_new_password">                        </div>
+                    </div>
+            </div>
+                                </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="field-holder">
+                                    <button name="button" type="button" class="btn-submit" id="profile_form">Save</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+                                                        <div class="foodbakery_loader" style="display: none;">
+                <div class="loader-img"><i class="icon-spinner"></i></div>
+            </div></div>
+                                                                                                        </div>
+                                                                                                        </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="page-section">
+                                        <div class="container">
+                                            <div class="row">
+                                                <!-- warning popup -->
+                                                <div id="id_confrmdiv">
+                                                    <div class="cs-confirm-container">
+                                                        <i class="icon-sad"></i>
+                                                        <div class="message">You Want To Delete?</div>
+                                                        <a href="javascript:void(0);" id="id_truebtn">Yes, Delete</a>
+                                                        <a href="javascript:void(0);" id="id_falsebtn">No, Cancel</a>
+                                                    </div>
+                                                </div>
+                                                <!-- end warning popup -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                    <script type="text/javascript">
+                        var page_id_all = 1;
+                        jQuery(document).ready(function (e) {
+                            jQuery('#foodbakery_publisher_accounts').trigger('click');
+
+                        });
+                        var count = 0;
+                        jQuery(document).ajaxComplete(function (event, request, settings) {
+                            if (count == 2) {
+                                jQuery('#').trigger('click');
+                            }
+
+                            count++;
+                        });
+                    </script>
+                    	<footer id="footer" class="footer-style-2">
+	    		    		    <div class="footer-widget"  >
+
+			<div class="container">
+
+			    <div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				    <div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="widget widget-newsletter"><div class="widget-title"><h5>Subscribe to our Newsletter</h5></div>
+        <script>
+            function foodbakery_mailchimp_submit(theme_url, counter, admin_url) {
+                'use strict';
+                $ = jQuery;
+                $('#newsletter_error_div_' + counter).fadeOut();
+                $('#newsletter_success_div_' + counter).fadeOut();
+                $('#process_' + counter).show();
+                $('#process_' + counter).html('<i class="icon-spinner8 fa-spin"></i>');
+                $.ajax({
+                    type: 'POST',
+                    url: admin_url,
+                    data: $('#mcform_' + counter).serialize() + '&action=foodbakery_mailchimp',
+                    dataType: "json",
+                    success: function (response) {
+                        $('#mcform_' + counter).get(0).reset();
+                        if (response.type === 'error') {
+                            $('#process_' + counter).hide();
+                            $('#newsletter_mess_error_' + counter).html(response.msg);
+                            $('#newsletter_error_div_' + counter).fadeIn();
+                        } else {
+                            $('#process_' + counter).hide();
+                            $('#newsletter_mess_success_' + counter).html(response.msg);
+                            $('#newsletter_success_div_' + counter).fadeIn();
+                        }
+                        $('#newsletter_mess_' + counter).fadeIn(600);
+                        $('#newsletter_mess_' + counter).html(response);
+                        $('#process_' + counter).html('');
+                    }
+                });
+            }
+            function hide_div(div_hide) {
+                jQuery('#' + div_hide).hide();
+            }
+        </script>
+        <div id ="process_newsletter_1" class="mailchimp-signup">
+            <div id="process_1" class="status status-message cs-spinner" style="display:none"></div>
+                        <div class="fieldset">
+                <form  action="javascript:foodbakery_mailchimp_submit('http://foodbakery.chimpgroup.com/wp-content/themes/foodbakery','1','http://foodbakery.chimpgroup.com/wp-admin/admin-ajax.php')" id="mcform_1" method="post">
+                                            <input id="foodbakery_list_id1" type="hidden" name="foodbakery_list_id" value="0" />
+                        <div class="field-holder">
+                            <label>
+                                <i class=" icon-envelope3"></i>
+                                <input type="text" id="mc_email1" class="field-input"  name="mc_email" placeholder=" Enter Your Email Address..."   >
+                            </label>
+                        </div>
+
+                                                    <div class="field-holder btn-holder">
+                                <input class="subscribe-btn bgcolor" id="btn_newsletter_1" type="submit" value="Sign Up">
+                            </div>
+                        
+                </form>
+                <div id="newsletter_error_div_1" style="display:none" class="alert alert-danger">
+                    <button class="close" type="button" onclick="hide_div('newsletter_error_div_1')" aria-hidden="true">×</button>
+                    <p><i class="icon-warning4"></i>
+                        <span id="newsletter_mess_error_1"></span></p>
+                </div> 
+                <div id="newsletter_success_div_1" style="display:none" class="alert alert-success">
+                    <button class="close" type="button" onclick="hide_div('newsletter_success_div_1')" aria-hidden="true">×</button>
+                    <p><i class="icon-warning4"></i><span id="newsletter_mess_success_1"></span></p>
+                </div>
+            </div>
+                    </div>
+        </div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget_text"><div class="widget-title"><h5>About us</h5></div>			<div class="textwidget">Foodbakery is the business of food and restaurants. Ridiculus sociosqu cursus neque cursus curae ante scelerisque vehicula.
+Explore restaurants, bars, and cafés by locality cum doctus civibus efficiantur in imperdiet deterruisset. FoodBakery Just ordered me some grub</div>
+		</div>                                                            <ul class="social-media">
+                                                                            </ul>
+                                                        </div><div class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><div class="widget widget-top-cities"><div class="widget-title"><h5>Popular Cities</h5></div><ul><li><a href="http://foodbakery.chimpgroup.com/listings/?location=Budleigh Salterton">Budleigh Salterton</a></li><li><a href="http://foodbakery.chimpgroup.com/listings/?location=Moreton in Marsh">Moreton in Marsh</a></li><li><a href="http://foodbakery.chimpgroup.com/listings/?location=Hebden Bridge">Hebden Bridge</a></li><li><a href="http://foodbakery.chimpgroup.com/listings/?location=Harwich">Harwich</a></li><li><a href="http://foodbakery.chimpgroup.com/listings/?location=Hertfordshire">Hertfordshire</a></li><li><a href="http://foodbakery.chimpgroup.com/listings/?location=Grays">Grays</a></li></ul></div></div><div class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><div class="widget widget-top-cities"><div class="widget-title"><h5>Popular Cuisines</h5></div><ul><li><a href="http://foodbakery.chimpgroup.com/listings/?restaurant-category=beef-roast">Beef Roast</a></li></ul></div></div><div class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><div class="widget widget-categories"><div class="widget-title"><h5>Menu</h5></div><ul><li id="menu-item-15827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15827"><a href="http://foodbakery.chimpgroup.com/blog-large/"> Blog Large</a></li>
+<li id="menu-item-15813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15813"><a href="http://foodbakery.chimpgroup.com/blog-medium/"> Blog Medium</a></li>
+<li id="menu-item-15828" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15828"><a href="http://foodbakery.chimpgroup.com/blog-masonry/"> Blog Masonry</a></li>
+<li id="menu-item-15814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15814"><a href="http://foodbakery.chimpgroup.com/contact-us/"> Contact</a></li>
+<li id="menu-item-15820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15820"><a href="http://foodbakery.chimpgroup.com/faqs/"> FAQ&#8217;s</a></li>
+<li id="menu-item-15821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15821"><a href="http://foodbakery.chimpgroup.com/how-it-works/"> How it works</a></li>
+</ul></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-connect"><div class="widget-title"><h5> Connect</h5></div><ul><li><span class="bgcolor"><i class="icon-ring_volume"></i>
+                    </span><p>+1 123 456 7892</p></li><li><span class="bgcolor"><i class="icon-envelope-o"></i>
+                   </span><p><a href="mailto:support@chimpstudio.com">support@chimpstudio.com</a></p></li><li><span class="bgcolor"><i class="icon-location-pin2"></i>
+                    </span><p>33 - B, 2nd Floor, Saint Jhon Doe Appartments, Sussex, UK.26AL565C.</p></li></ul></div></div>				    </div>
+				</div>
+			    </div>
+
+			</div>
+
+		    </div> <!-- /.cs-footer-widgets -->
+			    	    	        <div class="copyright-sec">
+	    	<div class="container">
+	    	    <div class="row">
+	    		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			    
+	    		    <div class="copyright-inner">
+				                                    
+				    					<div class="copy-right">
+					    <p>
+						© 2020 Foodbakery. All Rights Reserved. Powered By <a href="//www.chimpgroup.com&quot;">ChimpGroup</a>. 					    </p>
+
+					</div>
+								    				    	    		    </div>
+	    		</div>
+	    	    </div>
+	    	</div>
+	        </div> <!-- /.cs-copyright -->
+	    	</footer> <!-- /#footer -->
+    </div> <!-- /.wrapper -->
+            <div class="foodbakery_loader" style="display: none;">
+                <div class="loader-img"><i class="icon-spinner"></i></div>
+            </div>
+            <div class="foodbakery-button-loader">
+                <div class="spinner">
+                    <div class="double-bounce1"></div>
+                    <div class="double-bounce2"></div>
+                </div>
+            </div>
+
+                            <script type="text/javascript">
+                    (function ($) {
+                        $(document).ready(function () {
+                            bind_rest_auth_event();
+                            jQuery.growl.error({
+                                message: 'Demo users are not allowed to modify information.'
+                            });
+                            $("body").on("DOMNodeInserted DOMNodeRemoved", bind_rest_auth_event);
+                        });
+
+                        function bind_rest_auth_event() {
+                            $("input[type='submit'], .btn-submit, .btn-send, .delete-this-user-review, .delete-shortlist, .remove_member, #team_update_form").off("click");
+                            $(document).off("click", "input[type='submit'], .btn-submit, .btn-send, .delete-this-user-review, .delete-shortlist, .remove_member, #team_update_form");
+                            $("body").off("click", "input[type='submit'], .btn-submit, .btn-send, .delete-this-user-review, .delete-shortlist, .remove_member, #team_update_form");
+                            $("body").on("click", "input[type='submit'], .btn-submit, .btn-send, .delete-this-user-review, .delete-shortlist, .remove_member, #team_update_form", function (e) {
+                                e.stopPropagation();
+                                jQuery.growl.error({
+                                    message: 'Demo users are not allowed to modify information.'
+                                });
+                                return false;
+                            });
+                        }
+                    })(jQuery);
+                </script>
+                        <input type="hidden"     id="social_login_form_uri" name="foodbakery_" value="http://foodbakery.chimpgroup.com/wp-login.php" /><link rel='stylesheet' id='jquery-te-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/common/css/jquery-te-1.4.0.css' %}" type='text/css' media='all' />
+<link rel='stylesheet' id='fonticonpicker-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/icomoon/css/jquery.fonticonpicker.min.css' %}" type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var foodbakery_shortlists = {"admin_url":"http:\/\/foodbakery.chimpgroup.com\/wp-admin\/admin-ajax.php","confirm_msg":"Are you sure to do this?"};
+/* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/foodbakery-shortlists/assets/js/functions.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/common/js/bootstrap.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/modernizr.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/responsive.menu.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/swiper.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/counter.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/fliters.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/backend/js/cs-map_styles.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/jquery.fitvids.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/jquery.matchHeight-min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/functions.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/skills-progress.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/imagesloaded.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/masonry.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/foodbakery-map-styles.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery.growl.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/bootstrap-slider.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/common/js/jquery_datetimepicker.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/common/js/jquery.location-autocomplete.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/foodbakery-framework/assets/js/jquery.countdown.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/jQuery.print.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/moment.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/daterangepicker.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/bootstrap-datepicker.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-includes/js/wp-embed.min.js' %}"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var foodbakery_chosen_vars = {"plugin_url":"http:\/\/foodbakery.chimpgroup.com\/wp-content\/plugins\/wp-foodbakery\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/backend/scripts/chosen-ajaxify.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/elements/login/cs-social-login/media/js/cs-connect.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/common/js/responsive-calendar.min.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/tag-it.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/icomoon/js/jquery.fonticonpicker.min.js' %}"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var foodbakery_dashboard_strings = {"valid_amount_error":"Please enter valid amount.","ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-admin\/admin-ajax.php","plugin_url":"http:\/\/foodbakery.chimpgroup.com\/wp-content\/plugins\/wp-foodbakery\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/dashboard-common.js' %}"></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var foodbakery_restaurant_strings = {"service_added":"Service added to List.","off_day_added":"This date is already added in off days list.","buy_exist_packg":"Use Existing Membership","buy_new_packg":"Buy New Membership","upload_images_only":"Please upload images only.","upload_images_size":"Image size should not exceed more than 1mb.","action_error":"Error! There is some Problem.","compulsory_fields":"Please fill the compulsory fields first.","valid_price_error":"Please enter valid price.","valid_amount_error":"Please enter valid amount.","ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-admin\/admin-ajax.php","plugin_dir_url":"http:\/\/foodbakery.chimpgroup.com\/wp-content\/plugins\/wp-foodbakery\/"};
+/* ]]> */
+</script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/restaurant-add-functions.js' %}"></script>
+<script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/restaurant-add-menus-functions.js' %}"></script>
+<script type='text/javascript' src='http://s7.addthis.com/js/250/addthis_widget.js?ver=5.3.2#pubid=xa-4e4412d954dccc64'></script>
+</body>
+</html>
+

@@ -950,7 +950,9 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                             <!--Element Section Start-->
 <!--Foodbakery Element Start-->
     <ul>
+                {% for restaurant in restaurants %}
                     <li>
+                    
                 <div class="img-holder">
                     <figure>
                         <a href="../restaurants/italian-pizza-house/index.html">
@@ -966,7 +968,8 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                         </div>
                                         <div class="post-title">
                         <h5>
-                            <a href="../restaurants/italian-pizza-house/index.html">Italian Pizza house</a>
+                            
+                            <a href="{% url 'individual-restaurant-view' restaurant.id %}">{{ restaurant.restaurantName }}</a>
                                                     </h5>
                     </div>
                                             <span class="post-categories"><span>Type of food : </span> Hot Dogs, Pizza, Stakes</span>
@@ -975,10 +978,10 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                                                     <div class="post-time">
                                 <i class="icon-motorcycle"></i>
                                 <div class="time-tooltip">
-                                    <div class="time-tooltip-holder"> <b class="tooltip-label">Delivery time</b> <b class="tooltip-info">Your order will be delivered in 40 minutes.</b> </div>
+                                    <div class="time-tooltip-holder"> <b class="tooltip-label">Delivery time</b> <b class="tooltip-info">Your order will be delivered in {{ restaurant.deliveryTime }} minutes.</b> </div>
                                 </div>
                             </div>
-                                                        <span>Italy, Province of Verona, Legnano</span>
+                                                        <span>{{ restaurant.address }}</span>
                                                 </div>
                 </div>
                                     <div class="list-option">
@@ -987,9 +990,11 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                 <a href="javascript:void(0);" class="shortlist-btn" data-toggle="modal" data-target="#sign-in">
                     <i class="icon-heart-o"></i>                </a>
 
-                                        <a href="../restaurants/italian-pizza-house/index.html" class="viewmenu-btn text-color">View Menu</a>
+                                        <a href="{% url 'individual-restaurant-view' restaurant.id %}" class="viewmenu-btn text-color">View Menu</a>
                     </div>
+                    
                                 </li>
+                    {% endfor %}
                         <li>
                 <div class="img-holder">
                     <figure>
