@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-from users.models import RestaurantProfile,CustomerProfile
+from users.models import RestaurantProfile,CustomerProfile,DeliveryPersonProfile
 from PIL import Image
 
 class FoodNames(models.Model):
@@ -58,6 +58,7 @@ class OrdersDescription(models.Model):
     status = models.IntegerField(choices=OrderStatusEnum.choices)
     restaurant = models.ForeignKey(RestaurantProfile,on_delete=models.CASCADE)
     customer = models.ForeignKey(CustomerProfile,on_delete=models.CASCADE)
+    deliveryPerson = models.ForeignKey(DeliveryPersonProfile,on_delete=models.CASCADE,null=True)
     
 class OrderFoodQuantity(models.Model):
     orderId = models.ForeignKey(OrdersDescription,on_delete=models.CASCADE)

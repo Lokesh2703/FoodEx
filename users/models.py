@@ -87,6 +87,7 @@ class DeliveryPersonProfile(models.Model):
     mobile = PhoneNumberField()
     address = models.CharField(max_length=200)
     image = models.ImageField(default='default.jpg',upload_to='profile_pics/')
+    is_available = models.BooleanField(default=True)
 
     def __str__(self):
         return f'{self.user.username} Profile'

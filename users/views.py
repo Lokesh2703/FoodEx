@@ -8,7 +8,7 @@ from .models import User,RestaurantProfile
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_exempt,csrf_protect
-from .models import RestaurantProfile
+from .models import RestaurantProfile,DeliveryPersonProfile
 
 def Restaurant_Required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url=None):
     """
@@ -147,6 +147,38 @@ def registerRestaurant(request):
             return render(request,'users/register-user-and-add-restaurant/index2.html',context)
     return render(request,'users/register-user-and-add-restaurant/index.html',context)
 
+def deliveryPersonLogin(request):
+    if request.method == 'POST':
+        if request.POST.get('login'):
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            user = authenticate(request, username=username, password=password)
+            if user is not None and user.is_delivery_person:
+                login(request, user)
+                return redirect('/')
+            else:
+                return redirect('/deliveryperson/login/')
+    return render(request,'users/my-account/index.html')
+
+def deliveryPersonRegister(request):
+    if request.method == 'POST':
+        if request.POST.get('signup'):
+            username = request.POST.get('username')
+            fname = request.POST.get('fullname')
+            email = request.POST.get('email')
+            password = request.POST.get('password')
+            password2 = request.POST.get('password2')
+            mobile= request.POST.get('mobile')
+            address = request.POST.get('address')
+            password = make_password(password)
+            user  = User(username=username,email=email,first_name=fname,is_delivery_person=True,password=password)
+            user.save()
+            deliveryPerson = DeliveryPersonProfile(user=user,mobile=mobile,address=address)
+            deliveryPerson.save()
+            return redirect('/deliveryperson/login/')
+
+    return render(request,'users/my-account/register.html')
+
 @Customer_Required
 def userDashboard(request):
     return render(request,'users/user_dashboard/dashboard.html')
@@ -172,6 +204,7 @@ def userLogin(request):
                 return redirect('/')  
     return render(request,'users/my-account/index.html')
 
+@Restaurant_Required
 def restaurantOrders(request,pk):
     restaurant = get_object_or_404(RestaurantProfile,pk=pk)
     orders = restaurant.ordersdescription_set.all()
@@ -180,3 +213,12 @@ def restaurantOrders(request,pk):
         'restaurant' : restaurant
     }
     return render(request,'users/restaurant-dashboard/orders.html',context)
+
+def deliveryPersonOrders(request,pk):
+    deliveryPerson = get_object_or_404(DeliveryPersonProfile,pk=pk)
+    orders = deliveryPerson.ordersdescription_set.all()
+    context = {
+        'orders' : orders,
+        'deliveryPerson' : deliveryPerson
+    }
+    return render(request,'users/delivery-dashboard/orders.html',context)

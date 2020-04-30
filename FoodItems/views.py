@@ -17,8 +17,6 @@ def restaurantsView(request,**kwargs):
     context = {
         'restaurants' : restaurants,
     }
-    print(restaurants)
-    print(restaurants[0].restaurantName)
     return render(request,'users/listings/index.html',context)
 
 # class restaurantsView(ListView):
