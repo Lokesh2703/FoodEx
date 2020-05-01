@@ -1,9 +1,7 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en-US">
-    
-<!-- Mirrored from foodbakery.chimpgroup.com/homev1/my-account/ by HTTrack Website Copier/3.x [XR&CO'2005], Thu, 13 Feb 2020 12:29:57 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+
 <head>
                 <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -332,35 +330,11 @@ var _zxcvbnSettings = {"src":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-inc
 
 
                 </script>
-                <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal" href="#user-register">Login / Register</a><a class="get-start-btn" href="{% static 'register-user-and-add-restaurant/index.html' %}" > Register Restaurant  </a> 	    		    </div>
+                <a class="cs-color cs-popup-joinus-btn login-popup" href="{% url 'userLoginGeneral' %}">Register</a><a class="get-start-btn" href="{% url 'register-restaurant' %}" > Register Restaurant  </a> 	    		    </div>
 								    <div class="main-nav">
 						    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
-		<ul id="menu-main-menu" class="primary-menu"><li id="menu-item-33" class="menu-item  menu-item-type-post_type  menu-item-object-page  menu-item-home  menu-item-has-children"><a href="{% static 'index.html' %}">Demos</a>
-<ul>
-	<li id="menu-item-3816" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="{% static '../index.html' %}">Food Bakery</a></li>
-	<li id="menu-item-3815" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-home"><a href="{% static 'index.html' %}">Mexican Restaurant</a></li>
-	<li id="menu-item-5343" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="{% static '../rtl/index.html' %}">RTL Demo</a></li>
-</ul> <!--End Sub Menu -->
-</li>
-<li id="menu-item-1447" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'listings/index.html' %}">Restaurants</a></li>
-<li id="menu-item-1298" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-has-children"><a href="#">Pages</a>
-<ul>
-	<li id="menu-item-2414" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'price-plans/index.html' %}">Price Plans</a></li>
-	<li id="menu-item-297" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'how-it-works/index.html' %}">How it works</a></li>
-	<li id="menu-item-296" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'faqs/index.html' %}">FAQ&#8217;s</a></li>
-	<li id="menu-item-38" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="{% static '404.html' %}">404</a></li>
-	<li id="menu-item-39" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="{% static 'indexdccf.html?s=Enter+your+keyword' %}">Search Result</a></li>
-	<li id="menu-item-298" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'contact-us/index.html' %}">Contact</a></li>
-</ul> <!--End Sub Menu -->
-</li>
-<li id="menu-item-303" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-has-children"><a href="#">Blogs</a>
-<ul>
-	<li id="menu-item-45" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'blog-large/index.html' %}">Blog Large</a></li>
-	<li id="menu-item-156" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'blog-medium/index.html' %}">Blog Medium</a></li>
-	<li id="menu-item-155" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% static 'blog-masonry/index.html' %}">Blog Masonry</a></li>
-	<li id="menu-item-304" class="menu-item  menu-item-type-post_type  menu-item-object-post"><a href="{% static 'creating-the-worlds-greatest-food-community-with-food-bakery/index.html' %}">Blog Detail Page</a></li>
-</ul> <!--End Sub Menu -->
-</li>
+		<ul id="menu-main-menu" class="primary-menu">
+<li id="menu-item-1447" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% url 'restaurants-default' %}">Restaurants</a></li>
 </ul>	    </nav><!-- .main-navigation -->
 	    				    </div>
 				    			    
@@ -425,52 +399,7 @@ var _zxcvbnSettings = {"src":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-inc
             </div></div></div></div>
 
 </div>
-	<footer id="footer" class="footer-style-1">
-	    		    		    <div class="footer-widget"  >
-
-			<div class="container">
-
-			    <div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				    <div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-top-cities"><div class="widget-title"><h5>Popular Cities</h5></div><ul><li><a href="{% static 'listings/index07c4.html?location=Barcelona' %}">Barcelona</a></li><li><a href="{% static 'listings/index8d15.html?location=Florida' %}">Florida</a></li><li><a href="{% static 'listings/indexead1.html?location=Miami' %}">Miami</a></li><li><a href="{% static 'listings/indexe3cf.html?location=Normandy' %}">Normandy</a></li><li><a href="{% static 'listings/index6775.html?location=Toronto' %}">Toronto</a></li><li><a href="../listings/index4ca2.html?location=United States">United States</a></li></ul></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-top-cities"><div class="widget-title"><h5>Popular Cuisnies</h5></div><ul><li><a href="{% static 'listings/index523e.html?restaurant-category=apple-juice' %}">Apple Juice</a></li><li><a href="{% static 'listings/indexe3a7.html?restaurant-category=bb-q' %}">BB.Q</a></li><li><a href="{% static 'listings/index7c2f.html?restaurant-category=chicken-roast' %}">Chicken Roast</a></li><li><a href="{% static 'listings/index896c.html?restaurant-category=hot-dogs' %}">Hot Dogs</a></li><li><a href="{% static 'listings/index5fc8.html?restaurant-category=prawns' %}">Prawns</a></li><li><a href="{% static 'listings/index0712.html?restaurant-category=steam-roast' %}">Steam Roast</a></li></ul></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-categories"><div class="widget-title"><h5>Menu</h5></div><ul><li id="menu-item-289" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-289"><a href="{% static 'index.html' %}"> Home</a></li>
-<li id="menu-item-1243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1243"><a href="{% static 'blog-large/index.html' %}"> Blog Large</a></li>
-<li id="menu-item-293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293"><a href="{% static 'contact-us/index.html' %}"> Contact</a></li>
-<li id="menu-item-324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-324"><a href="{% static 'faqs/index.html' %}"> FAQ&#8217;s</a></li>
-<li id="menu-item-325" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-325"><a href="{% static 'how-it-works/index.html' %}"> How it works</a></li>
-</ul></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-connect"><div class="widget-title"><h5>Connect With Us</h5></div>		    <ul class="social-media">
-						    <li><a href="#" data-original-title="twitter"><i class=" icon-twitter"></i></a></li>
-						    <li><a href="#" data-original-title="linkedin"><i class="icon-linkedin"></i></a></li>
-						    <li><a href="#" data-original-title="youtube"><i class="icon-youtube"></i></a></li>
-						    </ul>
-		    <ul><li><span class="bgcolor"><i class="icon-ring_volume"></i>
-                    </span><p>+1863424766</p></li><li><span class="bgcolor"><i class="icon-envelope-o"></i>
-                   </span><p><a href="mailto:info@foodbakery.com">info@foodbakery.com</a></p></li><li><span class="bgcolor"><i class="icon-location-pin2"></i>
-                    </span><p>London, United Kingdom</p></li></ul></div></div>				    </div>
-				</div>
-			    </div>
-
-			</div>
-
-		    </div> <!-- /.cs-footer-widgets -->
-			    	    	        <div class="copyright-sec">
-	    	<div class="container">
-	    	    <div class="row">
-	    		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			    
-	    		    <div class="copyright-inner">
-				                                    
-				    					<div class="copy-right">
-					    <p>
-						© 2019 Foodbakery. All Rights Reserved. Powered By <a href="http://www.chimpgroup.com"/">ChimpGroup</a>. 					    </p>
-
-					</div>
-								    				    	    		    </div>
-	    		</div>
-	    	    </div>
-	    	</div>
-	        </div> <!-- /.cs-copyright -->
-	    	</footer> <!-- /#footer -->
+	
     </div> <!-- /.wrapper -->
             <div class="foodbakery_loader" style="display: none;">
                 <div class="loader-img"><i class="icon-spinner"></i></div>
@@ -487,173 +416,7 @@ var _zxcvbnSettings = {"src":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-inc
 		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
 		document.body.className = c;
 	</script>
-	<div class="modal fade" id="sign-in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-						<div class="modal-dialog" role="document">
-						<div class="login-form">
-						<div class="modal-content"><div class="tab-content"><div id="user-login-tab" class="tab-pane fade in active">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
-					<h5 class="modal-title foodbakery-dev-login-main-title">Login To Your Account</h5>
-				</div><div class="modal-body"><p class="foodbakery-dev-login-top-msg" style="display: none;"></p><div class="cs-login-pbox login-form-id-77231"><div class="status status-message"></div><script>jQuery("body").on("keypress", "input#user_login77231, input#user_pass77231", function (e) {
-							if (e.which == "13") {
-								foodbakery_user_authentication("../wp-admin/admin-ajax.html", "77231", '.ajax-login-button');
-								return false;
-							}
-						});</script><form method="post" class="wp-user-form webkit" id="ControlForm_77231"><div class="input-filed"><i class="icon-user4"></i><input type="text"   tabindex="11" placeholder="Username"   id="user_login77231" name="user_login" /></div><div class="input-filed"><i class="icon-unlock-alt"></i><input type="password"   tabindex="12" size="20" onfocus="if(this.value =='Password') { this.value = ''; }" onblur="if(this.value == '') { this.value ='Password'; }"   id="user_pass77231" name="user_pass" value="Password" /></div><div class="forget-password"><a class="cs-forgot-switch forgot-switch">Forgot Password?</a></div><div class="input-filed input-field-btn"><div class="ajax-login-button input-button-loader"><input type="button"   onclick="javascript:foodbakery_user_authentication('../wp-admin/admin-ajax.html','77231', '.ajax-login-button')"  class="cs-bgcolor"  name="user-submit" value="Log in" /></div><input type="hidden"     id="redirect_to" name="redirect_to" value="index.html" /><input type="hidden"     id="user-cookie" name="user-cookie" value="1" /><input type="hidden"     name="action" value="ajax_login" /><input type="hidden"     id="login" name="login" value="login" />
-					</div></form><div class="signin-tab-link forget-password">New Here? <a href="javascript:void(0);" class="foodbakery-dev-login-box-btn forgot-switch">Signup</a></div>                    <div class="footer-element comment-form-social-connect social_login_ui ">
-                        <div class="social_login_facebook_auth">
-                            <input type="hidden"     name="client_id" value="1168292993253842" /><input type="hidden"     name="redirect_uri" value="../index7e49.html?social-login=facebook-callback" />                        </div>
-                        <div class="social_login_twitter_auth">
-                            <input type="hidden"     name="client_id" value="5G3hNj5jFBVkw1F8m7NJvUXot" /><input type="hidden"     name="redirect_uri" value="../index1d96.html?social-login=twitter" />                        </div>
-                        <div class="social_login_google_auth">
-                            <input type="hidden"     name="client_id" value="307125859622-ovoqs7k7d9khob282n8e7qe422nriu1i.apps.googleusercontent.com" /><input type="hidden"     name="redirect_uri" value="../wp-login3a08.html?loginGoogle=1" />                        </div>
 
-                        <div class="social-media">
-                            <h6><span>Login with</span></h6>
-                            <ul>
-                                <li><a href="javascript:void(0);" title="Facebook" data-original-title="Facebook" class="social_login_login_facebook facebook"><span class="social-mess-top fb-social-login" style="display:none">Please set API key</span><i class="icon-facebook"></i>Sign In With Facebook</a></li><li><a href="javascript:void(0);" title="Twitter" data-original-title="twitter" class="social_login_login_twitter twitter"><span class="social-mess-top tw-social-login" style="display:none">Please set API key</span><i class="icon-twitter3"></i>Sign In With Twitter</a></li><li><a href="javascript:void(0);" rel="nofollow" title="google-plus" data-original-title="google+" class="social_login_login_google gplus"><span class="social-mess-top gplus-social-login" style="display:none">Please set API key</span><i class="icon-google2"></i>Sign In With Google</a></li>                            </ul>
-                        </div>
-                    </div>
-                
-                </div></div><div class="content-style-form cs-forgot-pbox content-style-form-2" style="display:none;">            <span class="foodbakery-dev-login-forget-txt" style="display: none;">Create Your Food Bakery Account</span>
-            <span class="foodbakery-dev-login-box-t-txt" style="display: none;">Login To Your Account</span>
-            <div id="cs-result-40211462"></div>
-            <div class="login-form-id-40211462">
-
-                <form class="user_form" id="wp_pass_lost_40211462" method="post">
-                    <div class="modal-body modal-body-loader">
-                        <span class="alert-info">Enter your email address below and we&#039;ll send you an email with instructions on how to change your password</span>
-                        <div class="input-filed">
-                            <i class="icon-email"></i>
-                            <input type="text"  placeholder="Enter email address..."   name="user_input" />                        </div>
-                        <div class="input-filed input-field-btn">
-                            <div class="ajax-forgot-button input-button-loader">
-                                <input type="submit"    class="reset_password cs-bgcolor"  name="submit" value="Submit" />                            </div>
-                        </div>
-                        <div class="forget-password">
-                            <a class="cs-login-switch forgot-switch triggered-click">Login Here</a>
-                        </div>
-                    </div>
-
-                </form>
-            </div>
-                    <script type="text/javascript">
-            var $ = jQuery;
-            $("#wp_pass_lost_40211462").submit(function () {
-                var thisObj = jQuery('.ajax-forgot-button');
-                foodbakery_show_loader('.ajax-forgot-button', '', 'button_loader', thisObj);
-                var input_data = $('#wp_pass_lost_40211462').serialize() + '&action=foodbakery_recover_pass';
-                var forget_pass = '.modal-body-loader';
-                $.ajax({
-                    type: "POST",
-                    url: "http://foodbakery.chimpgroup.com/homev1/wp-admin/admin-ajax.php",
-                    data: input_data,
-                    dataType: 'json',
-                    success: function (msg) {
-                        // call response function div.
-                        foodbakery_show_response(msg, forget_pass, thisObj);
-                    }
-                });
-                return false;
-            });
-            $("#wp_pass_lost_shortcode_40211462").submit(function () {
-                var thisObj = jQuery('.shortcode-ajax-forgot-button');
-                foodbakery_show_loader('.shortcode-ajax-forgot-button', '', 'button_loader', thisObj);
-                var input_data = $('#wp_pass_lost_40211462').serialize() + '&action=foodbakery_recover_pass';
-                $.ajax({
-                    type: "POST",
-                    url: "http://foodbakery.chimpgroup.com/homev1/wp-admin/admin-ajax.php",
-                    data: input_data,
-                    dataType: 'json',
-                    success: function (msg) {
-                        // call response function div.
-                        foodbakery_show_response(msg, '', thisObj);
-                    }
-                });
-                return false;
-            });
-            $(document).on('click', '.cs-forgot-switch', function () {
-                var _this_title = $('.foodbakery-dev-login-forget-txt').html();
-                var _this_append = $('.foodbakery-dev-login-main-title');
-
-                _this_append.html(_this_title);
-
-                $('.cs-login-pbox').hide();
-                $('.cs-forgot-pbox').show();
-            });
-            $(document).on('click', '.cs-login-switch', function () {
-                var _this_title = $('.foodbakery-dev-login-box-t-txt').html();
-                var _this_append = $('.foodbakery-dev-login-main-title');
-
-                _this_append.html(_this_title);
-
-                $('.cs-forgot-pbox').hide();
-                $('.cs-login-pbox').show();
-            });
-            $(document).on('click', '.user-registeration a', function () {
-                $('#sign-in').modal('hide');
-            });
-            $(document).on('click', '.user-logging-in a', function () {
-                $('#join-us').modal('hide');
-            });
-            $(document).on('click', '.foodbakery-subscribe-pkg', function () {
-                var msg_show = $(this).data('msg');
-                $("#sign-in .modal-body .foodbakery-dev-login-top-msg").html(msg_show);
-                $("#sign-in .modal-body .foodbakery-dev-login-top-msg").show();
-            });
-            $(document).on('click', '.cs-popup-login-btn', function () {
-                $("#sign-in .modal-body .foodbakery-dev-login-top-msg").html('');
-                $("#sign-in .modal-body .foodbakery-dev-login-top-msg").hide();
-            });
-        </script>
-        </div></div><div id="user-register" class="tab-pane fade"><div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>
-                                            <h5 id="myModalLabel" class="modal-title">Sign Up</h5>
-                                            </div><div class="modal-body"><div id="publisher685099" role="tabpanel" class="tab-pane active"><div id="result_302647" class="status-message"></div><script>window.rand_id_registration = '302647';
-						jQuery("body").on("keypress", "input#user_login_3302647, input#foodbakery_user_email302647, input#foodbakery_organization_name302647, input#foodbakery_publisher_specialisms302647, input#foodbakery_phone_no302647", function (e) {
-                                                                            if (e.which == "13") {
-                                                                                    foodbakery_registration_validation("../wp-admin/admin-ajax.html", "302647",'.ajax-signup-button');
-                                                                                    return false;
-                                                                            }
-                                                                            });</script><form method="post" class="wp-user-form demo_test" id="wp_signup_form_302647" enctype="multipart/form-data"><div class="input-filed"><input type="hidden" name="foodbakery_profile_type302647" value="buyer"/></div><div class="input-filed foodbakery-company-name" style="display:none;"><i class="icon-v-card"></i><input type="text"   placeholder="Company Name"   id="foodbakery_company_name302647" name="foodbakery_company_name302647" /></div><div class="input-filed"><i class="icon-user4"></i><input type="text"   placeholder="Username"   id="user_login_3302647" name="user_login302647" />
-                                </div><div class="input-filed"><i class="icon-v-card"></i><input type="text"   placeholder="Display Name"   id="foodbakery_display_name302647" name="foodbakery_display_name302647" /></div><div class="input-filed"><i class="icon-email"></i><input type="email"   placeholder="Email"   id="foodbakery_user_email302647" name="foodbakery_user_email302647" /></div><span class="signup-alert"><b>Note :</b> Please enter your correct email and we will send you a password on that email.</span>                <div class="checkbox-area">
-                    <input type="checkbox" id="terms-302647" name="terms-302647" class="foodbakery-dev-req-field"/>
-                    <label for="terms-302647">
-                        By Registering You Confirm That You Accept The                        <a target="_blank" href="{% static 'contact-us/index.html' %}">
-                            Terms &amp; conditions                        </a>
-                        And                        <a target="_blank" href="{% static 'contact-us/index.html' %}">
-                            Privacy Policy                        </a>
-                    </label>
-                </div>
-                <input type="hidden"  id="foodbakery_user_role_type302647"  class="input-holder"   name="foodbakery_user_role_type302647" value="publisher" /><div class="side-by-side select-icon clearfix"><div class="select-holder"></div></div><div class="recaptcha-reload" id="recaptcha6_div"><div class="g-recaptcha" data-theme="light" id="recaptcha6" data-sitekey="6LfoFgsUAAAAAP_o9aUl2oIyvocDwZrBdrhqlqWo" style=""></div> <a class="recaptcha-reload-a" href="javascript:void(0);" onclick="captcha_reload('../wp-admin/admin-ajax.html', 'recaptcha6');"><i class="icon-refresh2"></i> Reload</a></div><div class="checks-holder"><div class="input-filed input-field-btn"><div class="ajax-signup-button input-button-loader"><input type="button"   tabindex="103" onclick="javascript:foodbakery_registration_validation('../wp-admin/admin-ajax.html','302647','.ajax-signup-button')"  class="user-submit cs-bgcolor acc-submit"  id="submitbtn1314810599" name="user-submit" value="Sign Up" /></div><input type="hidden"     id="signin-role" name="role" /><input type="hidden"     name="action" value="foodbakery_registration_validation" />
-                                        </div></div></form>
-                                        <div class="register_content"></div><div class="create- signin-tab-link ">Already have an account? <a href="javascript:void(0);" class="foodbakery-dev-signup-box-btn">Login here</a></div>                    <div class="footer-element comment-form-social-connect social_login_ui ">
-                        <div class="social_login_facebook_auth">
-                            <input type="hidden"     name="client_id" value="1168292993253842" /><input type="hidden"     name="redirect_uri" value="../index7e49.html?social-login=facebook-callback" />                        </div>
-                        <div class="social_login_twitter_auth">
-                            <input type="hidden"     name="client_id" value="5G3hNj5jFBVkw1F8m7NJvUXot" /><input type="hidden"     name="redirect_uri" value="../index1d96.html?social-login=twitter" />                        </div>
-                        <div class="social_login_google_auth">
-                            <input type="hidden"     name="client_id" value="307125859622-ovoqs7k7d9khob282n8e7qe422nriu1i.apps.googleusercontent.com" /><input type="hidden"     name="redirect_uri" value="../wp-login3a08.html?loginGoogle=1" />                        </div>
-
-                        <div class="social-media">
-                            <h6><span>Login with</span></h6>
-                            <ul>
-                                <li><a href="javascript:void(0);" title="Facebook" data-original-title="Facebook" class="social_login_login_facebook facebook"><span class="social-mess-top fb-social-login" style="display:none">Please set API key</span><i class="icon-facebook"></i>Sign In With Facebook</a></li><li><a href="javascript:void(0);" title="Twitter" data-original-title="twitter" class="social_login_login_twitter twitter"><span class="social-mess-top tw-social-login" style="display:none">Please set API key</span><i class="icon-twitter3"></i>Sign In With Twitter</a></li><li><a href="javascript:void(0);" rel="nofollow" title="google-plus" data-original-title="google+" class="social_login_login_google gplus"><span class="social-mess-top gplus-social-login" style="display:none">Please set API key</span><i class="icon-google2"></i>Sign In With Google</a></li>                            </ul>
-                        </div>
-                    </div>
-                
-                </div></div>
-                </div><div id="user-password" class="tab-pane fade">
-                </div></div>
-                   </div>
-                </div>
-                </div>
-                </div>
-				<script type='text/javascript'>
-/* <![CDATA[ */
-var foodbakery_shortlists = {"admin_url":"http:\/\/foodbakery.chimpgroup.com\/homev1\/wp-admin\/admin-ajax.php","confirm_msg":"Are you sure to do this?"};
-/* ]]> */
-</script>
 <script type='text/javascript' src="{% static 'wp-content/plugins/foodbakery-shortlists/assets/js/functions4fa9.js' %}"></script>
 <script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/common/js/bootstrap.minf24c.js' %}"></script>
 <script type='text/javascript' src="{% static 'wp-content/themes/foodbakery/assets/frontend/js/modernizrf24c.js' %}"></script>

@@ -125,102 +125,41 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
             <!-- Side Menu Start -->
             <div id="overlay"></div>
             
-	<header id="header"  >
+        	<header id="header" class="sticky-header header-full-width transparent-header default" >
 	    <div class="main-header">
-		<div class="container">
+		<div class="wide">
 		    	    	    <div class="row">
 			 	    		<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
 			 			    	    		    <div class="logo">
 	    			<figure> 
-	    			    <a href="http://foodbakery.chimpgroup.com/" class="light-logo"> 
-					    						<img src="{% static 'wp-content/uploads/main-logo.png' %}"  alt="Foodbakery">
+	    			    <a href="{% url 'index' %}" class="light-logo"> 
+					    						<img src="{% static 'wp-content/uploads/logo.png' %}"  alt="FoodBakery">
 							    			    </a> 
-										    <a href="http://foodbakery.chimpgroup.com/" class="dark-logo">
-						<img src="{% static 'wp-content/uploads/main-logo.png' %}"  alt="Foodbakery">
+										    <a href="index.html" class="dark-logo">
+						<img src="{% static 'wp-content/uploads/sticky-logo.png' %}"  alt="FoodBakery">
 					    </a>
 					    
 	    			</figure>
 	    		    </div>
-			                                 			    	    		    <div class="main-nav">
-				    	    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
-		<ul id="menu-main-menu" class="primary-menu"><li id="menu-item-15833" class="menu-item  menu-item-type-post_type  menu-item-object-page  menu-item-home  menu-item-has-children"><a href="http://foodbakery.chimpgroup.com/">Demos</a>
-<ul>
-	<li id="menu-item-15834" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-home"><a href="http://foodbakery.chimpgroup.com/">Food Bakery</a></li>
-	<li id="menu-item-20319" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="http://foodbakery.chimpgroup.com/single-restaurant/">Single Restaurant</a></li>
-	<li id="menu-item-15832" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="http://foodbakery.chimpgroup.com/homev1/">Mexican Restaurant</a></li>
-	<li id="menu-item-20315" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="http://foodbakery.chimpgroup.com/foodcourt">FoodCourt</a></li>
-	<li id="menu-item-20316" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="http://foodbakery.chimpgroup.com/foodstop">Food Stop</a></li>
-	<li id="menu-item-15835" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="http://foodbakery.chimpgroup.com/rtl">RTL Demo</a></li>
-</ul> <!--End Sub Menu -->
-</li>
-<li id="menu-item-15830" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/listings/">Restaurants</a></li>
-<li id="menu-item-15829" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-has-children"><a href="#">Pages</a>
-<ul>
-	<li id="menu-item-15831" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/price-plans/">Price Plans</a></li>
-	<li id="menu-item-15816" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/how-it-works/">How it works</a></li>
-	<li id="menu-item-15815" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/faqs/">FAQ&#8217;s</a></li>
-	<li id="menu-item-15808" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="http://foodbakery.chimpgroup.com/404">404</a></li>
-	<li id="menu-item-15809" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="http://foodbakery.chimpgroup.com/?s=Enter+your+keyword">Search Result</a></li>
-	<li id="menu-item-15817" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/contact-us/">Contact</a></li>
-</ul> <!--End Sub Menu -->
-</li>
-<li id="menu-item-15818" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-has-children"><a href="#">Blogs</a>
-<ul>
-	<li id="menu-item-15810" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/blog-large/">Blog Large</a></li>
-	<li id="menu-item-15812" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/blog-medium/">Blog Medium</a></li>
-	<li id="menu-item-15811" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="http://foodbakery.chimpgroup.com/blog-masonry/">Blog Masonry</a></li>
-	<li id="menu-item-15819" class="menu-item  menu-item-type-post_type  menu-item-object-post"><a href="http://foodbakery.chimpgroup.com/creating-the-worlds-greatest-food-community-with-food-bakery/">Blog Detail Page</a></li>
-</ul> <!--End Sub Menu -->
-</li>
-</ul>	    </nav><!-- .main-navigation -->
-	    	    		    </div>
-							    	    		    <div class="main-location">
+			                                 			    			    	    		    <div class="main-location">
 	    			<ul>
 					                <li class="location-has-children"><a href="#"><i class="icon-compass-with-white-needles"></i>Feel Like Eating</a>
-                        <ul><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=apple-juice"><img alt="" src="{% static 'wp-content/uploads/food-icon-05-1.png' %}"/>Apple Juice</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=bb-q"><img alt="" src="{% static 'wp-content/uploads/food-icon-19-1.png' %}"/>BB.Q</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=carrot-juice"><img alt="" src="{% static 'wp-content/uploads/food-icon-10-1.png' %}"/>Carrot Juice</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=cold-coffee"><img alt="" src="{% static 'wp-content/uploads/food-icon-18-1.png' %}"/>Cold Coffee</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=cupcake"><img alt="" src="{% static 'wp-content/uploads/food-icon-28-1.png' %}"/>Cupcake</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=doughnut"><img alt="" src="{% static 'wp-content/uploads/food-icon-21-1.png' %}"/>Doughnut</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=drum-stick"><img alt="" src="{% static 'wp-content/uploads/food-icon-25-1.png' %}"/>Drum Stick</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=hot-dogs"><img alt="" src="{% static 'wp-content/uploads/food-icon-30-1.png' %}"/>Hot Dogs</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=ice-cream"><img alt="" src="{% static 'wp-content/uploads/food-icon-26-1.png' %}"/>Ice Cream</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=magi"><img alt="" src="{% static 'wp-content/uploads/food-icon-15-1-1.png' %}"/>Magi</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=noodles"><img alt="" src="{% static 'wp-content/uploads/food-icon-09-1.png' %}"/>Noodles</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=pastry"><img alt="" src="{% static 'wp-content/uploads/food-icon-14-1-1.png' %}"/>Pastry</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=pizza"><img alt="" src="{% static 'wp-content/uploads/food-icon-29-1.png' %}"/>Pizza</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=potato-fries"><img alt="" src="{% static 'wp-content/uploads/food-icon-06-1.png' %}"/>Potato Fries</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=prawns"><img alt="" src="{% static 'wp-content/uploads/food-icon-08-1.png' %}"/>Prawns</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=sham-pane"><img alt="" src="{% static 'wp-content/uploads/food-icon-17-1.png' %}"/>Sham pane</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=shawarma"><img alt="" src="{% static 'wp-content/uploads/food-icon-27-1.png' %}"/>Shawarma</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=soda-water"><img alt="" src="{% static 'wp-content/uploads/food-icon-04-1.png' %}"/>Soda water</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=stakes"><img alt="" src="{% static 'wp-content/uploads/food-icon-16-1.png' %}"/>Stakes</a> <span></span> </li><li><a href="http://foodbakery.chimpgroup.com/listings/?foodbakery_restaurant_category=tea"><img alt="" src="{% static 'wp-content/uploads/food-icon-02-1.png' %}"/>Tea</a> <span></span> </li></ul>
+                        <ul><li><a href="listings/index90a1.html?foodbakery_restaurant_category=apple-juice"><img alt="" src="{% static 'wp-content/uploads/food-icon-05-1.png' %}"/>Apple Juice</a> <span></span> </li><li><a href="listings/indexf9ec.html?foodbakery_restaurant_category=bb-q"><img alt="" src="{% static 'wp-content/uploads/food-icon-19-1.png' %}"/>BB.Q</a> <span></span> </li><li><a href="listings/index27f9.html?foodbakery_restaurant_category=beef-roast"><img alt="" src="{% static 'wp-content/uploads/food-icon-22-1.png' %}"/>Beef Roast</a> <span></span> </li><li><a href="listings/index4045.html?foodbakery_restaurant_category=carrot-juice"><img alt="" src="{% static 'wp-content/uploads/food-icon-10-1.png' %}"/>Carrot Juice</a> <span></span> </li><li><a href="listings/index3631.html?foodbakery_restaurant_category=cheese-burger"><img alt="" src="{% static 'wp-content/uploads/food-icon-03-1.png' %}"/>Cheese Burger</a> <span></span> </li><li><a href="listings/index9329.html?foodbakery_restaurant_category=chicken-roast"><img alt="" src="{% static 'wp-content/uploads/food-icon-07-1.png' %}"/>Chicken Roast</a> <span></span> </li><li><a href="listings/index4f90.html?foodbakery_restaurant_category=chines-soup"><img alt="" src="{% static 'wp-content/uploads/food-icon-01-1.png' %}"/>Chines Soup</a> <span></span> </li><li><a href="listings/indexe2ca.html?foodbakery_restaurant_category=cold-coffee"><img alt="" src="{% static 'wp-content/uploads/food-icon-18-1.png' %}"/>Cold Coffee</a> <span></span> </li><li><a href="listings/index4839.html?foodbakery_restaurant_category=cold-drink"><img alt="" src="{% static 'wp-content/uploads/food-icon-23-1.png' %}"/>Cold Drink</a> <span></span> </li><li><a href="listings/indexd2c2.html?foodbakery_restaurant_category=cupcake"><img alt="" src="{% static 'wp-content/uploads/food-icon-28-1.png' %}"/>Cupcake</a> <span></span> </li><li><a href="listings/indexeed9.html?foodbakery_restaurant_category=doughnut"><img alt="" src="{% static 'wp-content/uploads/food-icon-21-1.png' %}"/>Doughnut</a> <span></span> </li><li><a href="listings/indexef4a.html?foodbakery_restaurant_category=stakes"><img alt="" src="{% static 'wp-content/uploads/food-icon-16-1.png' %}"/>Stakes</a> <span></span> </li><li><a href="listings/indexcb8f.html?foodbakery_restaurant_category=steam-roast"><img alt="" src="{% static 'wp-content/uploads/food-icon-22-1.png' %}"/>Steam Roast</a> <span></span> </li></ul>
                 </li>
                 					                <li class="location-has-children choose-location">
                     <a href="#"><i class="icon-location-pin2"></i>Choose location</a>
                     <ul>
-                        <li class="select-location"><div class="foodbakery-locations-fields-group "><form name="foodbakery-restaurant-top-header-form874635" id="foodbakery-restaurant-top-header-form874635" action="http://foodbakery.chimpgroup.com/listings/"><span id="foodbakery-radius-location874635" class="foodbakery-radius-location foodbakery-radius-location874635" data-id="874635"><i class="icon-target5"></i></span><span class="foodbakery-input-cross foodbakery-input-cross874635 foodbakery-input-cross-header" data-id="874635" style="display:none;"><i class="icon-cross"></i></span><input type="text" class=" foodbakery-locations-field874635" data-id="874635" value="" id="foodbakery-locations-field874635" name="location" placeholder="All Locations" autocomplete="off"/><input type="hidden" class="foodbakery-locations-position874635" value="header" id="foodbakery-locations-position874635" name="foodbakery_locations_position"/><span id="foodbakery-geo-location874635" data-id="874635"><span class="loc-icon-holder"><i class="icon-target3"></i></span></span><div class="select-location foodbakery-radius-range874635" style="display:none"><div class="select-popup popup-open" id="popup874635"> <a href="javascript:;" id="close874635" class="location-close-popup location-close-popup874635"><i class="icon-times"></i></a><input type="hidden"  id="range-hidden-foodbakery-radius874635"  class="foodbakery-radius" data-id="874635"  name="foodbakery_radius" value="10" /><p>Show with in</p>
-                                <input id="ex16b874635" type="text" />
-                                <span id="ex16b874635CurrentSliderValLabel">Miles: <span id="ex16b874635SliderVal">10</span></span><br /><p class="my-location">of <i class="cs-color icon-location-arrow"></i><a id="foodbakery-geo-location-all" class="cs-color foodbakery-geo-location874635" href="javascript:void(0)">My location</a></p></div></div><script>
-                        jQuery(document).ready(function() {
-							var elem = jQuery("#ex16b874635");
-							if (elem.length != "") {
-								elem.slider({
-									step : 1,
-									min: 0,
-									max: 500,
-									value: 10,
-								});
-								elem.on("slideStop", function () {
-										var rang_slider_val = elem.val();
-										jQuery("#ex16b874635SliderVal").html(rang_slider_val);
-										jQuery("#range-hidden-foodbakery-radius874635").val(rang_slider_val);
-										//foodbakery_restaurant_content("874635");
-									});
-								elem.on("slide", function () {
-										jQuery("#ex16b874635SliderVal").html( elem.val() );
-								});
-                            }
-							
-							$(".location-close-popup874635").click(function() {
-								$(".foodbakery-radius-range874635").hide();
-							});
-                        });
-						
-                    </script></form></div></li><li class="popular-location">Popular Locations</li><li><ul class="foodbakery-all-locations874635"></ul></li><script>
+                        <li class="select-location"><div class="foodbakery-locations-fields-group "><form name="foodbakery-restaurant-top-header-form370353" id="foodbakery-restaurant-top-header-form370353" action="http://foodbakery.chimpgroup.com/homev1/listings/" ><span id="foodbakery-radius-location370353" class="foodbakery-radius-location foodbakery-radius-location370353" data-id="370353"><i class="icon-target5"></i></span><span class="foodbakery-input-cross foodbakery-input-cross370353 foodbakery-input-cross-header" data-id="370353" style="display:none;"><i class="icon-cross"></i></span><input type="text" class=" foodbakery-locations-field370353" data-id="370353" value="" id="foodbakery-locations-field370353" name="location" placeholder="All Locations" autocomplete="off"/><input type="hidden" class="foodbakery-locations-position370353" value="header" id="foodbakery-locations-position370353" name="foodbakery_locations_position"/></form></div></li><li class="popular-location">Popular Locations</li><li><ul class="foodbakery-all-locations370353"></ul></li><script>
 				jQuery(document).ready(function () {
 					jQuery(".chosen-select-location").chosen();
-					chosen_ajaxify("filter-location-box874635", "http://foodbakery.chimpgroup.com/wp-admin/admin-ajax.php", "dropdown_options_for_search_location_data");
-					$(document).on("click", ".foodbakery-all-locations874635 li", select_item_from_dropdown);
+					chosen_ajaxify("filter-location-box370353", "wp-admin/admin-ajax.html", "dropdown_options_for_search_location_data");
+					$(document).on("click", ".foodbakery-all-locations370353 li", select_item_from_dropdown);
 				});
 				</script><script>
 				function select_item_from_dropdown( e ) {
 					var this_value  = jQuery(this).text();
-					jQuery(".foodbakery-locations-field874635").val(this_value);
-					$("#foodbakery-restaurant-top-header-form874635").submit();
+					jQuery(".foodbakery-locations-field370353").val(this_value);
+					$("#foodbakery-restaurant-top-header-form370353").submit();
 					return false;
 			    }
 				
@@ -230,16 +169,16 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                     /*
                     * Locations search
                     */
-                   $(document).on("keyup", ".foodbakery-locations-field874635", function () {
+                   $(document).on("keyup", ".foodbakery-locations-field370353", function () {
                        var this_value  = jQuery(this).val();
-                       var this_position  = jQuery("#foodbakery-locations-position874635").val();
+                       var this_position  = jQuery("#foodbakery-locations-position370353").val();
                        if( this_value.length > 2 ){
                            jQuery.ajax({
                                type: "POST",
                                url: foodbakery_globals.ajax_url,
                                data: "this_position="+this_position+"&keyword="+this_value+"&action=foodbakery_get_all_locations",
                                success: function (response) {
-                                   jQuery(".foodbakery-all-locations874635").html(response);
+                                   jQuery(".foodbakery-all-locations370353").html(response);
                                }
                            });
                        } else {
@@ -248,36 +187,36 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                                url: foodbakery_globals.ajax_url,
                                data: "this_position="+this_position+"&action=foodbakery_get_all_default_locations",
                                success: function (response) {
-                                   jQuery(".foodbakery-all-locations874635").html(response);
+                                   jQuery(".foodbakery-all-locations370353").html(response);
                                }
                            });
                        }
 					   
-					   $(document).on("click", ".foodbakery-all-locations874635 li", select_item_from_dropdown);
+					   $(document).on("click", ".foodbakery-all-locations370353 li", select_item_from_dropdown);
                    });
 				   
-				   $(document).on("keypress", ".foodbakery-locations-field874635", function (e) {
+				   $(document).on("keypress", ".foodbakery-locations-field370353", function (e) {
 						var key = e.keyCode || e.which;
 						if (key == 13){ 
-							$("#foodbakery-restaurant-top-header-form874635").submit();
+							$("#foodbakery-restaurant-top-header-form370353").submit();
 							return false;
 						}
 				   });
 
-                   $(document).on("focus", ".foodbakery-locations-field874635", function () {
+                   $(document).on("focus", ".foodbakery-locations-field370353", function () {
                        jQuery("#range-hidden-foodbakery-radius").val(0);
-                       jQuery(".foodbakery-radius-range874635").hide();
+                       jQuery(".foodbakery-radius-range370353").hide();
                        jQuery(this).keyup();
                    });
 
-                   $(document).on("click", ".foodbakery-all-locations874635 li", function () {
+                   $(document).on("click", ".foodbakery-all-locations370353 li", function () {
                        var this_value  = jQuery(this).text();
-                       jQuery(".foodbakery-locations-field874635").val(this_value);
-                       var this_position  = jQuery("#foodbakery-locations-position874635").val();
+                       jQuery(".foodbakery-locations-field370353").val(this_value);
+                       var this_position  = jQuery("#foodbakery-locations-position370353").val();
                        if( this_position != "header" ){
-                            var data_counter    = jQuery(".foodbakery-locations-field874635").data("id");
-                            jQuery("#range-hidden-foodbakery-radius874635").val(0);
-                            jQuery(".foodbakery-radius-range874635").hide();
+                            var data_counter    = jQuery(".foodbakery-locations-field370353").data("id");
+                            jQuery("#range-hidden-foodbakery-radius370353").val(0);
+                            jQuery(".foodbakery-radius-range370353").hide();
                             foodbakery_restaurant_content(data_counter);
                        }
                    });
@@ -293,21 +232,20 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                         jQuery(".foodbakery-locations-field-geo"+data_id).val("");
                         jQuery(".foodbakery-locations-field-geo"+data_id).keyup();
                         jQuery("body").click();
-                        jQuery("#range-hidden-foodbakery-radius874635").val(0);
-                        jQuery(".foodbakery-radius-range874635").hide();
+                        jQuery("#range-hidden-foodbakery-radius370353").val(0);
+                        jQuery(".foodbakery-radius-range370353").hide();
                         
-                        jQuery(".foodbakery-input-cross874635").hide();
+                        jQuery(".foodbakery-input-cross370353").hide();
                     });
                     
                     $(document).on("change", ".location-field-text", function(){
                         this_text   = jQuery(this).val();
                         if(this_text == ""){
-                            jQuery(".foodbakery-input-cross874635").hide();
+                            jQuery(".foodbakery-input-cross370353").hide();
                         }
                     });
                     
-                    $(document).on("click", ".foodbakery-geo-location874635", function () {
-                     var gmap_api_key  = "AIzaSyANm8FXsFCup5NFuxmVN0a7Xsd-RrdcFpo";
+                    $(document).on("click", ".foodbakery-geo-location370353", function () {
 						var _this_f = $(this);
                         var data_id = jQuery(this).data("id");
                         jQuery(".foodbakery-locations-field-geo"+data_id).val("");
@@ -315,14 +253,14 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                         if (navigator.geolocation) {
                             navigator.geolocation.getCurrentPosition(function(position) {
 								jQuery.ajax({
-									url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&sensor=true&key="+gmap_api_key,
+									url: "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + position.coords.latitude + "," + position.coords.longitude + "&sensor=true",
 									type: "POST",
 									dataType: "json",
 									success: function (response) {
 										if ( typeof response.results[0] != "undefined" ) {
-											jQuery("#foodbakery-locations-field874635").val( response.results[0].formatted_address );
+											jQuery("#foodbakery-locations-field370353").val( response.results[0].formatted_address );
 											
-											jQuery(".foodbakery-input-cross874635").show();
+											jQuery(".foodbakery-input-cross370353").show();
 											_this_f.parents("form").submit();
 										}
 									}
@@ -331,7 +269,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                         }
                     });
                     
-                    $(".foodbakery-radius-location874635").click( function() {
+                    $(".foodbakery-radius-location370353").click( function() {
 						var data_id = jQuery(this).data("id");
 						$(".foodbakery-radius-range"+data_id).show();
 					});
@@ -346,12 +284,12 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                         check_city  = $.inArray( "locality", value.types );
                         if( check_city != -1){
                             var city_name = value.long_name;
-                            $(".foodbakery-locations-field-geo874635").val(city_name);
+                            $(".foodbakery-locations-field-geo370353").val(city_name);
                         }
                   });
                   $("#range-hidden-foodbakery-radius").val(0);
-                  var data_id   = $(".foodbakery-locations-field-geo874635").data("id");
-                  $(".foodbakery-input-cross874635").show();
+                  var data_id   = $(".foodbakery-locations-field-geo370353").data("id");
+                  $(".foodbakery-input-cross370353").show();
                   foodbakery_restaurant_content(data_id);
                 }
                 
@@ -367,59 +305,13 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                     }
                 }
                 
-                </script>
-			<script>
-			$( window ).load(function() {
-				if ( typeof isCountryAlreadyDetected != "undefined" ) {
-					return true;
-				}
-				isCountryAlreadyDetected = true;
-				var current_value = jQuery("input[name='location']").val();
-				
-				if(current_value == "" && ( window.location.search.indexOf("location=") < 0 ) ) {
-					
-					jQuery.getJSON("https://freegeoip.net/json/", function(data) {
-						
-						if( typeof data.city != "undefined" && data.city.trim() != "" ) {
-							current_value = data.city;
-						}
-						if( typeof data.region_name != "undefined" && data.region_name.trim() != "" ) {
-							if ( current_value != "") {
-								current_value += " ";
-							}
-							current_value += data.region_name;
-						}
-						if( typeof data.zip_code != "undefined" && data.zip_code.trim() != "" ) {
-							if ( current_value != "") {
-								current_value += " ";
-							}
-							current_value += data.zip_code;
-						}
-						if( typeof data.country_name != "undefined" && data.country_name.trim() != "" ) {
-							if ( current_value != "") {
-								current_value += ", ";
-							}
-							current_value += data.country_name;
-						} 
-						
-						if ( current_value != "" ) {
-							jQuery(".foodbakery-locations-fields-group input[name='location'], .foodbakery-locations-fields-group .location-field-text").val( current_value );
-							//jQuery(".location-field-text").val( current_value );
-							//jQuery("input[name='location']").val( current_value );
-							//foodbakery_restaurant_content(data_id);
-							jQuery(".foodbakery-input-cross").show();
-						}
-					});
-				}
-				
-			});
-            </script><script>
+                </script><script>
                     jQuery.ajax({
                        type: "POST",
                        url: foodbakery_globals.ajax_url,
                        data: "this_position=header&action=foodbakery_get_all_default_locations",
                        success: function (response) {
-                           jQuery(".foodbakery-all-locations874635").html(response);
+                           jQuery(".foodbakery-all-locations370353").html(response);
                        }
                    });
                     $(document).on("click", ".location-has-children > a", function () {
@@ -438,13 +330,57 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
 			    			    			    			     	    		</div>
 		    				    		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 	    		    <div class="login-option">
+				                    <script>
+
+
+                    jQuery(document).ready(function ($) {
+                        var recaptcha6;
+                        var recaptcha5;
+                        var foodbakery_multicap = function () {
+                            //Render the recaptcha1 on the element with ID "recaptcha1"
+                            recaptcha6 = grecaptcha.render('recaptcha6', {
+                                'sitekey': '6LfoFgsUAAAAAP_o9aUl2oIyvocDwZrBdrhqlqWo', //Replace this with your Site key
+                                'theme': 'light'
+                            });
+                            //Render the recaptcha2 on the element with ID "recaptcha2"
+                            recaptcha5 = grecaptcha.render('recaptcha5', {
+                                'sitekey': '6LfoFgsUAAAAAP_o9aUl2oIyvocDwZrBdrhqlqWo', //Replace this with your Site key
+                                'theme': 'light'
+                            });
+                        };
+
+                    });
+
+
+                </script>
+                    {% if request.user.is_authenticated %}
+                    <a class="cs-color cs-popup-joinus-btn login-popup" href="{% url 'foodEx-logout' %}">
+                        Log out
+                    </a>
+                    {% else %}
+                    <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal" href="#user-register">
+                        Login / Register
+                    </a>
+                    {% endif %}
+                    <!--{% if request.user.is_authenticated %}
+                        <a class="get-start-btn" href="{% url 'dashboard1' %}" >
+                            {{ request.user.username }} Profile
+                        </a>
+                    {% else %}
+                        <a class="get-start-btn" href="{% url 'register-restaurant' %}" >
+                            Register Restaurant  
+                        </a>
+                    {% endif %}-->
+                    
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+	    		    <div class="login-option">
 				                    <div class="user-dashboard-menu">
                     <ul>
                         <li class="user-dashboard-menu-children">
                             <a href="javascript:void(0);">
                                 <figure class="profile-image">
                                     <img src="{% static 'wp-content/uploads/fb-restaurant-01-1.jpg' %}" alt="">                                </figure>
-                                Jet Eat Drive                            </a>
+                                {{ deliveryPerson.user.first_name }}                         </a>
                                                             <ul>
                                     
                                         <li class="user_dashboard_ajax  active" id="foodbakery_publisher_suggested" data-queryvar=""><a href="javascript:void(0);"><i class="icon-dashboard3"></i>Dashboard</a></li>
@@ -470,9 +406,24 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                 	    		    </div>
 							    
 				    		</div>
+                 </div>
+								    <div class="main-nav">
+						    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
+		<ul id="menu-main-menu" class="primary-menu">
+</li>
+<li id="menu-item-1447" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% url 'restaurants-default' %}">Restaurants</a></li>	    </nav><!-- .main-navigation -->
+	    				    </div>
+				    			    
+				    		</div>
 			    </div>
 		</div>
 	</header>
+
+
+
+
+
+
 	        <div class="main-section ">
             <div class="page-content-fullwidth">
                 <div class="row">
@@ -678,65 +629,10 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                             </li>
                         {% endfor %}
 
-
-
-                            <li class="order-heading-titles">
-                                <div><a href="javascript:void(0)" data-toggle="modal" data-target="#order-det-21072">order-21072</a></div>
-                                <div>April 30, 2020</div>
-                                <div>£ 73.45</div>
-                                <div>£ 7.35</div>
-                                <div>£ 66.1</div>
-                                <div><span class="order-status" style="background-color: #1e73be;">Processing</span></div>
-                                <div><a href="javascript:void(0)" data-toggle="modal" data-target="#order-det-21072"><i class="icon-plus2 text-color"></i></a></div>
-                            </li>
-                                                        <li class="order-heading-titles">
-                                <div><a href="javascript:void(0)" data-toggle="modal" data-target="#order-det-20832">order-20832</a></div>
-                                <div>April 28, 2020</div>
-                                <div>£ 98.31</div>
-                                <div>£ 9.83</div>
-                                <div>£ 88.48</div>
-                                <div><span class="order-status" style="background-color: #000000;">Shipped</span></div>
-                                <div><a href="javascript:void(0)" data-toggle="modal" data-target="#order-det-20832"><i class="icon-plus2 text-color"></i></a></div>
-                            </li>
-                                                        <li class="order-heading-titles">
-                                <div><a href="javascript:void(0)" data-toggle="modal" data-target="#order-det-20676">order-20676</a></div>
-                                <div>April 26, 2020</div>
-                                <div>£ 56.50</div>
-                                <div>£ 5.65</div>
-                                <div>£ 50.85</div>
-                                <div><span class="order-status" style="background-color: #000000;">Shipped</span></div>
-                                <div><a href="javascript:void(0)" data-toggle="modal" data-target="#order-det-20676"><i class="icon-plus2 text-color"></i></a></div>
-                            </li>
-                                                        <li class="order-heading-titles">
-                                <div><a href="javascript:void(0)" data-toggle="modal" data-target="#order-det-20675">order-20675</a></div>
-                                <div>April 26, 2020</div>
-                                <div>£ 56.50</div>
-                                <div>£ 5.65</div>
-                                <div>£ 50.85</div>
-                                <div><span class="order-status" style="background-color: #000000;">Shipped</span></div>
-                                <div><a href="javascript:void(0)" data-toggle="modal" data-target="#order-det-20675"><i class="icon-plus2 text-color"></i></a></div>
-                            </li>
-                                                        <li class="order-heading-titles">
-                                <div><a href="javascript:void(0)" data-toggle="modal" data-target="#order-det-20531">order-20531</a></div>
-                                <div>April 24, 2020</div>
-                                <div>£ 77.97</div>
-                                <div>£ 7.80</div>
-                                <div>£ 70.17</div>
-                                <div><span class="order-status" style="background-color: #000000;">Shipped</span></div>
-                                <div><a href="javascript:void(0)" data-toggle="modal" data-target="#order-det-20531"><i class="icon-plus2 text-color"></i></a></div>
-                            </li>
-                                                        <li class="order-heading-titles">
-                                <div><a href="javascript:void(0)" data-toggle="modal" data-target="#order-det-20494">order-20494</a></div>
-                                <div>April 24, 2020</div>
-                                <div>£ 74.58</div>
-                                <div>£ 7.46</div>
-                                <div>£ 67.12</div>
-                                <div><span class="order-status" style="background-color: #1e73be;">Processing</span></div>
-                                <div><a href="javascript:void(0)" data-toggle="modal" data-target="#order-det-20494"><i class="icon-plus2 text-color"></i></a></div>
-                            </li>
                                                 </ul>
 
                 </div>
+                {% for order in orders %}
                                                     <div class="print-order-detail menu-order-detail order-detail" id="print-order-det-21072" style="display: none;">
                         <div class="logo"><img src="{% static 'wp-content/uploads/main-logo.png' %}" alt="Foodbakery"></div>
                         <h2>Order Detail</h2>
@@ -746,20 +642,20 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="list-detail-options has-checkbox">
                                             <h3>
-                                                {{ restaurant.restaurantName }}                                            </h3>
+                                                {{ order.restaurant.restaurantName }}                                            </h3>
                                             <ul class="order-detail-options">
                                                 <li class="order-number">
                                                     <strong>Order ID:</strong>
-                                                    <span>21072</span>
+                                                    <span>{{ order.id }}</span>
                                                 </li>
                                                                 <li class="req-delivery">
                                             <strong>Delivery Time:</strong>
-                        <span>40 Minutes </span>
+                        <span>{{ order.restaurant.deliveryTime }} Minutes </span>
                                     </li>
                                                                 <li class="created-date">
                                                     <strong>Delivery Date:</strong>
                                                     <span>
-                                                        Apr 30, 2020 03:33 AM                                                    </span>
+                                                        {{ order.dateTime | date:'M d,Y h:i A' }}                                                  </span>
                                                 </li>
                                                 <li class="order-type">
                                                     <strong>Type:</strong>
@@ -790,13 +686,27 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
 					<div>Products</div>	
 					<div>Price per</div>
 				    </li>
+                    {% for item in order.orderfoodquantity_set.all %}
 					<li class="order-heading-titles">
+                    
 					<div>
-						<h4>Pizza</h4>
-						<h5>Foodbakery Special Pizza</h5>
-						<ul><li>Sausages - Tequila Lime Sauce : £0.00</li><li>Sausages - Soy Sauce : £2.00</li><li>Extra Topping  - Pepperoni : £0.00</li><li>Extra Topping  - Asparagus : £1.00</li><li>Extra Topping  - Jalapenos : £0.00</li><li>Cold Drink - Sangria : £2.00</li></ul></div><div><span class="category-price">£50.00</span></div>
+						<h4>{{ item.foodItemId.food_name.food_name }} ({{ item.quantity }})</h4>
+						<!--<h5>Foodbakery Special Pizza</h5>
+						<ul>
+                            <li>Sausages - Tequila Lime Sauce : £0.00</li>
+                            <li>Sausages - Soy Sauce : £2.00</li>
+                            <li>Extra Topping  - Pepperoni : £0.00</li>
+                            <li>Extra Topping  - Asparagus : £1.00</li>
+                            <li>Extra Topping  - Jalapenos : £0.00</li>
+                            <li>Cold Drink - Sangria : £2.00</li>
+                        </ul>-->
+                    </div><div><span class="category-price">₹ {{ item.foodItemId.price | multiply:item.quantity }}</span></div>
+                    
 					</li>
-					</ul></div></div>                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    {% endfor %}
+					</ul>
+                    
+                    </div></div>                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="row">
                         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
                             <h3>Order Total</h3>
@@ -805,22 +715,19 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                             <ul class="order-detail-options order-total">
                                                                     <li class="created-date">
                                         <strong>Subtotal:</strong>
-                                        <span>£55.00</span>
+                                        <span>₹ {{ order.Subtotal }}</span>
                                     </li>
                                                                                                                                             <li class="order-type">
                                             <strong>
                                                 Pick Up Fee:                                            </strong>
-                                            <span>£10.00</span>
+                                            <span>₹ {{ order.charges }}</span>
                                         </li>
                                                                                                                 <li class="order-type">
-                                            <strong>VAT (13%)</strong>
-                                            <span>£8.45</span>
-                                        </li>
-                                                                    
+                                                             
 
                                                     <li class="order-type total-price">
                                         <strong>Total:</strong>
-                                        <span>£73.45</span>
+                                        <span>₹ {{ order.TotalPrice }}</span>
                                     </li>
                                             </ul>
                         </div>
@@ -830,7 +737,10 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                             </div>
                         </div>
                     </div>
-                    {% for order in orders %}
+
+
+
+                    
                                 <div class="modal fade menu-order-detail order-detail" id="order-det-{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content mCustomScrollbar _mCS_14 mCS-autoHide" style="height: 724px; overflow: visible;">
@@ -858,7 +768,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                 <div class="list-detail-options has-checkbox">
                                                     <h3>
-                                                       {{ restaurant.restaurantName }}                                                  </h3>
+                                                       {{ order.restaurant.restaurantName }}                                                  </h3>
                                                     <ul class="order-detail-options">
                                                         <li class="order-number">
                                                             <strong>Order ID:</strong>
@@ -866,7 +776,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                                                         </li>
                                                                         <li class="req-delivery">
                                             <strong>Delivery Time:</strong>
-                        <span>{{ restaurant.deliveryTime }} Minutes </span>
+                        <span>{{ order.restaurant.deliveryTime }} Minutes </span>
                                     </li>
                                                                         <li class="created-date">
                                                             <strong>Order Date:</strong>
@@ -928,7 +838,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                             <li>Extra Topping  - Jalapenos : £0.00</li>
                             <li>Cold Drink - Sangria : £2.00</li>
                         </ul>-->
-                    </div><div><span class="category-price">{{ item.foodItemId.price | multiply:item.quantity }}</span></div>
+                    </div><div><span class="category-price">₹ {{ item.foodItemId.price | multiply:item.quantity }}</span></div>
                     
 					</li>
                     {% endfor %}
@@ -944,12 +854,12 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                             <ul class="order-detail-options order-total">
                                                                     <li class="created-date">
                                         <strong>Subtotal:</strong>
-                                        <span>{{ order.Subtotal }}</span>
+                                        <span>₹ {{ order.Subtotal }}</span>
                                     </li>
                                                                                                                                             <li class="order-type">
                                             <strong>
                                                 Pick Up Fee:                                            </strong>
-                                            <span>{{ order.charges }}</span>
+                                            <span>₹ {{ order.charges }}</span>
                                         </li>
                                                                                                                <!--<li class="order-type">
                                             <strong>VAT (13%)</strong>
@@ -959,7 +869,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
 
                                                     <li class="order-type total-price">
                                         <strong>Total:</strong>
-                                        <span>{{ order.TotalPrice }}</span>
+                                        <span>₹ {{ order.TotalPrice }}</span>
                                     </li>
                                             </ul>
                         </div>
@@ -984,6 +894,8 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                 })(jQuery);
             </script>
             {% endfor %}
+
+
                                                 <div class="print-order-detail menu-order-detail order-detail" id="print-order-det-20832" style="display: none;">
                         <div class="logo"><img src="{% static 'wp-content/uploads/main-logo.png' %}" alt="Foodbakery"></div>
                         <h2>Order Detail</h2>
@@ -1077,1096 +989,6 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                             </div>
                         </div>
                     </div>
-                                <div class="modal fade menu-order-detail order-detail" id="order-det-20832" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content mCustomScrollbar _mCS_15 mCS-autoHide" style="height: 724px; overflow: visible;"><div id="mCSB_15" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" tabindex="0" style="max-height: 672px;"><div id="mCSB_15_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                <h2>Order Detail</h2>
-                                                                    <button class="btn-print" onclick="CallPrint('print-order-det-20832');"><i class="icon-printer"></i><span>Receipt</span></button>
-                                    <script type="text/javascript">
-                                        function CallPrint(divName) {
-                                            var title = "Order Detail";
-                                            var stylesheet_url = "http://foodbakery.chimpgroup.com/wp-content/plugins/wp-foodbakery//assets/frontend/css/cm-print.css";
-                                            jQuery('#' + divName).show();
-                                            jQuery("#" + divName).print({
-                                                stylesheet: stylesheet_url,
-                                                title: title,
-                                            });
-                                            jQuery('#' + divName).hide();
-                                        }
-                                    </script>
-                                                            </div>
-                            <div class="modal-body">
-                                <div class="order-detail-inner">
-                                    <div class="description-holder">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="list-detail-options has-checkbox">
-                                                    <h3>
-                                                        Jet Eat Drive                                                    </h3>
-                                                    <ul class="order-detail-options">
-                                                        <li class="order-number">
-                                                            <strong>Order ID:</strong>
-                                                            <span>20832</span>
-                                                        </li>
-                                                                        <li class="req-delivery">
-                                            <strong>Delivery Time:</strong>
-                        <span>40 Minutes </span>
-                                    </li>
-                                                                        <li class="created-date">
-                                                            <strong>Delivery Date:</strong>
-                                                            <span>
-                                                                Apr 28, 2020 09:56 AM                                                            </span>
-                                                        </li>
-                                                        <li class="order-type">
-                                                            <strong>Type:</strong>
-                                                            <span>order</span>
-                                                        </li>
-                                                        <li class="order-type">
-                                                            <strong>Payment Status:</strong>
-                                                            <span>Pending</span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-
-                                            </div>
-                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="order-status-holder">
-                                            <div class="row">
-                            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">	
-                                <h3>
-                                    Order Status                                </h3>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
-                                <div class="input-field">
-                                    <select onchange="foodbakery_update_order_status(this, '20832', 'http://foodbakery.chimpgroup.com/wp-admin/admin-ajax.php')" class="chosen-select-no-single" id="order-inquiry-status" name="order-inquiry-status" style="display: none;"><option value="Processing">Processing</option><option value="Cancelled">Cancelled</option><option value="Completed">Completed</option><option value="Awaiting payment">Awaiting payment</option><option value="Awaiting Pickup">Awaiting Pickup</option><option selected="selected" value="Shipped">Shipped</option></select><div class="chosen-container chosen-container-single chosen-container-single-nosearch" style="width: 100%;" title="" id="order_inquiry_status_chosen"><a class="chosen-single" tabindex="-1"><span>Shipped</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chosen-results"></ul></div></div>                                    <script type="text/javascript">
-                                        jQuery(document).ready(function () {
-                                            chosen_selectionbox();
-                                        });
-                                    </script>
-                                    <span class="status-loader order-status-loader-20832"></span> 
-                                </div>
-                            </div>
-                        </div>
-                                    </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h2 class="heading">Food Menu</h2>
-				<div class="responsive-table">    
-				<ul class="categories-order table-generic"><li class="order-heading-titles">
-					<div>Products</div>	
-					<div>Price per</div>
-				    </li>
-					<li class="order-heading-titles">
-					<div>
-						<h4>Pizza</h4>
-						<h5>Marinara Pizza</h5>
-						<ul><li>Extra Topping  - Tuna : £6.00</li><li>Extra Topping  - Sweet corn : £0.00</li><li>Sausages  - Barbecue Sauce  : £1.00</li></ul></div><div><span class="category-price">£70.00</span></div>
-					</li>
-					</ul></div></div>                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                            <h3>Order Total</h3>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <ul class="order-detail-options order-total">
-                                                                    <li class="created-date">
-                                        <strong>Subtotal:</strong>
-                                        <span>£77.00</span>
-                                    </li>
-                                                                                                                                            <li class="order-type">
-                                            <strong>
-                                                Pick Up Fee:                                            </strong>
-                                            <span>£10.00</span>
-                                        </li>
-                                                                                                                <li class="order-type">
-                                            <strong>VAT (13%)</strong>
-                                            <span>£11.31</span>
-                                        </li>
-                                                                    
-
-                                                    <li class="order-type total-price">
-                                        <strong>Total:</strong>
-                                        <span>£98.31</span>
-                                    </li>
-                                            </ul>
-                        </div>
-                    </div>
-                </div>
-                                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div></div><div id="mCSB_15_scrollbar_vertical" class="mCSB_scrollTools mCSB_15_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_15_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 50px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
-                    </div>
-                </div>
-                            <script>
-                (function ($) {
-                    $(document).ready(function () {
-                        $(".order-detail .modal-dialog .modal-content").mCustomScrollbar({
-                            setHeight: 724,
-                            theme: "minimal-dark",
-                            mouseWheelPixels: 100
-                        });
-                    });
-                })(jQuery);
-            </script>
-                                                <div class="print-order-detail menu-order-detail order-detail" id="print-order-det-20676" style="display: none;">
-                        <div class="logo"><img src="{% static 'wp-content/uploads/main-logo.png' %}" alt="Foodbakery"></div>
-                        <h2>Order Detail</h2>
-                        <div class="order-detail-inner">
-                            <div class="description-holder">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="list-detail-options has-checkbox">
-                                            <h3>
-                                                Jet Eat Drive                                            </h3>
-                                            <ul class="order-detail-options">
-                                                <li class="order-number">
-                                                    <strong>Order ID:</strong>
-                                                    <span>20676</span>
-                                                </li>
-                                                                <li class="req-delivery">
-                                            <strong>Delivery Time:</strong>
-                        <span>40 Minutes </span>
-                                    </li>
-                                                                <li class="created-date">
-                                                    <strong>Delivery Date:</strong>
-                                                    <span>
-                                                        Apr 26, 2020 08:14 PM                                                    </span>
-                                                </li>
-                                                <li class="order-type">
-                                                    <strong>Type:</strong>
-                                                    <span>order</span>
-                                                </li>
-                                                <li class="order-type">
-                                                    <strong>Payment Status:</strong>
-                                                    <span>Pending <small><em>(Cash on Delivery)</em></small></span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="customer-detail-holder">
-                            <h3>Customer Detail</h3>
-                            <ul class="customer-detail">
-                                                                    <li>
-                                        <strong>Name :</strong>
-                                        <span>Buyer Demo</span>
-                                    </li>
-                                                                                                    <li>
-                                        <strong>Phone Number :</strong>
-                                        <span>0123456789</span>
-                                    </li>
-                                                                                                    <li>
-                                        <strong>Email :</strong>
-                                        <span>dum4@chimpgroup.com</span>
-                                    </li>
-                                                                                                    <li>
-                                        <strong>Address :</strong>
-                                        <span>rua alegre, 83</span>
-                                    </li>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                                <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="order-status-holder">
-                        <h3> Order Status:</h3>
-                        <div class="order-status-process order-status">
-                            <p>Shipped</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h2 class="heading">Food Menu</h2>
-				<div class="responsive-table">    
-				<ul class="categories-order table-generic"><li class="order-heading-titles">
-					<div>Products</div>	
-					<div>Price per</div>
-				    </li>
-					<li class="order-heading-titles">
-					<div>
-						<h4>Pizza</h4>
-						<h5>California-Style Pizza</h5>
-						<ul><li>Extra Topping  - Sweet corn : £0.00</li><li>Extra Topping  - Asparagus : £1.00</li><li>Sausages  - Spicy Mayonnaise : £0.00</li></ul></div><div><span class="category-price">£39.00</span></div>
-					</li>
-					</ul></div></div>                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                            <h3>Order Total</h3>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <ul class="order-detail-options order-total">
-                                                                    <li class="created-date">
-                                        <strong>Subtotal:</strong>
-                                        <span>£40.00</span>
-                                    </li>
-                                                                                                                                            <li class="order-type">
-                                            <strong>
-                                                Pick Up Fee:                                            </strong>
-                                            <span>£10.00</span>
-                                        </li>
-                                                                                                                <li class="order-type">
-                                            <strong>VAT (13%)</strong>
-                                            <span>£6.50</span>
-                                        </li>
-                                                                    
-
-                                                    <li class="order-type total-price">
-                                        <strong>Total:</strong>
-                                        <span>£56.50</span>
-                                    </li>
-                                            </ul>
-                        </div>
-                    </div>
-                </div>
-                                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                <div class="modal fade menu-order-detail order-detail" id="order-det-20676" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content mCustomScrollbar _mCS_16 mCS-autoHide" style="height: 724px; overflow: visible;"><div id="mCSB_16" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" tabindex="0" style="max-height: 672px;"><div id="mCSB_16_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                <h2>Order Detail</h2>
-                                                                    <button class="btn-print" onclick="CallPrint('print-order-det-20676');"><i class="icon-printer"></i><span>Receipt</span></button>
-                                    <script type="text/javascript">
-                                        function CallPrint(divName) {
-                                            var title = "Order Detail";
-                                            var stylesheet_url = "http://foodbakery.chimpgroup.com/wp-content/plugins/wp-foodbakery//assets/frontend/css/cm-print.css";
-                                            jQuery('#' + divName).show();
-                                            jQuery("#" + divName).print({
-                                                stylesheet: stylesheet_url,
-                                                title: title,
-                                            });
-                                            jQuery('#' + divName).hide();
-                                        }
-                                    </script>
-                                                            </div>
-                            <div class="modal-body">
-                                <div class="order-detail-inner">
-                                    <div class="description-holder">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="list-detail-options has-checkbox">
-                                                    <h3>
-                                                        Jet Eat Drive                                                    </h3>
-                                                    <ul class="order-detail-options">
-                                                        <li class="order-number">
-                                                            <strong>Order ID:</strong>
-                                                            <span>20676</span>
-                                                        </li>
-                                                                        <li class="req-delivery">
-                                            <strong>Delivery Time:</strong>
-                        <span>40 Minutes </span>
-                                    </li>
-                                                                        <li class="created-date">
-                                                            <strong>Delivery Date:</strong>
-                                                            <span>
-                                                                Apr 26, 2020 08:14 PM                                                            </span>
-                                                        </li>
-                                                        <li class="order-type">
-                                                            <strong>Type:</strong>
-                                                            <span>order</span>
-                                                        </li>
-                                                        <li class="order-type">
-                                                            <strong>Payment Status:</strong>
-                                                            <span>Pending <small><em>(Cash on Delivery)</em></small></span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-
-                                            </div>
-                                                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="customer-detail-holder">
-                            <h3>Customer Detail</h3>
-                            <ul class="customer-detail">
-                                                                    <li>
-                                        <strong>Name :</strong>
-                                        <span>Buyer Demo</span>
-                                    </li>
-                                                                                                    <li>
-                                        <strong>Phone Number :</strong>
-                                        <span>0123456789</span>
-                                    </li>
-                                                                                                    <li>
-                                        <strong>Email :</strong>
-                                        <span>dum4@chimpgroup.com</span>
-                                    </li>
-                                                                                                    <li>
-                                        <strong>Address :</strong>
-                                        <span>rua alegre, 83</span>
-                                    </li>
-                                
-                            </ul>
-                        </div>
-                    </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="order-status-holder">
-                                            <div class="row">
-                            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">	
-                                <h3>
-                                    Order Status                                </h3>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
-                                <div class="input-field">
-                                    <select onchange="foodbakery_update_order_status(this, '20676', 'http://foodbakery.chimpgroup.com/wp-admin/admin-ajax.php')" class="chosen-select-no-single" id="order-inquiry-status" name="order-inquiry-status" style="display: none;"><option value="Processing">Processing</option><option value="Cancelled">Cancelled</option><option value="Completed">Completed</option><option value="Awaiting payment">Awaiting payment</option><option value="Awaiting Pickup">Awaiting Pickup</option><option selected="selected" value="Shipped">Shipped</option></select><div class="chosen-container chosen-container-single chosen-container-single-nosearch" style="width: 100%;" title="" id="order_inquiry_status_chosen"><a class="chosen-single" tabindex="-1"><span>Shipped</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chosen-results"></ul></div></div>                                    <script type="text/javascript">
-                                        jQuery(document).ready(function () {
-                                            chosen_selectionbox();
-                                        });
-                                    </script>
-                                    <span class="status-loader order-status-loader-20676"></span> 
-                                </div>
-                            </div>
-                        </div>
-                                    </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h2 class="heading">Food Menu</h2>
-				<div class="responsive-table">    
-				<ul class="categories-order table-generic"><li class="order-heading-titles">
-					<div>Products</div>	
-					<div>Price per</div>
-				    </li>
-					<li class="order-heading-titles">
-					<div>
-						<h4>Pizza</h4>
-						<h5>California-Style Pizza</h5>
-						<ul><li>Extra Topping  - Sweet corn : £0.00</li><li>Extra Topping  - Asparagus : £1.00</li><li>Sausages  - Spicy Mayonnaise : £0.00</li></ul></div><div><span class="category-price">£39.00</span></div>
-					</li>
-					</ul></div></div>                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                            <h3>Order Total</h3>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <ul class="order-detail-options order-total">
-                                                                    <li class="created-date">
-                                        <strong>Subtotal:</strong>
-                                        <span>£40.00</span>
-                                    </li>
-                                                                                                                                            <li class="order-type">
-                                            <strong>
-                                                Pick Up Fee:                                            </strong>
-                                            <span>£10.00</span>
-                                        </li>
-                                                                                                                <li class="order-type">
-                                            <strong>VAT (13%)</strong>
-                                            <span>£6.50</span>
-                                        </li>
-                                                                    
-
-                                                    <li class="order-type total-price">
-                                        <strong>Total:</strong>
-                                        <span>£56.50</span>
-                                    </li>
-                                            </ul>
-                        </div>
-                    </div>
-                </div>
-                                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div></div><div id="mCSB_16_scrollbar_vertical" class="mCSB_scrollTools mCSB_16_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_16_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 50px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
-                    </div>
-                </div>
-                            <script>
-                (function ($) {
-                    $(document).ready(function () {
-                        $(".order-detail .modal-dialog .modal-content").mCustomScrollbar({
-                            setHeight: 724,
-                            theme: "minimal-dark",
-                            mouseWheelPixels: 100
-                        });
-                    });
-                })(jQuery);
-            </script>
-                                                <div class="print-order-detail menu-order-detail order-detail" id="print-order-det-20675" style="display: none;">
-                        <div class="logo"><img src="{% static 'wp-content/uploads/main-logo.png' %}" alt="Foodbakery"></div>
-                        <h2>Order Detail</h2>
-                        <div class="order-detail-inner">
-                            <div class="description-holder">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="list-detail-options has-checkbox">
-                                            <h3>
-                                                Jet Eat Drive                                            </h3>
-                                            <ul class="order-detail-options">
-                                                <li class="order-number">
-                                                    <strong>Order ID:</strong>
-                                                    <span>20675</span>
-                                                </li>
-                                                                <li class="req-delivery">
-                                            <strong>Delivery Time:</strong>
-                        <span>40 Minutes </span>
-                                    </li>
-                                                                <li class="created-date">
-                                                    <strong>Delivery Date:</strong>
-                                                    <span>
-                                                        Apr 26, 2020 08:13 PM                                                    </span>
-                                                </li>
-                                                <li class="order-type">
-                                                    <strong>Type:</strong>
-                                                    <span>order</span>
-                                                </li>
-                                                <li class="order-type">
-                                                    <strong>Payment Status:</strong>
-                                                    <span>Pending</span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                                <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="order-status-holder">
-                        <h3> Order Status:</h3>
-                        <div class="order-status-process order-status">
-                            <p>Shipped</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h2 class="heading">Food Menu</h2>
-				<div class="responsive-table">    
-				<ul class="categories-order table-generic"><li class="order-heading-titles">
-					<div>Products</div>	
-					<div>Price per</div>
-				    </li>
-					<li class="order-heading-titles">
-					<div>
-						<h4>Pizza</h4>
-						<h5>California-Style Pizza</h5>
-						<ul><li>Extra Topping  - Sweet corn : £0.00</li><li>Extra Topping  - Asparagus : £1.00</li><li>Sausages  - Spicy Mayonnaise : £0.00</li></ul></div><div><span class="category-price">£39.00</span></div>
-					</li>
-					</ul></div></div>                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                            <h3>Order Total</h3>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <ul class="order-detail-options order-total">
-                                                                    <li class="created-date">
-                                        <strong>Subtotal:</strong>
-                                        <span>£40.00</span>
-                                    </li>
-                                                                                                                                            <li class="order-type">
-                                            <strong>
-                                                Pick Up Fee:                                            </strong>
-                                            <span>£10.00</span>
-                                        </li>
-                                                                                                                <li class="order-type">
-                                            <strong>VAT (13%)</strong>
-                                            <span>£6.50</span>
-                                        </li>
-                                                                    
-
-                                                    <li class="order-type total-price">
-                                        <strong>Total:</strong>
-                                        <span>£56.50</span>
-                                    </li>
-                                            </ul>
-                        </div>
-                    </div>
-                </div>
-                                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                <div class="modal fade menu-order-detail order-detail" id="order-det-20675" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content mCustomScrollbar _mCS_17 mCS-autoHide" style="height: 724px; overflow: visible;"><div id="mCSB_17" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" tabindex="0" style="max-height: 672px;"><div id="mCSB_17_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                <h2>Order Detail</h2>
-                                                                    <button class="btn-print" onclick="CallPrint('print-order-det-20675');"><i class="icon-printer"></i><span>Receipt</span></button>
-                                    <script type="text/javascript">
-                                        function CallPrint(divName) {
-                                            var title = "Order Detail";
-                                            var stylesheet_url = "http://foodbakery.chimpgroup.com/wp-content/plugins/wp-foodbakery//assets/frontend/css/cm-print.css";
-                                            jQuery('#' + divName).show();
-                                            jQuery("#" + divName).print({
-                                                stylesheet: stylesheet_url,
-                                                title: title,
-                                            });
-                                            jQuery('#' + divName).hide();
-                                        }
-                                    </script>
-                                                            </div>
-                            <div class="modal-body">
-                                <div class="order-detail-inner">
-                                    <div class="description-holder">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="list-detail-options has-checkbox">
-                                                    <h3>
-                                                        Jet Eat Drive                                                    </h3>
-                                                    <ul class="order-detail-options">
-                                                        <li class="order-number">
-                                                            <strong>Order ID:</strong>
-                                                            <span>20675</span>
-                                                        </li>
-                                                                        <li class="req-delivery">
-                                            <strong>Delivery Time:</strong>
-                        <span>40 Minutes </span>
-                                    </li>
-                                                                        <li class="created-date">
-                                                            <strong>Delivery Date:</strong>
-                                                            <span>
-                                                                Apr 26, 2020 08:13 PM                                                            </span>
-                                                        </li>
-                                                        <li class="order-type">
-                                                            <strong>Type:</strong>
-                                                            <span>order</span>
-                                                        </li>
-                                                        <li class="order-type">
-                                                            <strong>Payment Status:</strong>
-                                                            <span>Pending</span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-
-                                            </div>
-                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="order-status-holder">
-                                            <div class="row">
-                            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">	
-                                <h3>
-                                    Order Status                                </h3>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
-                                <div class="input-field">
-                                    <select onchange="foodbakery_update_order_status(this, '20675', 'http://foodbakery.chimpgroup.com/wp-admin/admin-ajax.php')" class="chosen-select-no-single" id="order-inquiry-status" name="order-inquiry-status" style="display: none;"><option value="Processing">Processing</option><option value="Cancelled">Cancelled</option><option value="Completed">Completed</option><option value="Awaiting payment">Awaiting payment</option><option value="Awaiting Pickup">Awaiting Pickup</option><option selected="selected" value="Shipped">Shipped</option></select><div class="chosen-container chosen-container-single chosen-container-single-nosearch" style="width: 100%;" title="" id="order_inquiry_status_chosen"><a class="chosen-single" tabindex="-1"><span>Shipped</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chosen-results"></ul></div></div>                                    <script type="text/javascript">
-                                        jQuery(document).ready(function () {
-                                            chosen_selectionbox();
-                                        });
-                                    </script>
-                                    <span class="status-loader order-status-loader-20675"></span> 
-                                </div>
-                            </div>
-                        </div>
-                                    </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h2 class="heading">Food Menu</h2>
-				<div class="responsive-table">    
-				<ul class="categories-order table-generic"><li class="order-heading-titles">
-					<div>Products</div>	
-					<div>Price per</div>
-				    </li>
-					<li class="order-heading-titles">
-					<div>
-						<h4>Pizza</h4>
-						<h5>California-Style Pizza</h5>
-						<ul><li>Extra Topping  - Sweet corn : £0.00</li><li>Extra Topping  - Asparagus : £1.00</li><li>Sausages  - Spicy Mayonnaise : £0.00</li></ul></div><div><span class="category-price">£39.00</span></div>
-					</li>
-					</ul></div></div>                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                            <h3>Order Total</h3>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <ul class="order-detail-options order-total">
-                                                                    <li class="created-date">
-                                        <strong>Subtotal:</strong>
-                                        <span>£40.00</span>
-                                    </li>
-                                                                                                                                            <li class="order-type">
-                                            <strong>
-                                                Pick Up Fee:                                            </strong>
-                                            <span>£10.00</span>
-                                        </li>
-                                                                                                                <li class="order-type">
-                                            <strong>VAT (13%)</strong>
-                                            <span>£6.50</span>
-                                        </li>
-                                                                    
-
-                                                    <li class="order-type total-price">
-                                        <strong>Total:</strong>
-                                        <span>£56.50</span>
-                                    </li>
-                                            </ul>
-                        </div>
-                    </div>
-                </div>
-                                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div></div><div id="mCSB_17_scrollbar_vertical" class="mCSB_scrollTools mCSB_17_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_17_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 50px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
-                    </div>
-                </div>
-                            <script>
-                (function ($) {
-                    $(document).ready(function () {
-                        $(".order-detail .modal-dialog .modal-content").mCustomScrollbar({
-                            setHeight: 724,
-                            theme: "minimal-dark",
-                            mouseWheelPixels: 100
-                        });
-                    });
-                })(jQuery);
-            </script>
-                                                <div class="print-order-detail menu-order-detail order-detail" id="print-order-det-20531" style="display: none;">
-                        <div class="logo"><img src="{% static 'wp-content/uploads/main-logo.png' %}" alt="Foodbakery"></div>
-                        <h2>Order Detail</h2>
-                        <div class="order-detail-inner">
-                            <div class="description-holder">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="list-detail-options has-checkbox">
-                                            <h3>
-                                                Jet Eat Drive                                            </h3>
-                                            <ul class="order-detail-options">
-                                                <li class="order-number">
-                                                    <strong>Order ID:</strong>
-                                                    <span>20531</span>
-                                                </li>
-                                                                <li class="req-delivery">
-                                            <strong>Delivery Time:</strong>
-                        <span>40 Minutes </span>
-                                    </li>
-                                                                <li class="created-date">
-                                                    <strong>Delivery Date:</strong>
-                                                    <span>
-                                                        Apr 24, 2020 01:39 PM                                                    </span>
-                                                </li>
-                                                <li class="order-type">
-                                                    <strong>Type:</strong>
-                                                    <span>order</span>
-                                                </li>
-                                                <li class="order-type">
-                                                    <strong>Payment Status:</strong>
-                                                    <span>Pending</span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                                <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="order-status-holder">
-                        <h3> Order Status:</h3>
-                        <div class="order-status-process order-status">
-                            <p>Shipped</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h2 class="heading">Food Menu</h2>
-				<div class="responsive-table">    
-				<ul class="categories-order table-generic"><li class="order-heading-titles">
-					<div>Products</div>	
-					<div>Price per</div>
-				    </li>
-					<li class="order-heading-titles">
-					<div>
-						<h4>Pizza</h4>
-						<h5>Foodbakery Special Pizza</h5>
-						<ul><li>Sausages - Spicy Mayonnaise : £1.00</li><li>Sausages - Tequila Lime Sauce : £0.00</li><li>Extra Topping  - Pepperoni : £0.00</li><li>Extra Topping  - Tuna : £3.00</li><li>Extra Topping  - Sweet corn : £1.00</li><li>Cold Drink - Coke / Diet Coke / Pepsi : £4.00</li></ul></div><div><span class="category-price">£50.00</span></div>
-					</li>
-					</ul></div></div>                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                            <h3>Order Total</h3>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <ul class="order-detail-options order-total">
-                                                                    <li class="created-date">
-                                        <strong>Subtotal:</strong>
-                                        <span>£59.00</span>
-                                    </li>
-                                                                                                                                            <li class="order-type">
-                                            <strong>
-                                                Pick Up Fee:                                            </strong>
-                                            <span>£10.00</span>
-                                        </li>
-                                                                                                                <li class="order-type">
-                                            <strong>VAT (13%)</strong>
-                                            <span>£8.97</span>
-                                        </li>
-                                                                    
-
-                                                    <li class="order-type total-price">
-                                        <strong>Total:</strong>
-                                        <span>£77.97</span>
-                                    </li>
-                                            </ul>
-                        </div>
-                    </div>
-                </div>
-                                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                <div class="modal fade menu-order-detail order-detail" id="order-det-20531" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content mCustomScrollbar _mCS_18 mCS-autoHide" style="height: 724px; overflow: visible;"><div id="mCSB_18" class="mCustomScrollBox mCS-minimal-dark mCSB_vertical mCSB_outside" tabindex="0" style="max-height: 672px;"><div id="mCSB_18_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                <h2>Order Detail</h2>
-                                                                    <button class="btn-print" onclick="CallPrint('print-order-det-20531');"><i class="icon-printer"></i><span>Receipt</span></button>
-                                    <script type="text/javascript">
-                                        function CallPrint(divName) {
-                                            var title = "Order Detail";
-                                            var stylesheet_url = "http://foodbakery.chimpgroup.com/wp-content/plugins/wp-foodbakery//assets/frontend/css/cm-print.css";
-                                            jQuery('#' + divName).show();
-                                            jQuery("#" + divName).print({
-                                                stylesheet: stylesheet_url,
-                                                title: title,
-                                            });
-                                            jQuery('#' + divName).hide();
-                                        }
-                                    </script>
-                                                            </div>
-                            <div class="modal-body">
-                                <div class="order-detail-inner">
-                                    <div class="description-holder">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="list-detail-options has-checkbox">
-                                                    <h3>
-                                                        Jet Eat Drive                                                    </h3>
-                                                    <ul class="order-detail-options">
-                                                        <li class="order-number">
-                                                            <strong>Order ID:</strong>
-                                                            <span>20531</span>
-                                                        </li>
-                                                                        <li class="req-delivery">
-                                            <strong>Delivery Time:</strong>
-                        <span>40 Minutes </span>
-                                    </li>
-                                                                        <li class="created-date">
-                                                            <strong>Delivery Date:</strong>
-                                                            <span>
-                                                                Apr 24, 2020 01:39 PM                                                            </span>
-                                                        </li>
-                                                        <li class="order-type">
-                                                            <strong>Type:</strong>
-                                                            <span>order</span>
-                                                        </li>
-                                                        <li class="order-type">
-                                                            <strong>Payment Status:</strong>
-                                                            <span>Pending</span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-
-                                            </div>
-                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="order-status-holder">
-                                            <div class="row">
-                            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">	
-                                <h3>
-                                    Order Status                                </h3>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
-                                <div class="input-field">
-                                    <select onchange="foodbakery_update_order_status(this, '20531', 'http://foodbakery.chimpgroup.com/wp-admin/admin-ajax.php')" class="chosen-select-no-single" id="order-inquiry-status" name="order-inquiry-status" style="display: none;"><option value="Processing">Processing</option><option value="Cancelled">Cancelled</option><option value="Completed">Completed</option><option value="Awaiting payment">Awaiting payment</option><option value="Awaiting Pickup">Awaiting Pickup</option><option selected="selected" value="Shipped">Shipped</option></select><div class="chosen-container chosen-container-single chosen-container-single-nosearch" style="width: 100%;" title="" id="order_inquiry_status_chosen"><a class="chosen-single" tabindex="-1"><span>Shipped</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chosen-results"></ul></div></div>                                    <script type="text/javascript">
-                                        jQuery(document).ready(function () {
-                                            chosen_selectionbox();
-                                        });
-                                    </script>
-                                    <span class="status-loader order-status-loader-20531"></span> 
-                                </div>
-                            </div>
-                        </div>
-                                    </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h2 class="heading">Food Menu</h2>
-				<div class="responsive-table">    
-				<ul class="categories-order table-generic"><li class="order-heading-titles">
-					<div>Products</div>	
-					<div>Price per</div>
-				    </li>
-					<li class="order-heading-titles">
-					<div>
-						<h4>Pizza</h4>
-						<h5>Foodbakery Special Pizza</h5>
-						<ul><li>Sausages - Spicy Mayonnaise : £1.00</li><li>Sausages - Tequila Lime Sauce : £0.00</li><li>Extra Topping  - Pepperoni : £0.00</li><li>Extra Topping  - Tuna : £3.00</li><li>Extra Topping  - Sweet corn : £1.00</li><li>Cold Drink - Coke / Diet Coke / Pepsi : £4.00</li></ul></div><div><span class="category-price">£50.00</span></div>
-					</li>
-					</ul></div></div>                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                            <h3>Order Total</h3>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <ul class="order-detail-options order-total">
-                                                                    <li class="created-date">
-                                        <strong>Subtotal:</strong>
-                                        <span>£59.00</span>
-                                    </li>
-                                                                                                                                            <li class="order-type">
-                                            <strong>
-                                                Pick Up Fee:                                            </strong>
-                                            <span>£10.00</span>
-                                        </li>
-                                                                                                                <li class="order-type">
-                                            <strong>VAT (13%)</strong>
-                                            <span>£8.97</span>
-                                        </li>
-                                                                    
-
-                                                    <li class="order-type total-price">
-                                        <strong>Total:</strong>
-                                        <span>£77.97</span>
-                                    </li>
-                                            </ul>
-                        </div>
-                    </div>
-                </div>
-                                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div></div><div id="mCSB_18_scrollbar_vertical" class="mCSB_scrollTools mCSB_18_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_18_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 50px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
-                    </div>
-                </div>
-                            <script>
-                (function ($) {
-                    $(document).ready(function () {
-                        $(".order-detail .modal-dialog .modal-content").mCustomScrollbar({
-                            setHeight: 724,
-                            theme: "minimal-dark",
-                            mouseWheelPixels: 100
-                        });
-                    });
-                })(jQuery);
-            </script>
-                                                <div class="print-order-detail menu-order-detail order-detail" id="print-order-det-20494" style="display: none;">
-                        <div class="logo"><img src="{% static 'wp-content/uploads/main-logo.png' %}" alt="Foodbakery"></div>
-                        <h2>Order Detail</h2>
-                        <div class="order-detail-inner">
-                            <div class="description-holder">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="list-detail-options has-checkbox">
-                                            <h3>
-                                                Jet Eat Drive                                            </h3>
-                                            <ul class="order-detail-options">
-                                                <li class="order-number">
-                                                    <strong>Order ID:</strong>
-                                                    <span>20494</span>
-                                                </li>
-                                                                <li class="req-delivery">
-                                            <strong>Delivery Time:</strong>
-                        <span>40 Minutes </span>
-                                    </li>
-                                                                <li class="created-date">
-                                                    <strong>Delivery Date:</strong>
-                                                    <span>
-                                                        Apr 24, 2020 10:24 AM                                                    </span>
-                                                </li>
-                                                <li class="order-type">
-                                                    <strong>Type:</strong>
-                                                    <span>order</span>
-                                                </li>
-                                                <li class="order-type">
-                                                    <strong>Payment Status:</strong>
-                                                    <span>Pending</span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                                <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="order-status-holder">
-                        <h3> Order Status:</h3>
-                        <div class="order-status-process order-status">
-                            <p>processing</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h2 class="heading">Food Menu</h2>
-				<div class="responsive-table">    
-				<ul class="categories-order table-generic"><li class="order-heading-titles">
-					<div>Products</div>	
-					<div>Price per</div>
-				    </li>
-					<li class="order-heading-titles">
-					<div>
-						<h4>Pizza</h4>
-						<h5>California-Style Pizza</h5>
-						<ul><li>Extra Topping  - Pepperoni : £9.00</li><li>Extra Topping  - Tuna : £6.00</li><li>Sausages  - Lime Sauce : £2.00</li></ul></div><div><span class="category-price">£39.00</span></div>
-					</li>
-					</ul></div></div>                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                            <h3>Order Total</h3>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <ul class="order-detail-options order-total">
-                                                                    <li class="created-date">
-                                        <strong>Subtotal:</strong>
-                                        <span>£56.00</span>
-                                    </li>
-                                                                                                                                            <li class="order-type">
-                                            <strong>
-                                                Pick Up Fee:                                            </strong>
-                                            <span>£10.00</span>
-                                        </li>
-                                                                                                                <li class="order-type">
-                                            <strong>VAT (13%)</strong>
-                                            <span>£8.58</span>
-                                        </li>
-                                                                    
-
-                                                    <li class="order-type total-price">
-                                        <strong>Total:</strong>
-                                        <span>£74.58</span>
-                                    </li>
-                                            </ul>
-                        </div>
-                    </div>
-                </div>
-                                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                <div class="modal fade menu-order-detail order-detail" id="order-det-20494" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog" role="document">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                <h2>Order Detail</h2>
-                                                                    <button class="btn-print" onclick="CallPrint('print-order-det-20494');"><i class="icon-printer"></i><span>Receipt</span></button>
-                                    <script type="text/javascript">
-                                        function CallPrint(divName) {
-                                            var title = "Order Detail";
-                                            var stylesheet_url = "http://foodbakery.chimpgroup.com/wp-content/plugins/wp-foodbakery//assets/frontend/css/cm-print.css";
-                                            jQuery('#' + divName).show();
-                                            jQuery("#" + divName).print({
-                                                stylesheet: stylesheet_url,
-                                                title: title,
-                                            });
-                                            jQuery('#' + divName).hide();
-                                        }
-                                    </script>
-                                                            </div>
-                            <div class="modal-body">
-                                <div class="order-detail-inner">
-                                    <div class="description-holder">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="list-detail-options has-checkbox">
-                                                    <h3>
-                                                        Jet Eat Drive                                                    </h3>
-                                                    <ul class="order-detail-options">
-                                                        <li class="order-number">
-                                                            <strong>Order ID:</strong>
-                                                            <span>20494</span>
-                                                        </li>
-                                                                        <li class="req-delivery">
-                                            <strong>Delivery Time:</strong>
-                        <span>40 Minutes </span>
-                                    </li>
-                                                                        <li class="created-date">
-                                                            <strong>Delivery Date:</strong>
-                                                            <span>
-                                                                Apr 24, 2020 10:24 AM                                                            </span>
-                                                        </li>
-                                                        <li class="order-type">
-                                                            <strong>Type:</strong>
-                                                            <span>order</span>
-                                                        </li>
-                                                        <li class="order-type">
-                                                            <strong>Payment Status:</strong>
-                                                            <span>Pending</span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-
-                                            </div>
-                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="order-status-holder">
-                                            <div class="row">
-                            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">	
-                                <h3>
-                                    Order Status                                </h3>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
-                                <div class="input-field">
-                                    <select onchange="foodbakery_update_order_status(this, '20494', 'http://foodbakery.chimpgroup.com/wp-admin/admin-ajax.php')" class="chosen-select-no-single" id="order-inquiry-status" name="order-inquiry-status" style="display: none;"><option value="Processing">Processing</option><option value="Cancelled">Cancelled</option><option value="Completed">Completed</option><option value="Awaiting payment">Awaiting payment</option><option value="Awaiting Pickup">Awaiting Pickup</option><option value="Shipped">Shipped</option></select><div class="chosen-container chosen-container-single chosen-container-single-nosearch" style="width: 100%;" title="" id="order_inquiry_status_chosen"><a class="chosen-single" tabindex="-1"><span>Processing</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chosen-results"></ul></div></div>                                    <script type="text/javascript">
-                                        jQuery(document).ready(function () {
-                                            chosen_selectionbox();
-                                        });
-                                    </script>
-                                    <span class="status-loader order-status-loader-20494"></span> 
-                                </div>
-                            </div>
-                        </div>
-                                    </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h2 class="heading">Food Menu</h2>
-				<div class="responsive-table">    
-				<ul class="categories-order table-generic"><li class="order-heading-titles">
-					<div>Products</div>	
-					<div>Price per</div>
-				    </li>
-					<li class="order-heading-titles">
-					<div>
-						<h4>Pizza</h4>
-						<h5>California-Style Pizza</h5>
-						<ul><li>Extra Topping  - Pepperoni : £9.00</li><li>Extra Topping  - Tuna : £6.00</li><li>Sausages  - Lime Sauce : £2.00</li></ul></div><div><span class="category-price">£39.00</span></div>
-					</li>
-					</ul></div></div>                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                            <h3>Order Total</h3>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <ul class="order-detail-options order-total">
-                                                                    <li class="created-date">
-                                        <strong>Subtotal:</strong>
-                                        <span>£56.00</span>
-                                    </li>
-                                                                                                                                            <li class="order-type">
-                                            <strong>
-                                                Pick Up Fee:                                            </strong>
-                                            <span>£10.00</span>
-                                        </li>
-                                                                                                                <li class="order-type">
-                                            <strong>VAT (13%)</strong>
-                                            <span>£8.58</span>
-                                        </li>
-                                                                    
-
-                                                    <li class="order-type total-price">
-                                        <strong>Total:</strong>
-                                        <span>£74.58</span>
-                                    </li>
-                                            </ul>
-                        </div>
-                    </div>
-                </div>
-                                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                    </div>
-                </div>
                                     
                     </div>
                 </div>
@@ -2201,130 +1023,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                         </div>
                     </div>
                 </div>
-                                    <script type="text/javascript">
-                        var page_id_all = 1;
-                        jQuery(document).ready(function (e) {
-                            jQuery('#foodbakery_publisher_received_orders').trigger('click');
 
-                        });
-                        var count = 0;
-                        jQuery(document).ajaxComplete(function (event, request, settings) {
-                            if (count == 2) {
-                                jQuery('#').trigger('click');
-                            }
-
-                            count++;
-                        });
-                    </script>
-                    	<footer id="footer" class="footer-style-2">
-	    		    		    <div class="footer-widget"  >
-
-			<div class="container">
-
-			    <div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				    <div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="widget widget-newsletter"><div class="widget-title"><h5>Subscribe to our Newsletter</h5></div>
-        <script>
-            function foodbakery_mailchimp_submit(theme_url, counter, admin_url) {
-                'use strict';
-                $ = jQuery;
-                $('#newsletter_error_div_' + counter).fadeOut();
-                $('#newsletter_success_div_' + counter).fadeOut();
-                $('#process_' + counter).show();
-                $('#process_' + counter).html('<i class="icon-spinner8 fa-spin"></i>');
-                $.ajax({
-                    type: 'POST',
-                    url: admin_url,
-                    data: $('#mcform_' + counter).serialize() + '&action=foodbakery_mailchimp',
-                    dataType: "json",
-                    success: function (response) {
-                        $('#mcform_' + counter).get(0).reset();
-                        if (response.type === 'error') {
-                            $('#process_' + counter).hide();
-                            $('#newsletter_mess_error_' + counter).html(response.msg);
-                            $('#newsletter_error_div_' + counter).fadeIn();
-                        } else {
-                            $('#process_' + counter).hide();
-                            $('#newsletter_mess_success_' + counter).html(response.msg);
-                            $('#newsletter_success_div_' + counter).fadeIn();
-                        }
-                        $('#newsletter_mess_' + counter).fadeIn(600);
-                        $('#newsletter_mess_' + counter).html(response);
-                        $('#process_' + counter).html('');
-                    }
-                });
-            }
-            function hide_div(div_hide) {
-                jQuery('#' + div_hide).hide();
-            }
-        </script>
-        <div id ="process_newsletter_1" class="mailchimp-signup">
-            <div id="process_1" class="status status-message cs-spinner" style="display:none"></div>
-                        <div class="fieldset">
-                <form  action="javascript:foodbakery_mailchimp_submit('http://foodbakery.chimpgroup.com/wp-content/themes/foodbakery','1','http://foodbakery.chimpgroup.com/wp-admin/admin-ajax.php')" id="mcform_1" method="post">
-                                            <input id="foodbakery_list_id1" type="hidden" name="foodbakery_list_id" value="0" />
-                        <div class="field-holder">
-                            <label>
-                                <i class=" icon-envelope3"></i>
-                                <input type="text" id="mc_email1" class="field-input"  name="mc_email" placeholder=" Enter Your Email Address..."   >
-                            </label>
-                        </div>
-
-                                                    <div class="field-holder btn-holder">
-                                <input class="subscribe-btn bgcolor" id="btn_newsletter_1" type="submit" value="Sign Up">
-                            </div>
-                        
-                </form>
-                <div id="newsletter_error_div_1" style="display:none" class="alert alert-danger">
-                    <button class="close" type="button" onclick="hide_div('newsletter_error_div_1')" aria-hidden="true">×</button>
-                    <p><i class="icon-warning4"></i>
-                        <span id="newsletter_mess_error_1"></span></p>
-                </div> 
-                <div id="newsletter_success_div_1" style="display:none" class="alert alert-success">
-                    <button class="close" type="button" onclick="hide_div('newsletter_success_div_1')" aria-hidden="true">×</button>
-                    <p><i class="icon-warning4"></i><span id="newsletter_mess_success_1"></span></p>
-                </div>
-            </div>
-                    </div>
-        </div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget_text"><div class="widget-title"><h5>About us</h5></div>			<div class="textwidget">Foodbakery is the business of food and restaurants. Ridiculus sociosqu cursus neque cursus curae ante scelerisque vehicula.
-Explore restaurants, bars, and cafés by locality cum doctus civibus efficiantur in imperdiet deterruisset. FoodBakery Just ordered me some grub</div>
-		</div>                                                            <ul class="social-media">
-                                                                            </ul>
-                                                        </div><div class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><div class="widget widget-top-cities"><div class="widget-title"><h5>Popular Cities</h5></div><ul><li><a href="http://foodbakery.chimpgroup.com/listings/?location=Budleigh Salterton">Budleigh Salterton</a></li><li><a href="http://foodbakery.chimpgroup.com/listings/?location=Moreton in Marsh">Moreton in Marsh</a></li><li><a href="http://foodbakery.chimpgroup.com/listings/?location=Hebden Bridge">Hebden Bridge</a></li><li><a href="http://foodbakery.chimpgroup.com/listings/?location=Harwich">Harwich</a></li><li><a href="http://foodbakery.chimpgroup.com/listings/?location=Hertfordshire">Hertfordshire</a></li><li><a href="http://foodbakery.chimpgroup.com/listings/?location=Grays">Grays</a></li></ul></div></div><div class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><div class="widget widget-top-cities"><div class="widget-title"><h5>Popular Cuisines</h5></div><ul><li><a href="http://foodbakery.chimpgroup.com/listings/?restaurant-category=beef-roast">Beef Roast</a></li></ul></div></div><div class="col-lg-2 col-md-2 col-sm-6 col-xs-12"><div class="widget widget-categories"><div class="widget-title"><h5>Menu</h5></div><ul><li id="menu-item-15827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15827"><a href="http://foodbakery.chimpgroup.com/blog-large/"> Blog Large</a></li>
-<li id="menu-item-15813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15813"><a href="http://foodbakery.chimpgroup.com/blog-medium/"> Blog Medium</a></li>
-<li id="menu-item-15828" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15828"><a href="http://foodbakery.chimpgroup.com/blog-masonry/"> Blog Masonry</a></li>
-<li id="menu-item-15814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15814"><a href="http://foodbakery.chimpgroup.com/contact-us/"> Contact</a></li>
-<li id="menu-item-15820" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15820"><a href="http://foodbakery.chimpgroup.com/faqs/"> FAQ&#8217;s</a></li>
-<li id="menu-item-15821" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15821"><a href="http://foodbakery.chimpgroup.com/how-it-works/"> How it works</a></li>
-</ul></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-connect"><div class="widget-title"><h5> Connect</h5></div><ul><li><span class="bgcolor"><i class="icon-ring_volume"></i>
-                    </span><p>+1 123 456 7892</p></li><li><span class="bgcolor"><i class="icon-envelope-o"></i>
-                   </span><p><a href="mailto:support@chimpstudio.com">support@chimpstudio.com</a></p></li><li><span class="bgcolor"><i class="icon-location-pin2"></i>
-                    </span><p>33 - B, 2nd Floor, Saint Jhon Doe Appartments, Sussex, UK.26AL565C.</p></li></ul></div></div>				    </div>
-				</div>
-			    </div>
-
-			</div>
-
-		    </div> <!-- /.cs-footer-widgets -->
-			    	    	        <div class="copyright-sec">
-	    	<div class="container">
-	    	    <div class="row">
-	    		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			    
-	    		    <div class="copyright-inner">
-				                                    
-				    					<div class="copy-right">
-					    <p>
-						© 2020 Foodbakery. All Rights Reserved. Powered By <a href="//www.chimpgroup.com&quot;">ChimpGroup</a>. 					    </p>
-
-					</div>
-								    				    	    		    </div>
-	    		</div>
-	    	    </div>
-	    	</div>
-	        </div> <!-- /.cs-copyright -->
-	    	</footer> <!-- /#footer -->
     </div> <!-- /.wrapper -->
             <div class="foodbakery_loader" style="display: none;">
                 <div class="loader-img"><i class="icon-spinner"></i></div>
@@ -2336,30 +1035,6 @@ Explore restaurants, bars, and cafés by locality cum doctus civibus efficiantur
                 </div>
             </div>
 
-                            <script type="text/javascript">
-                    (function ($) {
-                        $(document).ready(function () {
-                            bind_rest_auth_event();
-                            jQuery.growl.error({
-                                message: 'Demo users are not allowed to modify information.'
-                            });
-                            $("body").on("DOMNodeInserted DOMNodeRemoved", bind_rest_auth_event);
-                        });
-
-                        function bind_rest_auth_event() {
-                            $("input[type='submit'], .btn-submit, .btn-send, .delete-this-user-review, .delete-shortlist, .remove_member, #team_update_form").off("click");
-                            $(document).off("click", "input[type='submit'], .btn-submit, .btn-send, .delete-this-user-review, .delete-shortlist, .remove_member, #team_update_form");
-                            $("body").off("click", "input[type='submit'], .btn-submit, .btn-send, .delete-this-user-review, .delete-shortlist, .remove_member, #team_update_form");
-                            $("body").on("click", "input[type='submit'], .btn-submit, .btn-send, .delete-this-user-review, .delete-shortlist, .remove_member, #team_update_form", function (e) {
-                                e.stopPropagation();
-                                jQuery.growl.error({
-                                    message: 'Demo users are not allowed to modify information.'
-                                });
-                                return false;
-                            });
-                        }
-                    })(jQuery);
-                </script>
                         <input type="hidden"     id="social_login_form_uri" name="foodbakery_" value="http://foodbakery.chimpgroup.com/wp-login.php" /><link rel='stylesheet' id='jquery-te-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/common/css/jquery-te-1.4.0.css' %}" type='text/css' media='all' />
 <link rel='stylesheet' id='fonticonpicker-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/icomoon/css/jquery.fonticonpicker.min.css' %}" type='text/css' media='all' />
 <script type='text/javascript'>

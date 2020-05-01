@@ -204,6 +204,19 @@ def userLogin(request):
                 return redirect('/')  
     return render(request,'users/my-account/index.html')
 
+def userLoginGeneral(request):
+    if request.method == 'POST':
+        if request.POST.get('login'):
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('/')
+            else:
+                return redirect('/user/login/')  
+    return render(request,'users/my-account/index.html')
+
 @Restaurant_Required
 def restaurantOrders(request,pk):
     restaurant = get_object_or_404(RestaurantProfile,pk=pk)
@@ -214,6 +227,7 @@ def restaurantOrders(request,pk):
     }
     return render(request,'users/restaurant-dashboard/orders.html',context)
 
+@DeliveryPerson_Required
 def deliveryPersonOrders(request,pk):
     deliveryPerson = get_object_or_404(DeliveryPersonProfile,pk=pk)
     orders = deliveryPerson.ordersdescription_set.all()

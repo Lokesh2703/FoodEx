@@ -81,8 +81,6 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 <link rel='https://api.w.org/' href='wp-json/index.html' />
 <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc0db0.html?rsd" />
 <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
-<meta name="generator" content="WordPress 4.8.8" />
-<meta name="generator" content="WooCommerce 3.4.5" />
 <link rel="canonical" href="index.html" />
 <link rel='shortlink' href='index.html' />
 <link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embedab7b.json?url=http%3A%2F%2Ffoodbakery.chimpgroup.com%2Fhomev1%2F" />
@@ -363,25 +361,8 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
 {% if request.user.is_authenticated and request.user.is_delivery_person %}
     <li id="menu-item-1448" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% url 'deliveryPersonOrdersboard' request.user.deliverypersonprofile.id %}">Delivery Person</a></li>
 {% elif not request.user.is_authenticated %}
-    <li id="menu-item-1448" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% url 'deliveryPersonLogin' %}">Delivery Person</a></li>    
+    <li id="menu-item-1448" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% url 'deliveryPersonLogin' %}">Delivery Person Page</a></li>    
 {% endif %}
-<li id="menu-item-1298" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-has-children"><a href="#">Pages</a>
-<ul>
-	<li id="menu-item-2414" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="price-plans/index.html">Price Plans</a></li>
-	<li id="menu-item-297" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="how-it-works/index.html">How it works</a></li>
-	<li id="menu-item-296" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="faqs/index.html">FAQ&#8217;s</a></li>
-	<li id="menu-item-38" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="404.html">404</a></li>
-	<li id="menu-item-39" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="indexdccf.html?s=Enter+your+keyword">Search Result</a></li>
-	<li id="menu-item-298" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="contact-us/index.html">Contact</a></li>
-</ul> <!--End Sub Menu -->
-</li>
-<li id="menu-item-303" class="menu-item  menu-item-type-custom  menu-item-object-custom  menu-item-has-children"><a href="#">Blogs</a>
-<ul>
-	<li id="menu-item-45" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="blog-large/index.html">Blog Large</a></li>
-	<li id="menu-item-156" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="blog-medium/index.html">Blog Medium</a></li>
-	<li id="menu-item-155" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="blog-masonry/index.html">Blog Masonry</a></li>
-	<li id="menu-item-304" class="menu-item  menu-item-type-post_type  menu-item-object-post"><a href="creating-the-worlds-greatest-food-community-with-food-bakery/index.html">Blog Detail Page</a></li>
-</ul> <!--End Sub Menu -->
 </li>
 </ul>	    </nav><!-- .main-navigation -->
 	    				    </div>
@@ -1712,52 +1693,6 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                         </div>
 
 </div>
-	<footer id="footer" class="footer-style-1">
-	    		    		    <div class="footer-widget"  >
-
-			<div class="container">
-
-			    <div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				    <div class="row">
-					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-top-cities"><div class="widget-title"><h5>Popular Cities</h5></div><ul><li><a href="listings/index07c4.html?location=Barcelona">Barcelona</a></li><li><a href="listings/index8d15.html?location=Florida">Florida</a></li><li><a href="listings/indexead1.html?location=Miami">Miami</a></li><li><a href="listings/indexe3cf.html?location=Normandy">Normandy</a></li><li><a href="listings/index6775.html?location=Toronto">Toronto</a></li><li><a href="listings/index4ca2.html?location=United States">United States</a></li></ul></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-top-cities"><div class="widget-title"><h5>Popular Cuisnies</h5></div><ul><li><a href="listings/index523e.html?restaurant-category=apple-juice">Apple Juice</a></li><li><a href="listings/indexe3a7.html?restaurant-category=bb-q">BB.Q</a></li><li><a href="listings/index7c2f.html?restaurant-category=chicken-roast">Chicken Roast</a></li><li><a href="listings/index896c.html?restaurant-category=hot-dogs">Hot Dogs</a></li><li><a href="listings/index5fc8.html?restaurant-category=prawns">Prawns</a></li><li><a href="listings/index0712.html?restaurant-category=steam-roast">Steam Roast</a></li></ul></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-categories"><div class="widget-title"><h5>Menu</h5></div><ul><li id="menu-item-289" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-289"><a href="index.html"> Home</a></li>
-<li id="menu-item-1243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1243"><a href="blog-large/index.html"> Blog Large</a></li>
-<li id="menu-item-293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-293"><a href="contact-us/index.html"> Contact</a></li>
-<li id="menu-item-324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-324"><a href="faqs/index.html"> FAQ&#8217;s</a></li>
-<li id="menu-item-325" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-325"><a href="how-it-works/index.html"> How it works</a></li>
-</ul></div></div><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"><div class="widget widget-connect"><div class="widget-title"><h5>Connect With Us</h5></div>		    <ul class="social-media">
-						    <li><a href="#" data-original-title="twitter"><i class=" icon-twitter"></i></a></li>
-						    <li><a href="#" data-original-title="linkedin"><i class="icon-linkedin"></i></a></li>
-						    <li><a href="#" data-original-title="youtube"><i class="icon-youtube"></i></a></li>
-						    </ul>
-		    <ul><li><span class="bgcolor"><i class="icon-ring_volume"></i>
-                    </span><p>+1863424766</p></li><li><span class="bgcolor"><i class="icon-envelope-o"></i>
-                   </span><p><a href="mailto:info@foodbakery.com">info@foodbakery.com</a></p></li><li><span class="bgcolor"><i class="icon-location-pin2"></i>
-                    </span><p>London, United Kingdom</p></li></ul></div></div>				    </div>
-				</div>
-			    </div>
-
-			</div>
-
-		    </div> <!-- /.cs-footer-widgets -->
-			    	    	    <!--    <div class="copyright-sec">
-	    	<div class="container">
-	    	    <div class="row">
-	    		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-			    
-	    		    <div class="copyright-inner">
-				                                    
-				    					<div class="copy-right">
-					    <p>
-						© 2019 Foodbakery. All Rights Reserved. Powered By <a href="http://www.chimpgroup.com"/">ChimpGroup</a>. 					    </p>
-
-					</div>
-								    				    	    		    </div>
-	    		</div>
-	    	    </div>
-	    	</div>
-	        </div> -->
-	    	</footer> <!-- /#footer -->
     </div> <!-- /.wrapper -->
             <div class="foodbakery_loader" style="display: none;">
                 <div class="loader-img"><i class="icon-spinner"></i></div>
