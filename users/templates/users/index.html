@@ -330,7 +330,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                     </a>
                     {% endif %}
                     {% if request.user.is_authenticated and request.user.is_customer %}
-                        <a class="get-start-btn" href="{% url 'dashboard1' %}" >
+                        <a class="get-start-btn" href="{% url 'dashboard1' request.user.customerprofile.id %}" >
                             {{ request.user.username }} Profile
                         </a>
                     {% elif request.user.is_authenticated and request.user.is_restaurant %}
@@ -1309,7 +1309,6 @@ var foodbakery_chosen_vars = {"plugin_url":"http:\/\/foodbakery.chimpgroup.com\/
 </script>
 <script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/backend/scripts/chosen-ajaxify9537.js' %}"></script>
 <script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/elements/login/cs-social-login/media/js/cs-connect9537.js' %}"></script>
-<script type='text/javascript' src="{% static '../../www.google.com/recaptcha/api9537.js' %}"></script>
 <script type='text/javascript' src="{% static 'wp-content/plugins/wp-foodbakery/assets/frontend/scripts/restaurant-functions9537.js' %}"></script>
 </body>
 

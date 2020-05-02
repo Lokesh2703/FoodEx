@@ -362,7 +362,6 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                         Login / Register
                     </a>
                     {% endif %}
-
                     
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 	    		    <div class="login-option">
@@ -372,13 +371,13 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                             <a href="javascript:void(0);">
                                 <figure class="profile-image">
                                     <img src="{% static 'wp-content/uploads/fb-restaurant-01-1.jpg' %}" alt="">                                </figure>
-                                {{ deliveryPerson.user.first_name }}                         </a>
+                                {{ restaurant.restaurantName }}                       </a>
                                                             <ul>
                                     
-                                        <li class="user_dashboard_ajax  active" id="foodbakery_publisher_suggested" data-queryvar=""><a href="javascript:void(0);"><i class="icon-dashboard3"></i>Dashboard</a></li>
+                                        <li class="user_dashboard_ajax" id="foodbakery_publisher_suggested" data-queryvar=""><a href="javascript:void(0);"><i class="icon-dashboard3"></i>Dashboard</a></li>
                                                                                     <li class="user_dashboard_url"><a href="http://foodbakery.chimpgroup.com/user-dashboard/?tab=add-restaurant&restaurant_id=20260"><i class="icon-building"></i>My Restaurant</a></li>
                                                                                                                                 <li class="user_dashboard_ajax" id="foodbakery_publisher_food_menu" data-queryvar="dashboard=food_menu"><a href="javascript:void(0);"><i class="icon-menu5"></i>Menu Builder</a></li>
-                                                                                    <li class="user_dashboard_ajax" id="foodbakery_publisher_received_orders" data-queryvar="dashboard=received_orders"><a href="javascript:void(0);"><i class="icon-add_shopping_cart"></i>Orders</a></li>
+                                                                                    <li class="user_dashboard_ajax active" id="foodbakery_publisher_received_orders" data-queryvar="dashboard=received_orders"><a href="javascript:void(0);"><i class="icon-add_shopping_cart"></i>Orders</a></li>
                                                                                         <li class="user_dashboard_ajax" id="foodbakery_publisher_received_bookings" data-queryvar="dashboard=received_bookings"><a href="javascript:void(0);"><i class="icon-file-text2 "></i>Bookings</a></li>
                                                                                         <li class="user_dashboard_ajax" id="foodbakery_publisher_my_reviews" data-queryvar="dashboard=my_reviews"><a href="javascript:void(0);"><i class="icon-comment2"></i>Reviews</a></li>
 
@@ -402,6 +401,12 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
 								    <div class="main-nav">
 						    <nav id="site-navigation" class="main-navigation" role="navigation" aria-label="Primary Menu">
 		<ul id="menu-main-menu" class="primary-menu">
+    <!-- <li id="menu-item-33" class="menu-item  menu-item-type-post_type  menu-item-object-page  menu-item-home  current-menu-item  page_item  page-item-6  current_page_item  current-menu-ancestor  current-menu-parent  current_page_parent  current_page_ancestor  menu-item-has-children"><a href="index.html">Demos</a>
+<ul>
+	<li id="menu-item-3816" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="../index.html">Food Bakery</a></li>
+	<li id="menu-item-3815" class="menu-item  menu-item-type-custom  menu-item-object-custom  current-menu-item  current_page_item  menu-item-home"><a href="index.html">Mexican Restaurant</a></li>
+	<li id="menu-item-5343" class="menu-item  menu-item-type-custom  menu-item-object-custom"><a href="../rtl/index.html">RTL Demo</a></li>
+</ul> End Sub Menu -->
 </li>
 <li id="menu-item-1447" class="menu-item  menu-item-type-post_type  menu-item-object-page"><a href="{% url 'restaurants-default' %}">Restaurants</a></li>	    </nav><!-- .main-navigation -->
 	    				    </div>
@@ -410,12 +415,6 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
 			    </div>
 		</div>
 	</header>
-
-
-
-
-
-
 	        <div class="main-section ">
             <div class="page-content-fullwidth">
                 <div class="row">
@@ -431,7 +430,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                                             <div class="company-info">
                                                                                                     <div class="img-holder">
                                                         <figure> 
-                                                            <img src="{{ deliveryPerson.image.url }}" alt=""> 
+                                                            <img src="{{ restaurant.image.url }}" alt=""> 
                                                         </figure>
                                                     </div>
                                                     
@@ -440,7 +439,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                                                             <span class="rating-box" style="width: 100%;"></span> 
                                                         </div>
                                                         <span class="reviews">(3 Reviews)</span> 
-                                                                                                        <span class="restaurant-title">{{ deliveryPerson.user.first_name }}</span>
+                                                                                                        <span class="restaurant-title">{{ restaurant.restaurantName }}</span>
                                                                                                             <div class="text">
                                                             <i class="icon-local_pizza"></i>
                                                             <p>Hot Dogs, Pizza &amp; Stakes</p>
@@ -465,10 +464,10 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                                                     <div class="user-account-nav user-account-sidebar">
                                                                                                                 <div class="user-nav-list">
                                                             <ul>
-                                                                                                                                    <li class="user_dashboard_ajax" id="foodbakery_publisher_suggested" data-queryvar=""> <a href="javascript:void(0);"><i class="icon-dashboard3"></i> Dashboard</a></li>	
+                                                                                                                                    <li class="user_dashboard_ajax active" id="foodbakery_publisher_suggested" data-queryvar=""> <a href="javascript:void(0);"><i class="icon-dashboard3"></i> Dashboard</a></li>	
                                                                                                                                                 <li class="user_dashboard_url"><a href="http://foodbakery.chimpgroup.com/user-dashboard/?tab=add-restaurant&restaurant_id=20260"><i class="icon-building"></i>My Restaurant</a></li>
                                                                                                                                                                                                                     <li class="user_dashboard_ajax" id="foodbakery_publisher_food_menu" data-queryvar="dashboard=food_menu"><a href="javascript:void(0);"><i class="icon-menu5"></i>Menu Builder</a></li>
-                                                                                                                                                <li class="user_dashboard_ajax active" id="foodbakery_publisher_received_orders" data-queryvar="dashboard=received_orders"><a href="javascript:void(0);"><i class="icon-add_shopping_cart"></i>Orders</a></li>
+                                                                                                                                                <li class="user_dashboard_ajax" id="foodbakery_publisher_received_orders" data-queryvar="dashboard=received_orders"><a href="javascript:void(0);"><i class="icon-add_shopping_cart"></i>Orders</a></li>
                                                                                                                                                         <li class="user_dashboard_ajax" id="foodbakery_publisher_received_bookings" data-queryvar="dashboard=received_bookings"><a href="javascript:void(0);"><i class="icon-file-text2"></i>Bookings</a></li>
                                                                             
                                                                         </li>
@@ -490,7 +489,9 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
 
                                                     </div>
                                                 </div>
-                                <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+
+
+        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
                                                                                                             
                                                         <script>
                                                             function remove_order_complete() {
@@ -499,545 +500,300 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
 
                                                         </script>
                                                         <div class="user-dashboard loader-holder">
-                                                            <div class="user-holder">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="row">
-                    <div class="element-title has-border right-filters-row">
-                                                    <h5>Orders</h5>
-                                                    <div class="right-filters row pull-right">
-                                                            <div class="col-lg-6 col-md-6 col-xs-6">
-                                    <div class="input-field">
-                                        <select onchange="foodbakery_orders(this, 'foodbakery_publisher_received_orders')" class="chosen-select-no-single" id="filter_status" name="order_status" style="display: none;"><option selected="selected" value="">Select Orders Status</option><option value="Processing">Processing</option><option value="Cancelled">Cancelled</option><option value="Completed">Completed</option><option value="Awaiting payment">Awaiting payment</option><option value="Awaiting Pickup">Awaiting Pickup</option><option value="Shipped">Shipped</option></select><div class="chosen-container chosen-container-single chosen-container-single-nosearch" style="width: 100%;" title="" id="filter_status_chosen"><a class="chosen-single" tabindex="-1"><span>Select Orders Status</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chosen-results"></ul></div></div>
-                                        <script type="text/javascript">
-
-                                            chosen_selectionbox();
-
-                                        </script>
-                                    </div>
-                                </div>
-                                                                                        <div class="col-lg-6 col-md-6 col-xs-6">
-                                    <div class="input-field">
-                                        <i class="icon-angle-down"></i>
-                                        <input type="text" id="daterange" value="" placeholder="Select Date Range">
-                                        <input type="hidden" name="date_range" id="date_range" value="">
-                                        <script type="text/javascript">
-                                            jQuery('#daterange').daterangepicker({
-                                                autoUpdateInput: false,
-                                                opens: 'left',
-                                                locale: {
-                                                    format: 'DD/MM/YYYY'
-                                                }
-                                            },
-                                                    function (start, end) {
-                                                        var date_range = start.format('DD/MM/YYYY') + ',' + end.format('DD/MM/YYYY');
-                                                        jQuery('#date_range').val(date_range);
-                                                        var actionString = "foodbakery_publisher_received_orders";
-                                                        var pageNum = 1;
-                                                        foodbakery_show_loader('.loader-holder');
-                                                        var filter_parameters = get_filter_parameters();
-                                                        if (typeof (ajaxRequest) != 'undefined') {
-                                                            ajaxRequest.abort();
-                                                        }
-                                                        ajaxRequest = jQuery.ajax({
-                                                            type: "POST",
-                                                            url: foodbakery_globals.ajax_url,
-                                                            data: 'page_id_all=' + pageNum + '&action=' + actionString + filter_parameters,
-                                                            success: function (response) {
-                                                                foodbakery_hide_loader();
-                                                                jQuery('.user-holder').html(response);
-
-                                                            }
-                                                        });
-                                                    });
-                                            jQuery('#daterange').on('cancel.daterangepicker', function (ev, picker) {
-                                                jQuery('#daterange').val('');
-                                                jQuery('#date_range').val('');
-                                                var actionString = "foodbakery_publisher_received_orders";
-                                                var pageNum = 1;
-                                                foodbakery_show_loader('.loader-holder');
-                                                var filter_parameters = get_filter_parameters();
-                                                if (typeof (ajaxRequest) != 'undefined') {
-                                                    ajaxRequest.abort();
-                                                }
-                                                ajaxRequest = jQuery.ajax({
-                                                    type: "POST",
-                                                    url: foodbakery_globals.ajax_url,
-                                                    data: 'page_id_all=' + pageNum + '&action=' + actionString + filter_parameters,
-                                                    success: function (response) {
-                                                        foodbakery_hide_loader();
-                                                        jQuery('.user-holder').html(response);
-
-                                                    }
-                                                });
-                                            });
-                                        </script>
-                                    </div>
-                                </div>
-                                                    </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="user-orders-list">
-                                                                    <div class="responsive-table">
-                    <ul class="table-generic">
-                        <li class="order-heading-titles">
-                            <div>Order id</div>
-                            <div>Date</div>
-                            <div>Total Price</div>
-                            <div>Charges</div>
-                            <div>Received</div>
-                            <div>Status</div>
-                            <div>Detail</div>
-
-                        </li>
-
-
-
-                        {% for order in orders %}
-                            <li class="order-heading-titles">
-                                <div><a href="javascript:void(0)" data-toggle="modal" data-target="#order-det-{{ order.id }}">order-{{ order.id }}</a></div>
-                                <div>{{ order.dateTime |date:'F d,Y' }}</div>
-                                <div>₹ {{ order.TotalPrice }}</div>
-                                <div>₹ {{ order.charges }}</div>
-                                <div>₹ {{ order.received }}</div>
-                                {% ifequal order.status 1 %}
-                                <div><span class="order-status" style="background-color: #1e73be;">Processing</span></div>
-                                {% endifequal %}
-                                {% ifequal order.status 2 %}
-                                <div><span class="order-status" style="background-color: #7f00ff;">Confirmed</span></div>
-                                {% endifequal %}
-                                {% ifequal order.status 3 %}
-                                <div><span class="order-status" style="background-color: #ff0000;">Cancelled</span></div>
-                                {% endifequal %}
-                                {% ifequal order.status 4 %}
-                                <div><span class="order-status" style="background-color: #00ff11;">Out for Delivery</span></div>
-                                {% endifequal %}
-                                {% ifequal order.status 5 %}
-                                <div><span class="order-status" style="background-color: #35bc00;">Completed</span></div>
-                                {% endifequal %}
-                                <div><a href="javascript:void(0)" data-toggle="modal" data-target="#order-det-{{ order.id }}"><i class="icon-plus2 text-color"></i></a></div>
-                            </li>
-                        {% endfor %}
-
-                                                </ul>
-
-                </div>
-                {% for order in orders %}
-                                                    <div class="print-order-detail menu-order-detail order-detail" id="print-order-det-21072" style="display: none;">
-                        <div class="logo"><img src="{% static 'wp-content/uploads/main-logo.png' %}" alt="Foodbakery"></div>
-                        <h2>Order Detail</h2>
-                        <div class="order-detail-inner">
-                            <div class="description-holder">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="list-detail-options has-checkbox">
-                                            <h3>
-                                                {{ order.restaurant.restaurantName }}                                            </h3>
-                                            <ul class="order-detail-options">
-                                                <li class="order-number">
-                                                    <strong>Order ID:</strong>
-                                                    <span>{{ order.id }}</span>
-                                                </li>
-                                                                <li class="req-delivery">
-                                            <strong>Delivery Time:</strong>
-                        <span>{{ order.restaurant.deliveryTime }} Minutes </span>
-                                    </li>
-                                                                <li class="created-date">
-                                                    <strong>Delivery Date:</strong>
-                                                    <span>
-                                                        {{ order.dateTime | date:'M d,Y h:i A' }}                                                  </span>
-                                                </li>
-                                                <li class="order-type">
-                                                    <strong>Type:</strong>
-                                                    <span>order</span>
-                                                </li>
-                                                <li class="order-type">
-                                                    <strong>Payment Status:</strong>
-                                                    <span>Pending</span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="customer-detail-holder">
-                                                    <h3>Customer Detail</h3>
-                                                    <ul class="customer-detail">
-                                                                                            <li>
-                                                                <strong>Name :</strong>
-                                                                <span>{{ order.customer.user.first_name }}</span>
-                                                            </li>
-                                                                                                                            <li>
-                                                                <strong>Phone Number :</strong>
-                                                                <span>{{ order.customer.mobile }}</span>
-                                                            </li>
-                                                                                                                            <li>
-                                                                <strong>Email :</strong>
-                                                                <span>{{ order.customer.user.email }}</span>
-                                                            </li>
-                                                                                                                            <li>
-                                                                <strong>Address :</strong>
-                                                                <span>{{ order.customer.address }}</span>
-                                                            </li>
-                                                        
-                                                    </ul>
-                                                </div>
-                    </div>
-                                                <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="order-status-holder">
-                        <h3> Order Status:</h3>
-                        <div class="order-status-process order-status">
-                            <p>processing</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h2 class="heading">Food Menu</h2>
-				<div class="responsive-table">    
-				<ul class="categories-order table-generic"><li class="order-heading-titles">
-					<div>Products</div>	
-					<div>Price per</div>
-				    </li>
-                    {% for item in order.orderfoodquantity_set.all %}
-					<li class="order-heading-titles">
-                    
-					<div>
-						<h4>{{ item.foodItemId.food_name.food_name }} ({{ item.quantity }})</h4>
-						<!--<h5>Foodbakery Special Pizza</h5>
-						<ul>
-                            <li>Sausages - Tequila Lime Sauce : £0.00</li>
-                            <li>Sausages - Soy Sauce : £2.00</li>
-                            <li>Extra Topping  - Pepperoni : £0.00</li>
-                            <li>Extra Topping  - Asparagus : £1.00</li>
-                            <li>Extra Topping  - Jalapenos : £0.00</li>
-                            <li>Cold Drink - Sangria : £2.00</li>
-                        </ul>-->
-                    </div><div><span class="category-price">₹ {{ item.foodItemId.price | multiply:item.quantity }}</span></div>
-                    
-					</li>
-                    {% endfor %}
-					</ul>
-                    
-                    </div></div>                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                            <h3>Order Total</h3>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <ul class="order-detail-options order-total">
-                                                                    <li class="created-date">
-                                        <strong>Subtotal:</strong>
-                                        <span>₹ {{ order.Subtotal }}</span>
-                                    </li>
-                                                                                                                                            <li class="order-type">
-                                            <strong>
-                                                Pick Up Fee:                                            </strong>
-                                            <span>₹ {{ order.charges }}</span>
-                                        </li>
-                                                                                                                <li class="order-type">
-                                                             
-
-                                                    <li class="order-type total-price">
-                                        <strong>Total:</strong>
-                                        <span>₹ {{ order.TotalPrice }}</span>
-                                    </li>
-                                            </ul>
-                        </div>
-                    </div>
-                </div>
-                                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    
-                                <div class="modal fade menu-order-detail order-detail" id="order-det-{{ order.id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display: none;">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content mCustomScrollbar _mCS_14 mCS-autoHide" style="height: 724px; overflow: visible;">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                                <h2>Order Detail</h2>
-                                                                    <button class="btn-print" onclick="CallPrint('print-order-det-21072');"><i class="icon-printer"></i><span>Receipt</span></button>
-                                    <script type="text/javascript">
-                                        function CallPrint(divName) {
-                                            var title = "Order Detail";
-                                            var stylesheet_url = "http://foodbakery.chimpgroup.com/wp-content/plugins/wp-foodbakery//assets/frontend/css/cm-print.css";
-                                            jQuery('#' + divName).show();
-                                            jQuery("#" + divName).print({
-                                                stylesheet: stylesheet_url,
-                                                title: title,
-                                            });
-                                            jQuery('#' + divName).hide();
-                                        }
-                                    </script>
-                                                            </div>
-                            <div class="modal-body">
-                                <div class="order-detail-inner">
-                                    <div class="description-holder">
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="list-detail-options has-checkbox">
-                                                    <h3>
-                                                       {{ order.restaurant.restaurantName }}                                                  </h3>
-                                                    <ul class="order-detail-options">
-                                                        <li class="order-number">
-                                                            <strong>Order ID:</strong>
-                                                            <span>{{ order.id }}</span>
-                                                        </li>
-                                                                        <li class="req-delivery">
-                                            <strong>Delivery Time:</strong>
-                        <span>{{ order.restaurant.deliveryTime }} Minutes </span>
-                                    </li>
-                                                                        <li class="created-date">
-                                                            <strong>Order Date:</strong>
-                                                            <span>
-                                                               {{ order.dateTime | date:'M d,Y h:i A' }}                                                        </span>
-                                                        </li>
-                                                        <li class="order-type">
-                                                            <strong>Type:</strong>
-                                                            <span>order</span>
-                                                        </li>
-                                                        <li class="order-type">
-                                                            <strong>Payment Status:</strong>
-                                                            <span>Pending</span>
-                                                        </li>
-
-                                                    </ul>
-                                                </div>
-
-                                            </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="customer-detail-holder">
-                                                    <h3>Customer Detail</h3>
-                                                    <ul class="customer-detail">
-                                                                                            <li>
-                                                                <strong>Name :</strong>
-                                                                <span>{{ order.customer.user.first_name }}</span>
-                                                            </li>
-                                                                                                                            <li>
-                                                                <strong>Phone Number :</strong>
-                                                                <span>{{ order.customer.mobile }}</span>
-                                                            </li>
-                                                                                                                            <li>
-                                                                <strong>Email :</strong>
-                                                                <span>{{ order.customer.user.email }}</span>
-                                                            </li>
-                                                                                                                            <li>
-                                                                <strong>Address :</strong>
-                                                                <span>{{ order.customer.address }}</span>
-                                                            </li>
-                                                        
-                                                    </ul>
-                                                </div>
-                    </div>
-                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="order-status-holder">
-                                            <div class="row">
-                            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">	
-                                <h3>
-                                    Order Status                                </h3>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12">
-                                <div class="input-field">
-                                    <select onchange="foodbakery_update_order_status(this, '21072', 'http://foodbakery.chimpgroup.com/wp-admin/admin-ajax.php')" class="chosen-select-no-single" id="order-inquiry-status" name="order-inquiry-status" style="display: none;"><option value="Processing">Processing</option><option value="Cancelled">Cancelled</option><option value="Completed">Completed</option><option value="Awaiting payment">Awaiting payment</option><option value="Awaiting Pickup">Awaiting Pickup</option><option value="Shipped">Shipped</option></select><div class="chosen-container chosen-container-single chosen-container-single-nosearch" style="width: 100%;" title="" id="order_inquiry_status_chosen"><a class="chosen-single" tabindex="-1"><span>Processing</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off" readonly=""></div><ul class="chosen-results"><li class="active-result result-selected" data-option-array-index="0" style="">Processing</li><li class="active-result" data-option-array-index="1" style="">Cancelled</li><li class="active-result" data-option-array-index="2" style="">Completed</li><li class="active-result" data-option-array-index="3" style="">Awaiting payment</li><li class="active-result" data-option-array-index="4" style="">Awaiting Pickup</li><li class="active-result" data-option-array-index="5" style="">Shipped</li></ul></div></div>                                    <script type="text/javascript">
-                                        jQuery(document).ready(function () {
-                                            chosen_selectionbox();
-                                        });
-                                    </script>
-                                    <span class="status-loader order-status-loader-21072"></span> 
-                                </div>
-                            </div>
-                        </div>
-                                    </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h2 class="heading">Food Menu</h2>
-				<div class="responsive-table">
-				<ul class="categories-order table-generic">
-                <li class="order-heading-titles">
-					<div>Products</div>	
-					<div>Price per</div>
-				</li>
-                    {% for item in order.orderfoodquantity_set.all %}
-					<li class="order-heading-titles">
-                    
-					<div>
-						<h4>{{ item.foodItemId.food_name.food_name }} ({{ item.quantity }})</h4>
-						<!--<h5>Foodbakery Special Pizza</h5>
-						<ul>
-                            <li>Sausages - Tequila Lime Sauce : £0.00</li>
-                            <li>Sausages - Soy Sauce : £2.00</li>
-                            <li>Extra Topping  - Pepperoni : £0.00</li>
-                            <li>Extra Topping  - Asparagus : £1.00</li>
-                            <li>Extra Topping  - Jalapenos : £0.00</li>
-                            <li>Cold Drink - Sangria : £2.00</li>
-                        </ul>-->
-                    </div><div><span class="category-price">₹ {{ item.foodItemId.price | multiply:item.quantity }}</span></div>
-                    
-					</li>
-                    {% endfor %}
+                                                            <div class="user-holder">			<form method="post" enctype="multipart/form-data">
+				<ul class="restaurant-menu-nav nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#menu-cats-items">Menu Categories</a></li>
+					<li><a data-toggle="tab" href="#menu-list-items">Food Items</a></li>
 				</ul>
-                
-                    
-                    </div></div>                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                            <h3>Order Total</h3>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <ul class="order-detail-options order-total">
-                                                                    <li class="created-date">
-                                        <strong>Subtotal:</strong>
-                                        <span>₹ {{ order.Subtotal }}</span>
-                                    </li>
-                                                                                                                                            <li class="order-type">
-                                            <strong>
-                                                Pick Up Fee:                                            </strong>
-                                            <span>₹ {{ order.charges }}</span>
-                                        </li>
-                                                                                                               <!--<li class="order-type">
-                                            <strong>VAT (13%)</strong>
-                                            <span>£8.45</span>
-                                        </li>-->
-                                                                    
 
-                                                    <li class="order-type total-price">
-                                        <strong>Total:</strong>
-                                        <span>₹ {{ order.TotalPrice }}</span>
-                                    </li>
-                                            </ul>
-                        </div>
-                    </div>
-                </div>
-                                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-            <div id="mCSB_14_scrollbar_vertical" class="mCSB_scrollTools mCSB_14_scrollbar mCS-minimal-dark mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_14_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 50px; top: 0px; display: block; height: 629px; max-height: 688px;"><div class="mCSB_dragger_bar" style="line-height: 50px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div>
-                    </div>
-                </div>
-                            <script>
-                (function ($) {
-                    $(document).ready(function () {
-                        $(".order-detail .modal-dialog .modal-content").mCustomScrollbar({
-                            setHeight: 724,
-                            theme: "minimal-dark",
-                            mouseWheelPixels: 100
-                        });
-                    });
-                })(jQuery);
-            </script>
+				<div class="tab-content">
+					<script>
+						if ($(".menu-items-list").length != '') {
+
+							$('.menu-items-list').sortable({
+								handle: '.drag-option',
+								cursor: 'move'
+							});
+						}
+						if ($(".restaurant_menu_items_cat_list").length != '') {
+							$('.restaurant_menu_items_cat_list').sortable({
+								handle: '.drag-option',
+								cursor: 'move'
+							});
+						}
+						if ($(".restaurant-menu-cats-list").length != '') {
+
+							$('.restaurant-menu-cats-list').sortable({
+								handle: '.drag-option',
+								cursor: 'move'
+							});
+						}
+						if ($('[data-toggle="tooltip"]').length != '') {
+							$('[data-toggle="tooltip"]').tooltip();
+						}
+					</script>
+					<div id="menu-cats-items" class="tab-pane fade in active">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+								<div class="element-title">
+				<h5>Menu Categories</h5>
+				<div id="menu-cats-loader-569679677" class="restaurant-loader"></div>
+				<a id="restaurant-cats-btn-569679677" class="add-menu-item" href="javascript:void(0);" onclick="javascript:foodbakery_add_menu_cat('569679677');">Add Menu Category</a>
+			</div>
+
+            <form name="nameCategory" method="post" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+		    <div class="form-elements">
+			<div id="add-menu-cat-from-569679677" style="display:none;"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><a href="javascript:void(0);" onclick="foodbakery_close_menu_cat('569679677');" class="close-menu-item"><i class="icon-close2"></i></a><div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<label>Menu Name *</label>
+					<input class="menu-item-title" id="menu_item_title_{{ category.id }}" name="addCategoryname" type="text" placeholder="Menu Category Title">	
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<label>Description</label>
+					<textarea class="menu-item-desc" id="menu_item_desc_{{ category.id }}" name="addCategoryDesc" placeholder="Category Description"></textarea>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<input type="submit" name="addCategory" class="add-menu-item add-menu-item-list">Add Category</input>
+				</div>
+			</div></div></div>   </div>
+            </form>
+
+
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="field-holder">
+						<div class="service-list">
+						<div class="menu-items-list-holder"><div class="not-found" style="display:none;">
+					<i class="icon-error"></i>
+					<p>Sorry! No Menu Category added.</p>
+				</div> 
+        
+        {% for category in categories %}
+          <ul id="restaurant-cats-list-{{ category.id }}" class="restaurant-menu-cats-list ui-sortable" style="display:block;">
+
+
+        
+        <form method="post" name="categoryedit" enctype="multipart/form-data">
+        {% csrf_token %}
+            <li class="menu-item-{{ category.id }}">
+				<div class="drag-list">
+					<span class="drag-option ui-sortable-handle"><i class="icon-bars"></i></span>
+					<div class="list-title">
+						<h6>{{ category.foodCategories }}</h6>
+					</div>
+					<div class="list-option">
+						<a href="javascript:void(0);" class="edit-menu-item" onclick="foodbakery_add_menu_cat('{{ category.id }}');"><i class="icon-mode_edit"></i></a>
+						<a href="javascript:void(0);" class="remove-menu-item" onclick="foodbakery_remove_menu_item('1555');"><i class="icon-close2"></i></a>
+					</div>
+				</div>
+				<div id="add-menu-cat-from-{{ category.id }}" style="display: none;">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><a href="javascript:void(0);" onclick="foodbakery_close_menu_cat('{{ category.id }}');" class="close-menu-item"><i class="icon-close2"></i></a><div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<label>Menu Name *</label>
+					<input class="menu-item-title" id="menu_item_title_{{ category.id }}" name="menu_cat_title[{{ category.id }}]" value="{{ category.foodCategories }}" type="text" placeholder="Menu Category Title">	
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<label>Description</label>  
+					<textarea class="menu-item-desc" id="menu_item_desc_{{ category.id }}" name="menu_cat_desc[{{ category.id }}]" placeholder="Category Description">{{ category.categoryDescription }}</textarea>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<input type="submit" name="categoryedit-{{ category.id }}" class="add-menu-item add-menu-item-list" href="javascript:void(0);" onclick="foodbakery_close_menu_cat('{{ category.id }}');">Save</input>
+				</div>
+			</div></div></div>
+				</div>
+			</li>
+            </form>
+            
+
+
+							</ul>
+                    {% endfor %}
+					    </div>
+					</div>
+				    </div>
+				</div>
+			</div>							</div>
+						</div>
+					</div>
+					<div id="menu-list-items" class="tab-pane fade">
+						
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="element-title">
+						<h5>Food Items</h5>
+						<div id="menu-item-loader-44126540" class="restaurant-loader"></div>
+						<a id="restaurant-menu-items-btn-44126540" class="add-menu-item" href="javascript:void(0);" onclick="javascript:foodbakery_add_menu_item('44126540');">Add Menu Item</a>
+					</div>
+				</div>
+
+                <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+				<div id="add-menu-item-from-{{ restaurant.id }}" style="display:block;"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><a href="javascript:void(0);" onclick="foodbakery_close_menu_lists('44126540');" class="close-menu-item"><i class="icon-close2"></i></a><div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<label>Restaurant Menu *</label><div class="restaurants-menu">
+                    <select class="chosen-select" id="restaurant_menu_580734809" name="restaurant_menu_adingCateg" style="display: none;">
+                        {% for category in categories %}
+                        <option value="{{ category.foodCategories }}">{{ category.foodCategories }}</option>
+                        {% endfor %}
+                    </select>
+                <!--<div class="chosen-container chosen-container-single" style="width: 0px;" title="" id="restaurant_menu_580734809_chosen"><a class="chosen-single" tabindex="-1"><span>Pizza</span><div><b></b></div></a><div class="chosen-drop"><div class="chosen-search"><input type="text" autocomplete="off"></div><ul class="chosen-results"></ul></div></div></div><script> jQuery(document).ready(function () { jQuery(".chosen-select").chosen(); }); </script>-->
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<label>Title *</label>
+					<input id="current_restaurant_menu_580734809" type="hidden" value=""><input class="menu-item-title" id="menu_item_title_580734809" name="foodtitle" type="text" placeholder="Menu Item Title">
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<label>Price * (₹)</label><input class="menu-item-price" name="fooditemprice" id="menu_item_price_580734809" type="text" placeholder="Menu Item Price">
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<label>Food Image</label>
+			<div id="browse-btn-sec-580734809" class="browse-btn-sec" style="display: bolck !important;">
+				<input type="file" id="image-icon-580734809" data-id="580734809" name="image_icon_580734809" class="browse-menu-icon-file" style="display: none;">
+				<a id="browse-menu-icon-img-580734809" href="javascript:void(0)" class="browse-menu-icon-img btn bgcolor" data-id="580734809">Browse</a>
+			</div>
+			<div id="browse-img-sec-580734809" class="browse-image-sec" style="display: none !important;">
+				<div class="icon-img-holder">
+					<a href="javascript:void(0)" data-id="580734809" class="remove-icon"><i class="icon-close2"></i></a>
+					<img id="img-val-base-580734809" src="" alt="">
+				</div>
+				<input id="hiden-img-val-580734809" type="hidden">
+			</div>
+				</div>
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<label>Description</label><textarea class="menu-item-desc foodbakery_editor" id="menu_item_desc_580734809" name="fooditemdescription" placeholder="Menu Item Description test"></textarea>
+				</div>
+			</div><ul id="menu-item-extra-list-580734809" class="menu-item-extra-list"></ul>
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<!--<a class="add-menu-item-extra add-menu-item-extra-580734809" href="javascript:void(0);" onclick="foodbakery_add_menu_item_extra('44126540','580734809');">Add Menu Item Extra</a>-->
+					<input type="submit" class="add-menu-item add-menu-item-list add-menu-item-list-580734809" name="addFooditem">Add to Menu Item list</input>
+				</div>
+			</div></div></div></div>
+            </form>
+
+
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="field-holder">
+						<div class="service-list">
+							<ul id="restaurant_menu_items-list-44126540" class="restaurant_menu_items_cat_list panel-group ui-sortable">
+				
+                {% for category in categories %}
+                <li id="menu-{{ category.foodCategories }}" class="panel panel-default"><div class="element-title panel-heading"><span class="drag-option ui-sortable-handle"><i class="icon-bars"></i></span> <a data-toggle="collapse" data-parent="#restaurant_menu_items-list-44126540" href="#collapse-{{ category.id }}">{{ category.foodCategories }}</a></div>
+					<div id="collapse-0" class="panel-collapse collapse in"><ul class="menu-items-list ui-sortable">
+
+            {% for fooditem in foodItems|get_value_from_dict:category %}
+            <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+			<li class="menu-item-{{ fooditem.id }}">
+				<div class="drag-list">
+					<span class="drag-option ui-sortable-handle"><i class="icon-bars"></i></span>
+					<div class="icon-holder"><img src="{{ fooditem.image.url }}" alt=""></div>
+					<div class="list-title">
+						<h6>{{ fooditem.food_name.food_name }}</h6>
+						<p>{{ fooditem.description }}</p>
+					</div>
+					<div class="list-price">
+						<span><b>₹</b><b>{{ fooditem.price }}</b></span>
+					</div>
+					<div class="list-option">
+						<a href="javascript:void(0);" class="edit-menu-item" onclick="foodbakery_add_menu_item('553560543');"><i class="icon-mode_edit"></i></a>
+						<a href="javascript:void(0);" class="remove-menu-item" onclick="foodbakery_remove_menu_item('553560543');"><i class="icon-close2"></i></a>
+					</div>
+				</div><div id="add-menu-item-from-553560543" style="display:none;"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><a href="javascript:void(0);" onclick="foodbakery_close_menu_item('44126540','553560543');" class="close-menu-item"><i class="icon-close2"></i></a><div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<label>Restaurant Menu *</label>
+                        <div class="restaurants-menu">
+                            <select class="chosen-select" id="restaurant_menu_553560543" name="restaurant_menu[{{ fooditem.id }}]" style="display: none;">
+                            {% for category in categories %}
+                                <option selected="selected" value="{{ category.foodCategories }}">{{ category.foodCategories }}</option>
+                            {% endfor %}
+                            </select>
+                        </div><script> jQuery(document).ready(function () { jQuery(".chosen-select").chosen(); }); </script>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<label>Title *</label>
+					<input id="current_restaurant_menu_{{ fooditem.id }}" type="hidden" value="{{ fooditem.food_name.food_name }}"><input name="menu_item_action[{{ fooditem.id }}]" value="edit" type="hidden"><input class="menu-item-title" id="menu_item_title_{{ fooditem.id }}" name="menu_item_title[{{ fooditem.id }}]" value="{{ fooditem.food_name.food_name }}" type="text" placeholder="Menu Item Title">
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<label>Price * (₹)</label><input class="menu-item-price" id="menu_item_price_{{ fooditem.id }}" name="menu_item_price[{{ fooditem.id }}]" type="text" value="{{ fooditem.price }}" placeholder="Menu Item Price">
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<label>Food Image</label>
+			<div id="browse-btn-sec-553560543" class="browse-btn-sec" style="display: none !important;">
+				<input type="file" id="image-icon-{{ fooditem.id }}" data-id="{{ fooditem.id }}" name="image_icon_{{ fooditem.id }}" class="browse-menu-icon-file" style="display: none;">
+				<a id="browse-menu-icon-img-{{ fooditem.id }}" href="javascript:void(0)" class="browse-menu-icon-img btn bgcolor" data-id="553560543">Browse</a>
+			</div>
+			<div id="browse-img-sec-{{ fooditem.id }}" class="browse-image-sec" style="display: block !important;">
+				<div class="icon-img-holder">
+					<a href="javascript:void(0)" data-id="{{ fooditem.id }}" class="remove-icon"><i class="icon-close2"></i></a>
+					<img id="img-val-base-{{ fooditem.id }}" src="{{ fooditem.image.url }}" alt="">
+				</div>
+				<input id="hiden-img-val-{{ fooditem.id }}" type="hidden" name="menu_item_icon[{{ fooditem.id }}]" value="20206">
+			</div>
+				</div>
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<label>Description</label><textarea class="menu-item-desc foodbakery_editor" id="menu_item_desc_{{ fooditem.id }}" name="menu_item_desc[{{ fooditem.id }}]" placeholder="Menu Item Description test">{{ fooditem.description }}</textarea>
+				</div>
+			</div>
+            
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="field-holder">
+					<!--<a class="add-menu-item-extra add-menu-item-extra-{{ fooditem.id }}" href="javascript:void(0);" onclick="foodbakery_add_menu_item_extra('{{ category.id }}','{{ fooditem.id }}');">Add Menu Item Extra</a>-->
+					<input type="submit" class="add-menu-item add-menu-item-list add-menu-item-list-{{ fooditem.id }}" name="fooditemedit-{{ fooditem.id }}" >Save</input>
+				</div>
+			</div></div></div></div></li>
+            </form>
+            {% endfor %}
+                    </ul></div></li>
             {% endfor %}
 
-
-                                                <div class="print-order-detail menu-order-detail order-detail" id="print-order-det-20832" style="display: none;">
-                        <div class="logo"><img src="{% static 'wp-content/uploads/main-logo.png' %}" alt="Foodbakery"></div>
-                        <h2>Order Detail</h2>
-                        <div class="order-detail-inner">
-                            <div class="description-holder">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <div class="list-detail-options has-checkbox">
-                                            <h3>
-                                                Jet Eat Drive                                            </h3>
-                                            <ul class="order-detail-options">
-                                                <li class="order-number">
-                                                    <strong>Order ID:</strong>
-                                                    <span>20832</span>
-                                                </li>
-                                                                <li class="req-delivery">
-                                            <strong>Delivery Time:</strong>
-                        <span>40 Minutes </span>
-                                    </li>
-                                                                <li class="created-date">
-                                                    <strong>Delivery Date:</strong>
-                                                    <span>
-                                                        Apr 28, 2020 09:56 AM                                                    </span>
-                                                </li>
-                                                <li class="order-type">
-                                                    <strong>Type:</strong>
-                                                    <span>order</span>
-                                                </li>
-                                                <li class="order-type">
-                                                    <strong>Payment Status:</strong>
-                                                    <span>Pending</span>
-                                                </li>
-
-                                            </ul>
-                                        </div>
-                                    </div>
-                                                <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="order-status-holder">
-                        <h3> Order Status:</h3>
-                        <div class="order-status-process order-status">
-                            <p>Shipped</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<h2 class="heading">Food Menu</h2>
-				<div class="responsive-table">    
-				<ul class="categories-order table-generic"><li class="order-heading-titles">
-					<div>Products</div>	
-					<div>Price per</div>
-				    </li>
-					<li class="order-heading-titles">
-					<div>
-						<h4>Pizza</h4>
-						<h5>Marinara Pizza</h5>
-						<ul><li>Extra Topping  - Tuna : £6.00</li><li>Extra Topping  - Sweet corn : £0.00</li><li>Sausages  - Barbecue Sauce  : £1.00</li></ul></div><div><span class="category-price">£70.00</span></div>
-					</li>
-					</ul></div></div>                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                            <h3>Order Total</h3>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <ul class="order-detail-options order-total">
-                                                                    <li class="created-date">
-                                        <strong>Subtotal:</strong>
-                                        <span>£77.00</span>
-                                    </li>
-                                                                                                                                            <li class="order-type">
-                                            <strong>
-                                                Pick Up Fee:                                            </strong>
-                                            <span>£10.00</span>
-                                        </li>
-                                                                                                                <li class="order-type">
-                                            <strong>VAT (13%)</strong>
-                                            <span>£11.31</span>
-                                        </li>
-                                                                    
-
-                                                    <li class="order-type total-price">
-                                        <strong>Total:</strong>
-                                        <span>£98.31</span>
-                                    </li>
-                                            </ul>
-                        </div>
-                    </div>
-                </div>
-                                                </div>
-                            </div>
-                        </div>
-                    </div>
-                                    
-                    </div>
-                </div>
-            </div>
-            <ul class="pagination"><li class="active"><a>1</a></li><li><a href="javascript:void(0);" data-id="foodbakery_publisher_received_orders" data-pagenum="2" class="user_dashboard_ajax" data-queryvar="dashboard=received_orders&amp;page_id_all=2">2</a></li><li><a href="javascript:void(0);" data-id="foodbakery_publisher_received_orders" data-pagenum="2" class="user_dashboard_ajax" data-queryvar="dashboard=received_orders&amp;page_id_all=2">Next </a></li></ul></div>
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="field-holder">
+							<div id="update-menu-items-holder" class="payment-holder input-button-loader">
+								<input class="redirect-button-click update-menu-items" value="Update Menu" type="submit">
+								<input name="food_menu_updating" value="1" type="hidden">
+							</div>
+						</div> 
+					</div>
+				</div>
+			</form>
+			</div>
                                                         <div class="foodbakery_loader" style="display: none;">
                 <div class="loader-img"><i class="icon-spinner"></i></div>
             </div></div>
                                                                                                         </div>
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -1075,6 +831,30 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                 </div>
             </div>
 
+                            <script type="text/javascript">
+                    (function ($) {
+                        $(document).ready(function () {
+                            bind_rest_auth_event();
+                            jQuery.growl.error({
+                                message: 'Demo users are not allowed to modify information.'
+                            });
+                            $("body").on("DOMNodeInserted DOMNodeRemoved", bind_rest_auth_event);
+                        });
+
+                        function bind_rest_auth_event() {
+                            $("input[type='submit'], .btn-submit, .btn-send, .delete-this-user-review, .delete-shortlist, .remove_member, #team_update_form").off("click");
+                            $(document).off("click", "input[type='submit'], .btn-submit, .btn-send, .delete-this-user-review, .delete-shortlist, .remove_member, #team_update_form");
+                            $("body").off("click", "input[type='submit'], .btn-submit, .btn-send, .delete-this-user-review, .delete-shortlist, .remove_member, #team_update_form");
+                            $("body").on("click", "input[type='submit'], .btn-submit, .btn-send, .delete-this-user-review, .delete-shortlist, .remove_member, #team_update_form", function (e) {
+                                e.stopPropagation();
+                                jQuery.growl.error({
+                                    message: 'Demo users are not allowed to modify information.'
+                                });
+                                return false;
+                            });
+                        }
+                    })(jQuery);
+                </script>
                         <input type="hidden"     id="social_login_form_uri" name="foodbakery_" value="http://foodbakery.chimpgroup.com/wp-login.php" /><link rel='stylesheet' id='jquery-te-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/common/css/jquery-te-1.4.0.css' %}" type='text/css' media='all' />
 <link rel='stylesheet' id='fonticonpicker-css'  href="{% static 'wp-content/plugins/wp-foodbakery/assets/icomoon/css/jquery.fonticonpicker.min.css' %}" type='text/css' media='all' />
 <script type='text/javascript'>

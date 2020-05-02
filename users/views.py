@@ -4,11 +4,11 @@ from django.shortcuts import render,redirect,get_object_or_404,get_list_or_404
 from django.contrib.auth.decorators import user_passes_test
 from django.http import HttpResponse
 from django.contrib.auth import REDIRECT_FIELD_NAME
-from .models import User,RestaurantProfile
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth import authenticate, login, logout
 from django.views.decorators.csrf import csrf_exempt,csrf_protect
-from .models import RestaurantProfile,DeliveryPersonProfile
+from .models import User,RestaurantProfile,DeliveryPersonProfile,CustomerProfile
+from FoodItems.models import OrdersDescription,FoodCategory,FoodItemsDescription,FoodNames
 
 def Restaurant_Required(function=None, redirect_field_name=REDIRECT_FIELD_NAME, login_url=None):
     """
@@ -180,12 +180,27 @@ def deliveryPersonRegister(request):
     return render(request,'users/my-account/register.html')
 
 @Customer_Required
-def userDashboard(request):
+def userDashboard(request,pk):
     return render(request,'users/user_dashboard/dashboard.html')
 
 @Customer_Required
-def userBookings(request):
+def userBookings(request,pk):
     return render(request,'users/user_dashboard/my-bookings.html')
+
+@Customer_Required
+def userOrders(request,pk):
+    customer = CustomerProfile.objects.filter(pk=pk)
+    if len(customer)==1:
+        orders= customer[0].ordersdescription_set.all()
+        customer=customer[0]
+    else:
+        orders=None
+    print(orders)
+    context={
+        'customer':customer,
+        'orders':orders,
+    }
+    return render(request,'users/user_dashboard/orders.html',context)
 
 @Customer_Required
 def userAccountSetting(request):
@@ -226,6 +241,93 @@ def restaurantOrders(request,pk):
         'restaurant' : restaurant
     }
     return render(request,'users/restaurant-dashboard/orders.html',context)
+
+@Restaurant_Required
+def restaurantMenuBuilder(request,pk):
+    restaurant = RestaurantProfile.objects.filter(pk=pk)
+    if restaurant:
+        restaurant = restaurant[0]
+    if request.method == 'POST':
+        if request.POST.get('addCategory'):
+            catName = request.POST.get('addCategoryname')
+            catDesc = request.POST.get('addCategoryDesc')
+
+            categ = FoodCategory(foodCategories=catName,categoryDescription=catName)
+            categ.save()
+            restaurant.foodcategory_set.add(categ)
+
+        elif request.POST.get('addFooditem'):
+            foodname = request.POST.get('foodtitle')
+            foodNameObj = FoodNames.objects.filter(food_name=foodname)
+            if len(foodNameObj)>0:
+                foodNameObj=foodNameObj[0]
+            elif len(foodNameObj)==0:
+                foodNameObj= FoodNames(food_name=foodname)
+                foodNameObj.save()
+            
+            foodPrice= request.POST.get('fooditemprice')
+            fooditemDescription = request.POST.get('fooditemdescription')
+            Foodcategory = request.POST.get('restaurant_menu_adingCateg')
+            foodCateg = FoodCategory.objects.filter(foodCategories=Foodcategory,restaurants=restaurant)[0]
+            newItem = FoodItemsDescription(
+                description=fooditemDescription,
+                price = foodPrice,
+                restaurant=restaurant,
+                food_name=foodNameObj,
+                foodCategory=foodCateg
+            )
+            newItem.save()
+
+        for key,value in request.POST.items():
+            if key.startswith('categoryedit-'):
+                categpk = key[len('categoryedit-'):]
+                categpk=int(categpk)
+                print("categ:",categpk)
+                categoryFood = FoodCategory.objects.filter(pk=int(categpk))[0]
+                print(categoryFood)
+                categoryName = request.POST.get('menu_cat_title['+str(categpk)+']')
+                categoryDesc = request.POST.get('menu_cat_desc['+str(categpk)+']')
+
+                print(categoryName)
+                print(categoryDesc)
+                categoryFood.foodCategories=categoryName
+                categoryFood.categoryDescription=categoryDesc
+                categoryFood.save()
+
+        for key,value in request.POST.items():
+            if key.startswith('fooditemedit-'):
+                fooditempk = key[len('fooditemedit-'):]
+                print("fooditempk: " , fooditempk)
+                fooditemObj = FoodItemsDescription.objects.filter(pk=int(fooditempk))[0]
+
+                fooddesc = request.POST.get('menu_item_desc['+ fooditempk +']')
+                foodprice = request.POST.get('menu_item_price['+ fooditempk +']')
+                print("previousPrice:", foodprice,":::",fooditemObj.price)
+                foodname = request.POST.get('menu_item_action['+ fooditempk +']')
+                foodcateg = request.POST.get('restaurant_menu['+ fooditempk +']')
+                categoryFood = FoodCategory.objects.filter(foodCategories=foodcateg,restaurants=restaurant)[0]
+                fooditemObj.description =fooddesc
+                fooditemObj.price = foodprice
+                print("previousPrice:", foodprice,":::",fooditemObj.price)
+                fooditemObj.food_name.food_name= foodname
+                fooditemObj.foodCategory = categoryFood
+                fooditemObj.save()
+
+    # restaurant = RestaurantProfile.objects.filter(pk=pk)
+    # if restaurant:
+    #     restaurant = restaurant[0]
+    categories = restaurant.foodcategory_set.all()
+    foodItems = {}
+    for category in categories:
+        foods = category.fooditemsdescription_set.filter(restaurant=restaurant)
+        foodItems[category]=foods
+    
+    context={
+        'restaurant':restaurant,
+        'categories':categories,
+        'foodItems':foodItems
+    }
+    return render(request,'users/restaurant-dashboard/menubuilder.html',context)
 
 @DeliveryPerson_Required
 def deliveryPersonOrders(request,pk):

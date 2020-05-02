@@ -652,15 +652,6 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                         Login / Register
                     </a>
                     {% endif %}
-                    <!--{% if request.user.is_authenticated %}
-                        <a class="get-start-btn" href="{% url 'dashboard1' %}" >
-                            {{ request.user.username }} Profile
-                        </a>
-                    {% else %}
-                        <a class="get-start-btn" href="{% url 'register-restaurant' %}" >
-                            Register Restaurant  
-                        </a>
-                    {% endif %}-->
                     
                     		    				    		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
 	    		    <div class="login-option">
@@ -674,7 +665,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                                                             <ul>
                                                                             <li class="user_dashboard_ajax active" id="foodbakery_publisher_suggested" data-queryvar="dashboard=suggested"><a href="http://foodbakery.chimpgroup.com/user-dashboard/"><i class="icon-dashboard3"></i>Dashboard</a></li>
 
-                                        <li class="user_dashboard_ajax" id="foodbakery_publisher_bookings" data-queryvar="dashboard=bookings"><a href="{% url 'userbookings' %}">
+                                        <li class="user_dashboard_ajax" id="foodbakery_publisher_bookings" data-queryvar="dashboard=bookings"><a href="{% url 'userbookings' request.user.customerprofile.id %}">
                                                 <i class="icon-file-text2"></i>My Bookings</a></li>
                                         <li class="user_dashboard_ajax" id="foodbakery_publisher_reviews" data-queryvar="dashboard=reviews"><a href="http://foodbakery.chimpgroup.com/user-dashboard/?dashboard=reviews"><i class="icon-comment2"></i>My Reviews</a></li>
                                         <li class="user_dashboard_ajax" id="foodbakery_publisher_orders" data-queryvar="dashboard=orders"><a href="http://foodbakery.chimpgroup.com/user-dashboard/?dashboard=orders"><i class="icon-add_shopping_cart"></i>My Orders</a></li>
@@ -773,9 +764,9 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/wp-adm
                                                                                                                                     <li class="user_dashboard_ajax active" id="foodbakery_publisher_suggested" data-queryvar="dashboard=suggested"><a href="javascript:void(0);"><i class="icon-dashboard3"></i> Dashboard</a></li>
 
                                                                     
-                                                                    <li class="user_dashboard_ajax" id="foodbakery_publisher_bookings" data-queryvar="dashboard=bookings"><a href="{% url 'userbookings' %}" class="btn-edit-profile" ><i class="icon-file-text2"></i>My Bookings</a></li>
+                                                                    <li class="user_dashboard_ajax" id="foodbakery_publisher_bookings" data-queryvar="dashboard=bookings"><a href="{% url 'userbookings' request.user.customerprofile.id %}" class="btn-edit-profile" ><i class="icon-file-text2"></i>My Bookings</a></li>
                                                                                                                                         <li class="user_dashboard_ajax" id="foodbakery_publisher_reviews" data-queryvar="dashboard=reviews"><a href="javascript:void(0);" class="btn-edit-profile"><i class="icon-comment2"></i>My Reviews</a></li>
-                                                                                                                                        <li class="user_dashboard_ajax" id="foodbakery_publisher_orders" data-queryvar="dashboard=orders"><a href="javascript:void(0);" class="btn-edit-profile"><i class="icon-add_shopping_cart"></i>My Orders</a></li>
+                                                                                                                                        <li class="user_dashboard_ajax" id="foodbakery_publisher_orders" data-queryvar="dashboard=orders"><a href="{% url 'userorders' request.user.customerprofile.id %}" class="btn-edit-profile"><i class="icon-add_shopping_cart"></i>My Orders</a></li>
                                                                      <li class="user_dashboard_ajax" id="foodbakery_publisher_shortlists" data-queryvar="dashboard=shortlists"><a href="javascript:void(0);"><i class="icon-heart"></i>Shortlists</a></li>                                                                    <li class="user_dashboard_ajax" id="foodbakery_publisher_statements" data-queryvar="dashboard=statement"><a href="javascript:void(0);"><i class="icon-file-text22"></i>Statement</a></li>
                                                                                                                                             <li class="user_dashboard_ajax" id="foodbakery_publisher_accounts" data-queryvar="dashboard=account"><a href="javascript:void(0);"><i class="icon-build"></i>Account Settings</a></li>
                                                                                                                                             <li>
