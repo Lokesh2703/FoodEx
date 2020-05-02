@@ -11,6 +11,7 @@ urlpatterns=[
     path('user/<int:pk>/dashboard/myorders',views.userOrders,name='userorders'),
     path('user/accountsetting/',views.userAccountSetting,name='userAccountSetting'),
     path('restaurant/<int:pk>/orders/',views.restaurantOrders,name='restaurantOrdersboard'),
+    path('restaurant/<int:pk>/dashboard/menu',views.restaurantMenuBuilder,name='restaurantMenuBuilder'),
     path('deliveryperson/login/',views.deliveryPersonLogin,name='deliveryPersonLogin'),
     path('deliveryperson/register/',views.deliveryPersonRegister,name='deliveryPersonRegister'),
     path('deliveryperson/<int:pk>/orders/',views.deliveryPersonOrders,name='deliveryPersonOrdersboard'),
