@@ -27,8 +27,7 @@ def restaurantsView(request,**kwargs):
 
 def individualRestaurantView(request,pk):
     restaurant = get_object_or_404(RestaurantProfile,pk=pk)
-    reviews = get_list_or_404(CustomerReviews,restaurant=restaurant)
-    print(restaurant)
+    reviews = CustomerReviews.objects.filter(restaurant=restaurant) 
     context={
         'restaurant' : restaurant,
         'reviews' : reviews

@@ -331,7 +331,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                         Log out
                     </a>
                     {% else %}
-                    <a class="cs-color cs-popup-joinus-btn login-popup" data-target="#sign-in" data-toggle="modal" href="#user-register">
+                    <a class="cs-color cs-popup-joinus-btn login-popup" href="{% url 'userLoginGeneral' %}">
                         Login / Register
                     </a>
                     {% endif %}
@@ -1270,18 +1270,42 @@ Choose you sauce: Go for BBQ sauce or piri piri sauce on your pizza base for no 
                                                                                     foodbakery_registration_validation("../../wp-admin/admin-ajax.html", "153724",'.ajax-signup-button');
                                                                                     return false;
                                                                             }
-                                                                            });</script><form method="post" class="wp-user-form demo_test" id="wp_signup_form_153724" enctype="multipart/form-data"><div class="input-filed"><input type="hidden" name="foodbakery_profile_type153724" value="buyer"/></div><div class="input-filed foodbakery-company-name" style="display:none;"><i class="icon-v-card"></i><input type="text"   placeholder="Company Name"   id="foodbakery_company_name153724" name="foodbakery_company_name153724" /></div><div class="input-filed"><i class="icon-user4"></i><input type="text"   placeholder="Username"   id="user_login_3153724" name="user_login153724" />
-                                </div><div class="input-filed"><i class="icon-v-card"></i><input type="text"   placeholder="Display Name"   id="foodbakery_display_name153724" name="foodbakery_display_name153724" /></div><div class="input-filed"><i class="icon-email"></i><input type="email"   placeholder="Email"   id="foodbakery_user_email153724" name="foodbakery_user_email153724" /></div><span class="signup-alert"><b>Note :</b> Please enter your correct email and we will send you a password on that email.</span>                <div class="checkbox-area">
-                    <input type="checkbox" id="terms-153724" name="terms-153724" class="foodbakery-dev-req-field"/>
-                    <label for="terms-153724">
-                        By Registering You Confirm That You Accept The                        <a target="_blank" href="{% static 'contact-us/index.html' %}">
+                                                                            });</script>
+                        <fo1555rm method="post" class="wp-user-form demo_test" id="wp_signup_form_793553" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="input-filed">
+                    <input type="hidden" name="foodbakery_profile_type793553" value="buyer"/>
+                </div>
+                <div class="input-filed foodbakery-company-name" style="display:none;">
+                    <i class="icon-v-card"></i>
+                    <input type="text"   placeholder="Company Name"   id="foodbakery_company_name793553" name="foodbakery_company_name793553" />
+                </div>
+                <div class="input-filed">
+                    <i class="icon-user4"></i><input type="text"   placeholder="Username"   id="user_login_3793553" name="user_login793553" />
+                </div>
+                <div class="input-filed">
+                    <i class="icon-v-card"></i><input type="text"   placeholder="Display Name"   id="foodbakery_display_name793553" name="foodbakery_display_name793553" />
+                </div>
+                <div class="input-filed">
+                    <i class="icon-email"></i><input type="email"   placeholder="Email"   id="foodbakery_user_email793553" name="foodbakery_user_email793553" />
+                </div>
+                <div class="input-filed">
+                    <i><img src="https://img.icons8.com/material-outlined/24/000000/password.png"/></i><input type="password"   placeholder="Password"   id="foodbakery_user_password793553" name="foodbakery_user_password793553" />
+                </div>
+                <span class="signup-alert"><b>Note :</b> Please enter your correct email and we will send you a password on that email.</span>                <div class="checkbox-area">
+                    <input type="checkbox" id="terms-793553" name="terms-793553" class="foodbakery-dev-req-field"/>
+                    <label for="terms-793553">
+                        By Registering You Confirm That You Accept The                        <a target="_blank" href="contact-us/index.html">
                             Terms &amp; conditions                        </a>
-                        And                        <a target="_blank" href="{% static 'contact-us/index.html' %}">
+                        And                        <a target="_blank" href="contact-us/index.html">
                             Privacy Policy                        </a>
                     </label>
                 </div>
-                <input type="hidden"  id="foodbakery_user_role_type153724"  class="input-holder"   name="foodbakery_user_role_type153724" value="publisher" /><div class="side-by-side select-icon clearfix"><div class="select-holder"></div></div><div class="recaptcha-reload" id="recaptcha6_div"><div class="g-recaptcha" data-theme="light" id="recaptcha6" data-sitekey="6LfoFgsUAAAAAP_o9aUl2oIyvocDwZrBdrhqlqWo" style=""></div> <a class="recaptcha-reload-a" href="javascript:void(0);" onclick="captcha_reload('../../wp-admin/admin-ajax.html', 'recaptcha6');"><i class="icon-refresh2"></i> Reload</a></div><div class="checks-holder"><div class="input-filed input-field-btn"><div class="ajax-signup-button input-button-loader"><input type="button"   tabindex="103" onclick="javascript:foodbakery_registration_validation('../../wp-admin/admin-ajax.html','153724','.ajax-signup-button')"  class="user-submit cs-bgcolor acc-submit"  id="submitbtn93471571" name="user-submit" value="Sign Up" /></div><input type="hidden"     id="signin-role" name="role" /><input type="hidden"     name="action" value="foodbakery_registration_validation" />
-                                        </div></div></form>
+                <input type="hidden"  id="foodbakery_user_role_type793553"  class="input-holder"   name="foodbakery_user_role_type793553" value="publisher" />
+                <div class="side-by-side select-icon clearfix"><div class="select-holder"></div></div><div class="checks-holder">
+                <div class="input-filed input-field-btn"><div class="ajax-signup-button input-button-loader">
+                <input type="submit"   tabindex="103"  class="user-submit cs-bgcolor acc-submit"  id="submitbtn1467322373" name="user-submit" value="Sign Up" /></div><input type="hidden"     id="signin-role" name="role" /><input type="hidden"     name="action" value="foodbakery_registration_validation" />
+                                        </div></div></fo1555rm>
                                         <div class="register_content"></div><div class="create- signin-tab-link ">Already have an account? <a href="javascript:void(0);" class="foodbakery-dev-signup-box-btn">Login here</a></div>                    <div class="footer-element comment-form-social-connect social_login_ui ">
                         <div class="social_login_facebook_auth">
                             <input type="hidden"     name="client_id" value="1168292993253842" /><input type="hidden"     name="redirect_uri" value="../../index7e49.html?social-login=facebook-callback" />                        </div>
