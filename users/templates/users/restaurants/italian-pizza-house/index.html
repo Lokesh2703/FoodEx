@@ -1,4 +1,5 @@
 {% load static %}
+{% load csfilters %}
 <!DOCTYPE html>
 <html lang="en-US">
     
@@ -499,13 +500,13 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                                                             <div id="menu-item-list-14334" class="menu-itam-list">
             <form name="orderFood" method="post" enctype="multipart/form-data">
             {% csrf_token %}
-            {% for category in restaurant.foodcategory_set.all %}
+            {% for category in categories %}
              <div class="element-title" id="menu-category-{{ forloop.counter }}">
                 <h5 class="text-color">{{ category.foodCategories }}</h5>
                 <span>{{ category.categoryDescription }}</span>
             </div>
             <ul>
-                {% for food in category.fooditemsdescription_set.all %}
+                {% for food in foodItems|get_value_from_dict:category %}
                 <script> jQuery(document).ready(function ($) {
 
                         $("a[rel^='prettyPhoto']").prettyPhoto();
