@@ -336,7 +336,7 @@ var foodbakery_globals = {"ajax_url":"http:\/\/foodbakery.chimpgroup.com\/homev1
                     </a>
                     {% endif %}
                     {% if request.user.is_authenticated and request.user.is_customer %}
-                        <a class="get-start-btn" href="{% url 'dashboard1' %}" >
+                        <a class="get-start-btn" href="{% url 'dashboard1' request.user.customerprofile.id %}" >
                             {{ request.user.username }} Profile
                         </a>
                     {% elif request.user.is_authenticated and request.user.is_restaurant %}
