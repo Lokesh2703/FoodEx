@@ -13,7 +13,7 @@ from django.views.generic import (
 )
 
 def restaurantsView(request,**kwargs):
-    restaurants = get_list_or_404(RestaurantProfile,city='')
+    restaurants = get_list_or_404(RestaurantProfile)
     context = {
         'restaurants' : restaurants,
     }
@@ -27,10 +27,20 @@ def restaurantsView(request,**kwargs):
 
 def individualRestaurantView(request,pk):
     restaurant = get_object_or_404(RestaurantProfile,pk=pk)
-    reviews = CustomerReviews.objects.filter(restaurant=restaurant) 
+
+    categories = restaurant.foodcategory_set.all()
+    foodItems = {}
+    for category in categories:
+        foods = category.fooditemsdescription_set.filter(restaurant=restaurant)
+        foodItems[category]=foods
+
+    reviews = CustomerReviews.objects.filter(restaurant=restaurant)
+
     context={
         'restaurant' : restaurant,
-        'reviews' : reviews
+        'reviews' : reviews,
+        'categories':categories,
+        'foodItems':foodItems
     }
     if request.method=='POST':
         if request.POST.get('OrderConfirm'):
